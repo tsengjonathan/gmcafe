@@ -3646,7 +3646,8 @@ const highlands: Asset[] = [{
     mood: ['Surging'],
     object: ['Surging Orb', 'Powerful Claw Arms']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570550563022831617'
+  token: '81086769033880357206596084476994515861067324006954129146728570550563022831617',
+  isSpecial: true
 }, {
   name: 'Highland #271',
   description: 'Highland Cattle.',

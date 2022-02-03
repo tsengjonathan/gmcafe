@@ -13,7 +13,7 @@ const Sidebar = () => {
       </div>
 
       <div className="px-3 pt-4">
-        <div className="p-2 mx-auto bg-white rounded">
+        <div className="p-2 mx-auto bg-white rounded sticky top-12">
           <h1 className="w-full px-4 py-2 text-lg font-medium">Filter</h1>
           <Disclosure title={TRAIT.BACKGROUND} fields={background} />
           <Disclosure title={TRAIT.CLOTHING} fields={clothing} />
