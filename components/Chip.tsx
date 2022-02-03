@@ -23,7 +23,7 @@ const Chip = ({ name, type, variant }: ChipProps) => {
 
   const classes = classNames(
     bg,
-    'rounded-full align-middle text-center inline-block',
+    'rounded-full align-middle text-center inline-block cursor-default',
     { 'text-xs mx-1 px-2 py-0.5': variant === 'sm' },
     { 'text-lg mx-2 px-4 py-1': variant === 'lg' }
   )

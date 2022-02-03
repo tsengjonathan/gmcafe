@@ -23,7 +23,7 @@ const Card = ({ name, imageUrl: inputUrl, traits, token, isSpecial }: Asset) => 
       )}>
         <Image src={imageUrl} alt={name} layout="fill" objectFit="cover" onError={() => setImageUrl('/fallback.png')}/>
       </div>
-      <h3 className="mt-2 text-lg">{displayName}</h3>
+      <h3 className="mt-2 text-lg cursor-default">{displayName}</h3>
       <div className="break-inside-avoid">
         {background.map((trait, idx) => {
           const key = `${token}-${trait}-${idx}`
