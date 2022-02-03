@@ -15,7 +15,7 @@ const FilterList = ({ count }: FilterListProps) => {
   return (
     <div className="h-20 w-full bg-pink-light">
       <div className="bg-white opacity-60 w-full h-full px-8 flex items-center">
-        <div className="font-mono text-3xl w-32 text-left">
+        <div className="font-mono text-3xl w-28 text-left">
           <span className="text-purple">{count}</span>
           /
           <span>{total}</span>

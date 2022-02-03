@@ -25,7 +25,7 @@ const Chip = ({ name, type, variant }: ChipProps) => {
     bg,
     'rounded-full align-middle text-center inline-block',
     { 'text-xs mx-1 px-2 py-0.5': variant === 'sm' },
-    { 'text-lg px-4 py-1': variant === 'lg' }
+    { 'text-lg mx-2 px-4 py-1': variant === 'lg' }
   )
 
   return (
