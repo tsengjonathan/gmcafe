@@ -1,12 +1,10 @@
 import classNames from 'classnames'
 import React from 'react'
 import { TRAIT } from '../types/asset'
-import { capitalize } from './util'
 
 export type ChipProps = {
   name: string
   type: TRAIT
-  variant: 'sm' | 'lg'
 }
 
 const traitToColor = {
@@ -18,21 +16,14 @@ const traitToColor = {
   [TRAIT.OBJECT]: 'bg-yellow-light'
 }
 
-const Chip = ({ name, type, variant }: ChipProps) => {
+const FilterChip = ({ name, type }: ChipProps) => {
   const bg = traitToColor[type]
 
-  const classes = classNames(
-    bg,
-    'rounded-full align-middle text-center inline-block',
-    { 'text-xs mx-1 px-2 py-0.5': variant === 'sm' },
-    { 'text-lg px-4 py-1': variant === 'lg' }
-  )
-
   return (
-    <span className={classes}>
-      {capitalize(name)}
+    <span className={classNames(bg, 'text-2xl mx-1 px-2 py-0.5 rounded-full align-middle text-center inline-block')}>
+      {name}
     </span>
   )
 }
 
-export default Chip
+export default FilterChip

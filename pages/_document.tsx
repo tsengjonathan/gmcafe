@@ -6,11 +6,11 @@ const Document = () => {
     <Html>
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Inconsolata&display=swap"
           rel="stylesheet"
         />
       </Head>
-      <body className="font-default">
+      <body className="font-sans">
         <Main />
         <NextScript />
       </body>

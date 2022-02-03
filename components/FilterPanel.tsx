@@ -3,7 +3,7 @@ import useDebounce from '../hooks/useDebounce'
 import { DisclosureProps } from './Disclosure'
 import FilterInput from './FilterInput'
 import RadioFilter from './RadioFilter'
-import { capitalize, kebabCase } from './util'
+import { kebabCase } from './util'
 
 export type FilterPanelProps = DisclosureProps
 
@@ -16,10 +16,14 @@ const FilterPanel = ({ fields, title }: FilterPanelProps) => {
       if (debouncedInput === '') { return field }
       return field.toUpperCase().includes(debouncedInput.toUpperCase())
     })
+    .sort((a, b) => {
+      const aCount = fields[a]
+      const bCount = fields[b]
+      return aCount === bCount ? a.localeCompare(b) : aCount < bCount ? 1 : -1
+    })
     .map((field, idx) => {
-      const name = capitalize(field)
       const key = kebabCase(field)
-      return <RadioFilter key={key} name={name} type={title} idx={idx} />
+      return <RadioFilter key={key} name={field} type={title} idx={idx} count={fields[field]} />
     })
 
   return (

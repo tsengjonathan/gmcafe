@@ -1,27 +1,60 @@
-import { baseUrl, collection } from '../constants'
+import { baseUrl, collection, highlands } from '../constants'
 import useSWR from 'swr'
 import { Collection, UnprocessedCollection } from '../types/collection'
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json())
+// const fetcher = (url: string) => fetch(url).then((res) => res.json())
+
+const addCount = (obj: { [key: string]: number }, rawKey: string): void => {
+  const key = rawKey.trim().toLowerCase()
+  if (key in obj) {
+    obj[key] += 1
+  } else {
+    obj[key] = 1
+  }
+}
 
 const useCollection = (): Collection => {
-  const url = `${baseUrl}/collection/${collection}`
-  const { data, error } = useSWR<UnprocessedCollection, Error>(url, fetcher)
-
-  if (error || !data) {
-    console.error('Error fetching collection', error)
-    return {
-      background: {},
-      clothing: {},
-      colour: {},
-      feature: {},
-      mood: {},
-      object: {}, 
-    }
+  const collection: Collection = {
+    background: {},
+    clothing: {},
+    colour: {},
+    feature: {},
+    mood: {},
+    object: {}, 
   }
 
-  return processCollection(data)
+  highlands.forEach(({ traits }) => {
+    const { background, clothing, colour, feature, mood, object } = traits
+
+    background.forEach(trait => addCount(collection.background, trait))
+    clothing.forEach(trait => addCount(collection.clothing, trait))
+    colour.forEach(trait => addCount(collection.colour, trait))
+    feature.forEach(trait => addCount(collection.feature, trait))
+    mood.forEach(trait => addCount(collection.mood, trait))
+    object.forEach(trait => addCount(collection.object, trait))
+  })
+
+  return collection
 }
+
+// const useCollection = (): Collection => {
+//   const url = `${baseUrl}/collection/${collection}`
+//   const { data, error } = useSWR<UnprocessedCollection, Error>(url, fetcher)
+
+//   if (error || !data) {
+//     console.error('Error fetching collection', error)
+//     return {
+//       background: {},
+//       clothing: {},
+//       colour: {},
+//       feature: {},
+//       mood: {},
+//       object: {}, 
+//     }
+//   }
+
+//   return processCollection(data)
+// }
 
 export default useCollection
 

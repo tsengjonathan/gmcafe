@@ -21,7 +21,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      default: [ 'Roboto Mono', ...defaultTheme.fontFamily.sans ]
+      sans: [ 'Roboto Mono', ...defaultTheme.fontFamily.sans ],
+      mono: [ 'Inconsolata', ...defaultTheme.fontFamily.mono ]
     }
   },
   plugins: [],

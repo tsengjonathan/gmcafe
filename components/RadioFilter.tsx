@@ -1,14 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { FilterContext } from '../providers/FilterProvider'
 import { TRAIT } from '../types/asset'
+import { capitalize } from './util'
 
 export type RadioFilterProps = {
   name: string
   type: TRAIT
   idx: number
+  count: number
 }
 
-const RadioFilter = ({ name, type, idx }: RadioFilterProps) => {
+const RadioFilter = ({ name, type, idx, count }: RadioFilterProps) => {
   const id = `filter-${type}-${idx}`
 
   const { addFilter, removeFilter, traits } = useContext(FilterContext)
@@ -24,9 +26,9 @@ const RadioFilter = ({ name, type, idx }: RadioFilterProps) => {
   }
 
   return (
-    <div className="flex items-center px-0.5">
+    <div className="flex px-0.5">
       <input
-        className="h-4 w-4 border-gray-300 rounded cursor-pointer"
+        className="h-4 w-4 my-1 border-gray-300 rounded cursor-pointer"
         id={id}
         type="checkbox"
         value={name}
@@ -34,10 +36,10 @@ const RadioFilter = ({ name, type, idx }: RadioFilterProps) => {
         onClick={onClick}
       />
       <label
-        className="ml-2 my-0.5 text-default"
+        className="ml-2 my-0.5 text-default overflow-hidden inline-block"
         htmlFor={id}
       >
-        {name}
+        {`${capitalize(name)} (${count})`}
       </label>
     </div>
   )

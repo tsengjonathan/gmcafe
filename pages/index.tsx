@@ -1,13 +1,14 @@
 import Head from 'next/head'
 import { useContext } from 'react'
 import Card from '../components/Card'
+import FilterList from '../components/FilterList'
 import Sidebar from '../components/Sidebar'
 import { highlands } from '../constants'
 import { FilterContext } from '../providers/FilterProvider'
 
 const shouldInclude = (traits: string[], filter: string[]): boolean => {
   if (filter.length === 0) { return true }
-  return traits.some(trait => filter.includes(trait))
+  return traits.some(trait => filter.includes(trait.toLowerCase()))
 }
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
 
   const filteredHighlands = highlands.filter(({ traits }) => {
     if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0) { return true }
+
     return shouldInclude(traits['background'], background)
       && shouldInclude(traits['clothing'], clothing)
       && shouldInclude(traits['colour'], colour)
@@ -31,8 +33,9 @@ const Home = () => {
       </Head>
 
       <Sidebar />
-      <main className="flex w-full flex-1 flex-col items-center text-center m-6">
-        <div className="grid gap-6 grid-cols-4">
+      <main className="flex w-full flex-1 flex-col items-center text-center ">
+        <FilterList count={filteredHighlands.length} />
+        <div className="grid gap-6 grid-cols-4 m-6">
           { filteredHighlands.map(highland => <Card key={highland.token} {...highland}/>) }
         </div>
       </main>

@@ -281,7 +281,7 @@ const highlands: Asset[] = [{
       'Purple'
     ],
     'feature': [
-      'Moustache '
+      'Moustache'
     ],
     'mood': [
       "Cookin'"
@@ -873,7 +873,7 @@ const highlands: Asset[] = [{
       'Green Mess'
     ],
     'mood': [
-      'Deranged '
+      'Deranged'
     ],
     'object': [
       'Spoon',
@@ -1047,7 +1047,7 @@ const highlands: Asset[] = [{
       'Captain Hat'
     ],
     'colour': [
-      'Light PInk with Purple Spots'
+      'Light Pink with Purple Spots'
     ],
     'feature': [],
     'mood': [
@@ -1972,7 +1972,7 @@ const highlands: Asset[] = [{
   'imageUrl': 'https://lh3.googleusercontent.com/2NSwnZWIL_uJfJqOoTqUMFUdsQuzbFh0fffrpv1Y22HFSa45Ego4Dgaeb5Hc0Tr3hJDKmLeKVB5hYk8PzVkXp-nx_-3KUt44UB29BbE',
   'traits': {
     'background': [
-      'Light PInk'
+      'Light Pink'
     ],
     'clothing': [
       'Hat',
@@ -2129,7 +2129,7 @@ const highlands: Asset[] = [{
       'Green'
     ],
     'clothing': [
-      'Bandana '
+      'Bandana'
     ],
     'colour': [
       'Light Purple'
@@ -2897,7 +2897,7 @@ const highlands: Asset[] = [{
       'Bucket Hat'
     ],
     'colour': [
-      'Light PInk with Spots'
+      'Light Pink with Spots'
     ],
     'feature': [],
     'mood': [
@@ -2977,7 +2977,7 @@ const highlands: Asset[] = [{
       'ily'
     ],
     'object': [
-      'Baguette '
+      'Baguette'
     ]
   },
   'token': '81086769033880357206596084476994515861067324006954129146728570384536767037441'
@@ -3043,7 +3043,7 @@ const highlands: Asset[] = [{
       'Light Blue'
     ],
     'feature': [
-      ' Freckles'
+      'Freckles'
     ],
     'mood': [
       'Set!'
@@ -3143,11 +3143,12 @@ const highlands: Asset[] = [{
   'imageUrl': 'https://lh3.googleusercontent.com/6q9WIQGRp2CiGwYA8Be8RR0VnAh6PIlV-XIHYGmuNSZsMpXQE5A2FF3K3qZqlF-Ju6v8F41P6DkQ_30fHC6XPl9YPGsJWnStrr9n',
   'traits': {
     'background': [
-      'Light PInk'
+      'Light Pink'
     ],
     'clothing': [
       'Scarf',
-      'Cat Beanie'
+      'Cat Beanie',
+      'Star Glasses'
     ],
     'colour': [
       'Purple'
@@ -3240,7 +3241,7 @@ const highlands: Asset[] = [{
   'imageUrl': 'https://lh3.googleusercontent.com/hGwcRrq-8KIPzq-W-DwLf1qFVM21LyFkQKjhiD56FU0js14XOsttY4v1U6TaMpCOvolWTOtUTqvDxBqdMzqT8sPE1xrqpv17tpMDrQ',
   'traits': {
     'background': [
-      'Light PInk'
+      'Light Pink'
     ],
     'clothing': [
       'Scarf',
@@ -3802,7 +3803,7 @@ const highlands: Asset[] = [{
     'clothing': [
       'Furr',
       'Viking Helmet',
-      'Earring '
+      'Earring'
     ],
     'colour': [
       'Light Purple'
@@ -4073,13 +4074,13 @@ const highlands: Asset[] = [{
       'Light Brown'
     ],
     'feature': [
-      'Moustache '
+      'Moustache'
     ],
     'mood': [
       'Hola'
     ],
     'object': [
-      'Maracas '
+      'Maracas'
     ]
   },
   'token': '81086769033880357206596084476994515861067324006954129146728570436213813542913'
@@ -4787,7 +4788,7 @@ const highlands: Asset[] = [{
   'imageUrl': 'https://lh3.googleusercontent.com/QcqZGy78zp3k7DDymzZFGgKUbzx1Vfo0MgVFtastMkS0dGUeYlG8DGIxAr-FAc9s1vjV8ZqTq0m-6JYy_Y95fphGy3WqjwneaEbnuw',
   'traits': {
     'background': [
-      'PInk'
+      'Pink'
     ],
     'clothing': [],
     'colour': [
@@ -5175,7 +5176,7 @@ const highlands: Asset[] = [{
       'Bow'
     ],
     'colour': [
-      'Light PInk with Light Stripes'
+      'Light Pink with Light Stripes'
     ],
     'feature': [],
     'mood': [
@@ -5350,7 +5351,7 @@ const highlands: Asset[] = [{
     ],
     'feature': [],
     'mood': [
-      'Futuristic '
+      'Futuristic'
     ],
     'object': [
       'Hover Board'
@@ -5493,7 +5494,7 @@ const highlands: Asset[] = [{
     ],
     'object': [
       'Brush',
-      'Palette '
+      'Palette'
     ]
   },
   'token': '81086769033880357206596084476994515861067324006954129146728570502184511209473'
@@ -5959,7 +5960,7 @@ const highlands: Asset[] = [{
   'imageUrl': 'https://lh3.googleusercontent.com/vHGHbF9SGEPthyrVlFnrRjBcOKJsHYKTe6BXevaAsbY_KFk-T7zNv2u7UF8M6kNCUn4oCXyE7Mb0x9dTHVw87_ctUs2FqDnV66gMSSg',
   'traits': {
     'background': [
-      ' Green Gradient with Snow'
+      'Green Gradient with Snow'
     ],
     'clothing': [
       'Saint Moocholas Suit'
@@ -5983,7 +5984,7 @@ const highlands: Asset[] = [{
   'imageUrl': 'https://lh3.googleusercontent.com/GUss2VoDrqQbAkHSgsrzRXvpEsQSox5OkfWj7ObVG7hHUXgvsBfX0jxOug-6xYe8THdJ_Zg3y2wQxQ6ufu5fcP7dAGvAV2xP1Mmx',
   'traits': {
     'background': [
-      'Light PInk'
+      'Light Pink'
     ],
     'clothing': [
       'Military Hat',
@@ -6221,7 +6222,7 @@ const highlands: Asset[] = [{
       'Sweet'
     ],
     'object': [
-      'Lollipop '
+      'Lollipop'
     ]
   },
   'token': '81086769033880357206596084476994515861067324006954129146728570537368883298305'
@@ -6335,7 +6336,7 @@ const highlands: Asset[] = [{
       'Rainbow'
     ],
     'feature': [
-      ' Space Radiation Sparkles'
+      'Space Radiation Sparkles'
     ],
     'mood': [
       'Mooning'
@@ -6549,7 +6550,7 @@ const highlands: Asset[] = [{
     'clothing': [
       'Flower',
       'Wrist Tie',
-      'Bow Hair Band '
+      'Bow Hair Band'
     ],
     'colour': [
       'Light Pink'
