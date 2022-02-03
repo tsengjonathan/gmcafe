@@ -1,18 +1,26 @@
+import classNames from 'classnames'
 import Image from 'next/image'
 import { useState } from 'react'
 import { Asset, TRAIT } from '../types/asset'
 import Chip from './Chip'
 
 
-const Card = ({ name, imageUrl: inputUrl, traits, token }: Asset) => {
+const Card = ({ name, imageUrl: inputUrl, traits, token, isSpecial }: Asset) => {
   const [ imageUrl, setImageUrl ] = useState(inputUrl)
-  const displayName = name.split(' ')[1]
+  const displayName = isSpecial ? name : name.split(' ')[1]
 
   const { background, clothing, colour, mood, feature, object } = traits
 
   return (
-    <div className="flex flex-col items-center overflow-hidden">
-      <div className="relative w-48 h-48 rounded-full overflow-hidden transition-transform hover:scale-110 duration-200 m-3">
+    <div className={classNames(
+      'flex flex-col items-center overflow-hidden rounded pb-6',
+      { 'bg-gray-100 drop-shadow transition-transform hover:scale-105 duration-200': isSpecial }
+    )}>
+      <div className={classNames(
+        'relative w-48 h-48 rounded-full overflow-hidden m-3 mt-5',
+        { 'drop-shadow': isSpecial },
+        { 'transition-transform hover:scale-110 duration-200': !isSpecial }
+      )}>
         <Image src={imageUrl} alt={name} layout="fill" objectFit="cover" onError={() => setImageUrl('/fallback.png')}/>
       </div>
       <h3 className="mt-2 text-lg">{displayName}</h3>

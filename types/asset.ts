@@ -4,6 +4,7 @@ export type Asset = {
   imageUrl: string
   traits: Traits
   token: string
+  isSpecial?: boolean
 }
 
 export enum TRAIT {
