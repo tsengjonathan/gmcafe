@@ -9,6 +9,7 @@ const Document = () => {
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Inconsolata&display=swap"
           rel="stylesheet"
         />
+        <script defer data-domain="gmcafe.vercel.app" src="https://plausible.io/js/plausible.js"></script>
       </Head>
       <body className="font-sans">
         <Main />
