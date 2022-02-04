@@ -3,8 +3,9 @@ import Image from 'next/image'
 import useCollection from '../hooks/useCollection'
 import Disclosure from './Disclosure'
 import { TRAIT } from '../types/asset'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { HeartIcon, MenuIcon, XIcon } from '@heroicons/react/solid'
 import { Drawer } from '@mui/material'
+import { Coffee } from 'react-feather'
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,17 +30,25 @@ const Sidebar = () => {
       </div>
 
       <Drawer open={isOpen} onClose={() => setIsOpen(false)} anchor="right">
-        <div className="w-64">
+        <div className="w-64 flex flex-col h-full justify-between">
           <div className="flex items-center border-b border-gray-300 pl-4 pr-3 py-2">
             <h1 className="w-full text-lg font-medium">Filter</h1>
             <XIcon className="w-8 h-8 cursor-pointer" onClick={() => setIsOpen(false)} />
           </div>
-          { filterControls }
+          <div className="grow">
+            { filterControls }
+          </div>
+          <div className="justify-center text-sm mb-2 flex items-center">
+            Made with <Coffee className="h-4 w-4 mx-1" strokeWidth="3" /> by Loop<span className="text-xs text-gray-500">#1155</span>
+          </div>
         </div>
       </Drawer>
 
-      <div className="mx-auto hidden lg:block">
+      <div className="mx-auto hidden lg:flex lg:flex-col">
         <Image src="/logo.webp" alt="logo" width={173} height={112} />
+        <div className="text-white justify-center mt-2 text-sm flex items-center">
+          Made with <Coffee className="h-4 w-4 mx-1" strokeWidth="3" /> by Loop <span className="text-xs">#1155</span>
+        </div>
       </div>
 
       <div className="px-3 pt-4 hidden lg:block">

@@ -13,14 +13,12 @@
     "@heroicons/react": "^1.0.5",
     "@mui/material": "^5.4.0",
     "classnames": "^2.3.1",
-    "cors": "^2.8.5",
     "next": "latest",
-    "next-connect": "^0.11.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.12",
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.0",
