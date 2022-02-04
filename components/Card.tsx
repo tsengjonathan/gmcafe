@@ -27,27 +27,27 @@ const Card = ({ name, imageUrl: inputUrl, traits, token, isSpecial }: Asset) => 
       <div className="break-inside-avoid">
         {background.map((trait, idx) => {
           const key = `${token}-${trait}-${idx}`
-          return <Chip key={key} name={trait} type={TRAIT.BACKGROUND} variant="sm" />
+          return <Chip key={key} name={trait} type={TRAIT.BACKGROUND} />
         })}
         {clothing.map((trait, idx) => {
           const key = `${token}-${trait}-${idx}`
-          return <Chip key={key} name={trait} type={TRAIT.CLOTHING} variant="sm" />
+          return <Chip key={key} name={trait} type={TRAIT.CLOTHING} />
         })}
         {colour.map((trait, idx) => {
           const key = `${token}-${trait}-${idx}`
-          return <Chip key={key} name={trait} type={TRAIT.COLOUR} variant="sm" />
+          return <Chip key={key} name={trait} type={TRAIT.COLOUR} />
         })}
         {mood.map((trait, idx) => {
           const key = `${token}-${trait}-${idx}`
-          return <Chip key={key} name={trait} type={TRAIT.MOOD} variant="sm" />
+          return <Chip key={key} name={trait} type={TRAIT.MOOD} />
         })}
         {feature.map((trait, idx) => {
           const key = `${token}-${trait}-${idx}`
-          return <Chip key={key} name={trait} type={TRAIT.FEATURE} variant="sm" />
+          return <Chip key={key} name={trait} type={TRAIT.FEATURE} />
         })}
         {object.map((trait, idx) => {
           const key = `${token}-${trait}-${idx}`
-          return <Chip key={key} name={trait} type={TRAIT.OBJECT} variant="sm" />
+          return <Chip key={key} name={trait} type={TRAIT.OBJECT} />
         })}
       </div>
     </div>
