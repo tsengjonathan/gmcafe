@@ -13,11 +13,11 @@ const Card = ({ name, imageUrl: inputUrl, traits, token, isSpecial }: Asset) => 
 
   return (
     <div className={classNames(
-      'flex flex-col items-center overflow-hidden rounded pb-6',
+      'flex flex-col items-center overflow-hidden rounded lg:pb-6',
       { 'bg-gray-100 drop-shadow transition-transform hover:scale-105 duration-200': isSpecial }
     )}>
       <div className={classNames(
-        'relative w-48 h-48 rounded-full overflow-hidden m-3 mt-5',
+        'relative w-40 h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden m-3 mt-5',
         { 'drop-shadow': isSpecial },
         { 'transition-transform hover:scale-110 duration-200': !isSpecial }
       )}>

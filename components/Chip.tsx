@@ -6,7 +6,6 @@ import { capitalize } from './util'
 export type ChipProps = {
   name: string
   type: TRAIT
-  variant: 'sm' | 'lg'
 }
 
 const traitToColor = {
@@ -18,14 +17,12 @@ const traitToColor = {
   [TRAIT.OBJECT]: 'bg-yellow-light'
 }
 
-const Chip = ({ name, type, variant }: ChipProps) => {
+const Chip = ({ name, type }: ChipProps) => {
   const bg = traitToColor[type]
 
   const classes = classNames(
     bg,
-    'rounded-full align-middle text-center inline-block cursor-default',
-    { 'text-xs mx-1 px-2 py-0.5': variant === 'sm' },
-    { 'text-lg mx-2 px-4 py-1': variant === 'lg' }
+    'rounded-full align-middle text-center inline-block cursor-default whitespace-nowrap text-xs mx-1 px-2 py-0.5',
   )
 
   return (
