@@ -18,6 +18,9 @@ module.exports = {
         'purple': '#8946ab',
         'orange-light': '#fef0e5',
         'yellow-light': '#fffeca',
+      },
+      spacing: {
+        38: '9.5rem'
       }
     },
     fontFamily: {
