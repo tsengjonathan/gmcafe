@@ -13,6 +13,15 @@ const Home = () => {
       <Head>
         <title>Good Morning Café</title>
         <link rel="icon" href="/favicon.ico" />
+
+        <meta name="description" content="Browse and explore GMCafé Moos" />
+        <meta property="og:title" content="Good Morning Café" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/banner.png" />
+        <meta property="og:description" content="Browse and explore GMCafé Moos" />
+        <meta name="theme-color" content="#ffc7e5" />
+
+        <meta name="twitter:card" content="summary_large_image"></meta>
       </Head>
 
       <Sidebar />
