@@ -13,7 +13,7 @@ const FilterList = ({ count }: FilterListProps) => {
   const total = highlands.length
 
   return (
-    <div className="h-20 w-full bg-pink-light">
+    <div className="h-20 w-full bg-pink-light bg-opacity-50">
       <div className="w-full h-full pl-4 lg:px-8 flex items-center">
         <div className="font-mono text-3xl w-20 lg:w-28 text-left font-semibold">
           <span className="text-purple font-normal">{count}</span>
