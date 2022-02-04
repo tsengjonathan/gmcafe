@@ -19,7 +19,7 @@ const Card = ({ name, imageUrl: inputUrl, traits, token, isSpecial }: Asset) => 
       <div className={classNames(
         'relative w-38 h-38 lg:w-48 lg:h-48 rounded-full overflow-hidden m-3 mt-5',
         { 'drop-shadow': isSpecial },
-        { 'transition-transform hover:scale-110 duration-200': !isSpecial }
+        { 'scale-110 lg:scale-100 transition-transform lg:hover:scale-110 duration-200': !isSpecial }
       )}>
         <Image src={imageUrl} alt={name} layout="fill" objectFit="cover" onError={() => setImageUrl('/fallback.png')}/>
       </div>
