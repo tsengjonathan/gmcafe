@@ -3199,7 +3199,7 @@ const highlands: Asset[] = [{
     mood: ['Chill'],
     object: ['Zweihander']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570269088046120961',
+  token: '81086769033880357206596084476994515861067324006954129146728570513179627487233',
   isSpecial: true
 }, {
   name: 'Highland #239',
@@ -3586,12 +3586,12 @@ const highlands: Asset[] = [{
   description: 'Highland Cattle.',
   imageUrl: 'https://lh3.googleusercontent.com/kPnkK9nzS5whDcxk7_4CjqvPyAorPWwRCmYzcgFT-5dNB6eoYwUOJCBaM1YUHO2zL0c9bEZ0j4ZzYHoyEvYDJ0uihxoMlbeI2ocr7Q',
   traits: {
-    background: ['Light Pink'],
-    clothing: [],
-    colour: ['Brown'],
-    feature: ['Blush'],
-    mood: ['Hodl'],
-    object: ['Diamond Coffee Mug']
+    background: ['M00nlit Sky'],
+    clothing: ['Sailor Moo Cosplay'],
+    colour: ['Light Brown'],
+    feature: [],
+    mood: ['M00n Vibes'],
+    object: ['M00n Cepter']
   },
   token: '81086769033880357206596084476994515861067324006954129146728570546164976320513',
   isSpecial: true
@@ -3600,14 +3600,14 @@ const highlands: Asset[] = [{
   description: 'Highland Cattle.',
   imageUrl: 'https://lh3.googleusercontent.com/cSm6GdnpCj1K5Ro5a0SHKnlzgl-nwpdkxOpV_G-10mmmw5zrJ5URwNdk21NTmAUMxsM8cgIbPOWVgno9gGMj_Ji-LgVrWkU0-DiGLA',
   traits: {
-    background: ['M00nlit Sky'],
-    clothing: ['Sailor Moo Cosplay'],
-    colour: ['Light Brown'],
-    feature: [],
-    mood: ['M00n Vibes'],
-    object: ['M00n Cepter']
+    background: ['Light Pink'],
+    clothing: [],
+    colour: ['Brown'],
+    feature: ['Blush'],
+    mood: ['Hodl'],
+    object: ['Diamond Coffee Mug']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570546164976320513'
+  token: '81086769033880357206596084476994515861067324006954129146728570547264487948289'
 }, {
   name: 'Highland #269',
   description: 'Highland Cattle.',

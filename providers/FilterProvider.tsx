@@ -1,5 +1,6 @@
-import { createContext, ReactNode, useState } from "react"
-import { TRAIT } from "../types/asset"
+import { createContext, ReactNode, useState } from 'react'
+import { highlands } from '../constants'
+import { Asset, TRAIT } from '../types/asset'
 
 export type FilterContextProps = {
   traits: {
@@ -12,6 +13,7 @@ export type FilterContextProps = {
   }
   addFilter: (type: TRAIT, value: string) => void
   removeFilter: (type: TRAIT, value: string) => void
+  items: Asset[]
 }
 
 const defaultFilterProvider: FilterContextProps = {
@@ -24,13 +26,19 @@ const defaultFilterProvider: FilterContextProps = {
     object: [],
   },
   addFilter: (_type: TRAIT, _value: string) => null,
-  removeFilter: (_type: TRAIT, _value: string) => null
+  removeFilter: (_type: TRAIT, _value: string) => null,
+  items: []
 }
 
 export const FilterContext = createContext(defaultFilterProvider)
 
 type FilterProviderProps = {
   children: ReactNode
+}
+
+const shouldInclude = (traits: string[], filter: string[]): boolean => {
+  if (filter.length === 0) { return true }
+  return traits.some(trait => filter.includes(trait.toLowerCase()))
 }
 
 export const FilterProvider = ({ children }: FilterProviderProps) => {
@@ -40,6 +48,17 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ feature, setFeature ] = useState<string[]>([])
   const [ mood, setMood ] = useState<string[]>([])
   const [ object, setObject ] = useState<string[]>([])
+  
+  const items = [ ...highlands ].filter(({ traits }) => {
+    if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0) { return true }
+
+    return shouldInclude(traits['background'], background)
+      && shouldInclude(traits['clothing'], clothing)
+      && shouldInclude(traits['colour'], colour)
+      && shouldInclude(traits['feature'], feature)
+      && shouldInclude(traits['mood'], mood)
+      && shouldInclude(traits['object'], object)
+  })
   
   const addFilter = (type: TRAIT, value: string) => {
     switch (type) {
@@ -116,7 +135,8 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
         object,
       },
       addFilter,
-      removeFilter
+      removeFilter,
+      items
     }}>
       { children }
     </FilterContext.Provider>

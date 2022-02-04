@@ -3,7 +3,7 @@ import Image from 'next/image'
 import useCollection from '../hooks/useCollection'
 import Disclosure from './Disclosure'
 import { TRAIT } from '../types/asset'
-import { HeartIcon, MenuIcon, XIcon } from '@heroicons/react/solid'
+import { MenuIcon, XIcon } from '@heroicons/react/solid'
 import { Drawer } from '@mui/material'
 import { Coffee } from 'react-feather'
 
@@ -39,7 +39,7 @@ const Sidebar = () => {
             { filterControls }
           </div>
           <div className="justify-center text-sm mb-2 flex items-center">
-            Made with <Coffee className="h-4 w-4 mx-1" strokeWidth="3" /> by Loop<span className="text-xs text-gray-500">#1155</span>
+            Made with <Coffee className="h-4 w-4 mx-1" strokeWidth="3" /> by Loop<span className="text-xs text-gray-500 ml-0.5">#1155</span>
           </div>
         </div>
       </Drawer>
@@ -47,7 +47,7 @@ const Sidebar = () => {
       <div className="mx-auto hidden lg:flex lg:flex-col">
         <Image src="/logo.webp" alt="logo" width={173} height={112} />
         <div className="text-white justify-center mt-2 text-sm flex items-center">
-          Made with <Coffee className="h-4 w-4 mx-1" strokeWidth="3" /> by Loop <span className="text-xs">#1155</span>
+          Made with <Coffee className="h-4 w-4 mx-1" strokeWidth="3" /> by Loop <span className="text-xs ml-0.5">#1155</span>
         </div>
       </div>
 
