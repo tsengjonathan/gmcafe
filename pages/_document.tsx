@@ -6,7 +6,7 @@ const Document = () => {
     <Html>
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Inconsolata&display=swap"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Inconsolata:wght@400;600&display=swap"
           rel="stylesheet"
         />
         <script defer data-domain="gmcafe.vercel.app" src="/js/script.js"></script>

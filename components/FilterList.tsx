@@ -15,12 +15,12 @@ const FilterList = ({ count }: FilterListProps) => {
   return (
     <div className="h-20 w-full bg-pink-light">
       <div className="w-full h-full pl-4 lg:px-8 flex items-center">
-        <div className="font-mono text-2xl lg:text-3xl w-20 lg:w-28 text-left">
-          <span className="text-purple">{count}</span>
+        <div className="font-mono text-3xl w-20 lg:w-28 text-left font-semibold">
+          <span className="text-purple font-normal">{count}</span>
           /
           <span>{total}</span>
         </div>
-        <div className="flex flex-nowrap overflow-x-auto ml-2">
+        <div className="flex flex-nowrap overflow-x-auto ml-4 lg:ml-2">
           {background.map((trait, idx) => <FilterChip key={`filter-chip-background-${idx}`} name={trait} type={TRAIT.BACKGROUND} />)}
           {clothing.map((trait, idx) => <FilterChip key={`filter-chip-clothing-${idx}`} name={trait} type={TRAIT.CLOTHING} />)}
           {colour.map((trait, idx) => <FilterChip key={`filter-chip-colour-${idx}`} name={trait} type={TRAIT.COLOUR} />)}
