@@ -13,7 +13,9 @@ export type FilterContextProps = {
   }
   addFilter: (type: TRAIT, value: string) => void
   removeFilter: (type: TRAIT, value: string) => void
-  items: Asset[]
+  items: Asset[],
+  filterSpecial: boolean
+  setFilterSpecial: (filterSpecial: boolean) => void
 }
 
 const defaultFilterProvider: FilterContextProps = {
@@ -27,7 +29,9 @@ const defaultFilterProvider: FilterContextProps = {
   },
   addFilter: (_type: TRAIT, _value: string) => null,
   removeFilter: (_type: TRAIT, _value: string) => null,
-  items: []
+  items: [],
+  filterSpecial: false,
+  setFilterSpecial: (_filterSpecial: boolean) => null
 }
 
 export const FilterContext = createContext(defaultFilterProvider)
@@ -48,11 +52,14 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ feature, setFeature ] = useState<string[]>([])
   const [ mood, setMood ] = useState<string[]>([])
   const [ object, setObject ] = useState<string[]>([])
+  const [ filterSpecial, setFilterSpecial ] = useState(false)
   
-  const items = [ ...highlands ].filter(({ traits }) => {
-    if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0) { return true }
+  const items = [ ...highlands ].filter(({ traits, isSpecial }) => {
+    if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0 && !filterSpecial) { return true }
+    const shouldFilterSpecial = filterSpecial ? isSpecial : true
 
-    return shouldInclude(traits['background'], background)
+    return shouldFilterSpecial
+      && shouldInclude(traits['background'], background)
       && shouldInclude(traits['clothing'], clothing)
       && shouldInclude(traits['colour'], colour)
       && shouldInclude(traits['feature'], feature)
@@ -136,7 +143,9 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       },
       addFilter,
       removeFilter,
-      items
+      items,
+      filterSpecial,
+      setFilterSpecial
     }}>
       { children }
     </FilterContext.Provider>
