@@ -3764,7 +3764,21 @@ const highlands: Asset[] = [{
     mood: ['Loving Leek'],
     object: ['Leek']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570584647883292673'
+  token: '81086769033880357206596084476994515861067324006954129146728570584647883292673',
+  isSpecial: true
+}, {
+  name: 'Highland #278',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/97N0S1FNAcQWpeFW_oXYuhN35YfscYCIWppspNyi-QCZZ7BAhS5_EH23pk9B4wGnP7j5QMq40mDxp3m4icVE9iSuP-tlzIwmGRDa',
+  traits: {
+    background: ['Yellow'],
+    feature: ['Blush'],
+    mood: ['Carbs'],
+    colour: ['Pink with spots'],
+    object: ['Croissant', 'Coffee Mug'],
+    clothing: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570559359115853825'
 }]
 
 export default highlands
