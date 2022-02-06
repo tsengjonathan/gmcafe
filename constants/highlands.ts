@@ -3779,6 +3779,19 @@ const highlands: Asset[] = [{
     clothing: []
   },
   token: '81086769033880357206596084476994515861067324006954129146728570559359115853825'
+}, {
+  name: 'Highland #311 - Moononoke',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/C1X79hsJF1v-HJef0JMxBZwqsCODawnjRgacpPLyIb7ZXPw5lptRt4kaxPfw6nsuwniptSmlCd5a004bjYpmj8FjpaI6M4GMkMaSxw',
+  traits: {
+    colour: ['Light Brown'],
+    mood: ['Fight'],
+    clothing: ['Custom Mask and Fur', 'Custom Jewellery'],
+    feature: [],
+    object: ['Custom ETH Spear'],
+    background: ['Warm Filtered Light']
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570585747394920449'
 }]
 
 export default highlands
