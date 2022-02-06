@@ -3791,7 +3791,8 @@ const highlands: Asset[] = [{
     object: ['Custom ETH Spear'],
     background: ['Warm Filtered Light']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570585747394920449'
+  token: '81086769033880357206596084476994515861067324006954129146728570585747394920449',
+  isSpecial: true
 }]
 
 export default highlands
