@@ -3793,6 +3793,46 @@ const highlands: Asset[] = [{
   },
   token: '81086769033880357206596084476994515861067324006954129146728570585747394920449',
   isSpecial: true
+}, {
+  name: 'Highland #279',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/l5jtOJOKsddO_8AZFxDDYrpbSq4kd06wtRuOW6AIUhMRp57Sk5z4N0lGoTMumCcmefPskF7EWuoWG3ogtmlQ2BH3WOgQSfz17MR1uQ',
+  traits: {
+    background: ['Light Purple'],
+    feature: ['Sparkles'],
+    colour: ['Light Brown'],
+    clothing: ['Hairband', 'Fairy Wings'],
+    object: ['GM Wand'],
+    mood: ['Moogical']
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570560458627481601'
+}, {
+  name: 'Highland #280',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/YpTxbSQQ-awfs_uGRhoI5M6fKThRzavxiy6lPxeFnTa_vluNbsppEXCLLW5MXHrXjPsCJekHqD-HCNklk6GetjiQzRQowtXbofnkWg',
+  traits: {
+    background: ['Light Yellow'],
+    feature: [],
+    colour: ['Light Pink with Spots'],
+    clothing: ['Janitor Hat'],
+    object: ['Floor Sweeper'],
+    mood: ["Sweepin'"]
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570561558139109377'
+}, {
+  name: 'Highland #312 - GeeMoo',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/kGipwS9kSpjRrfLdNVSTlJQMcdtawUih4MclFHOIqBFCoME9wOPCHT0DNEPmPv8Sw1FukysnMYqat33RtbLPOrZ9996Is98vq729ng',
+  traits: {
+    background: ['Rainbow Sparkle Sky'],
+    feature: [],
+    colour: ['White'],
+    clothing: ['Punk Hoodie', 'Punk Hat', 'Punk Glasses'],
+    object: [],
+    mood: ['Punk']
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570586846906548225',
+  isSpecial: true
 }]
 
 export default highlands
