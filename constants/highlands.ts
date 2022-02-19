@@ -3833,6 +3833,59 @@ const highlands: Asset[] = [{
   },
   token: '81086769033880357206596084476994515861067324006954129146728570586846906548225',
   isSpecial: true
+}, {
+  name: 'Highland #281',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/pcbOfuAjAtxrSYK6UhF_k1RU-Ow_FTVm3WarU8sGHtzZ1U7Oi2iQC12OdZfG2F6Wnl_68_QEWkRrv1F1mrRgR9HPt4DmpKDhiPd3UwU',
+  traits: {
+    colour: ['Light Brown'],
+    background: ['Light Orange'],
+    mood: ['Dripping'],
+    clothing: ['GMCafé Moo Outline Tee', 'GMCafé Horn Beanie'],
+    object: [],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570562657650737153'
+}, {
+  name: 'Highland #282',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/-mpe1YRZJMJJyU3av9d6nHmATsV_crgL80zhwLCkUznqtNg2kPGUMALjg4T7VKLLjOLGOILIFOcPJWGjN8zhQFIhbmcLCubiogL6sg',
+  traits: {
+    background: ['Light Pink'],
+    clothing: ['Crown', 'Horn Bows', 'Royal Cloak'],
+    mood: ['Royal'],
+    colour: ['Light Purple'],
+    object: [],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570563757162364929'
+}, {
+  name: "Highland #314 - Majora's Moo",
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/-oDC_YHajDRRmhe9NRyj956fwnSFydoKAg3nz5J3IMOtCP11dCjNjFp-HWAiMVyQKVKVTp6bXvUCtDaS_Og8LdXMAFaUaOV7GQqbS_k',
+  traits: {
+    colour: ['Light Brown'],
+    mood: ['Fierce'],
+    background: ['Fierce Clouds and Sparkles'],
+    object: ['Fierce Diety Sword'],
+    clothing: ['Fierce Diety Armour'],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570589045929803777',
+  isSpecial: true
+}, {
+  name: 'Highland #283',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/sj3lPi0ZCkmSAMWTOZitkgltMET-v8qJ-uLoaDLfPub9ITYL3FTUtQfnzJPRV-SqUnhjKD8_oYYpNb9_xFVAq3UoinxNgCpuiM9w6Q',
+  traits: {
+    colour: ['Light Brown'],
+    background: ['Light Pink'],
+    mood: ['Carbs'],
+    object: ['Ear Pods', 'Noodles'],
+    feature: [],
+    clothing: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570564856673992705'
 }]
 
 export default highlands
