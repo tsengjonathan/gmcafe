@@ -3886,6 +3886,46 @@ const highlands: Asset[] = [{
     clothing: []
   },
   token: '81086769033880357206596084476994515861067324006954129146728570564856673992705'
+}, {
+  name: 'Highland #284',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/AipWY6TfwOCmmH9W1SU1hWOIQyltTsiIXReb3mfKka7FKCaONat90N2nhdI-N3HtostnndNh8AgboejTQ_Ugpy_A0yvMd1cgjJzZ',
+  traits: {
+    background: ['Pink'],
+    colour: ['Light Yellow'],
+    object: ['Moonchies'],
+    mood: ['Degen'],
+    clothing: ['Paper Hat'],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570565956185620481'
+}, {
+  name: 'Highland #285',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/GDkx_Fuu_57FwuBYPVw2x6HBLxkOeKLMOOuc9Qip_aCAFSgxpZqdaXirF1bQUEqUvcH_kxSRrpEXtkxtI0PlLfTyYykmrtStJbVO',
+  traits: {
+    background: ['Light Pink'],
+    mood: ["Cookin'"],
+    colour: ['Pink'],
+    clothing: ['Chef Hat', 'Chef Jacket'],
+    feature: ['Sparkles'],
+    object: ['Cleaver']
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570567055697248257'
+}, {
+  name: 'Highland #332 - Mootoro',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/dqRQrCbCQTQBjq-DfITHVDC_otVKr7H3KfTT2yQ6LQGlhHj9BDZocnWn7H0sIAKgTcfFp9A8Zm8pN_JY_MEQmwBqKmxPD3oY1kpwZNw',
+  traits: {
+    colour: ['Mootoro Purple'],
+    background: ['Shooting Stars'],
+    object: ['Mysterious Creature'],
+    mood: ['Daughterly'],
+    feature: [],
+    clothing: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570608837139103745',
+  isSpecial: true
 }]
 
 export default highlands
