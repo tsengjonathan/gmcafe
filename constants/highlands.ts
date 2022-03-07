@@ -3913,6 +3913,20 @@ const highlands: Asset[] = [{
   },
   token: '81086769033880357206596084476994515861067324006954129146728570567055697248257'
 }, {
+  name: 'Highland #315 - Saitamoo',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/2OUQ-p4N6Rk1A7jEvgKOpTA_fMtQ7GnkaGtDrKT1fylPK5R8t8rneWkSnLLMzGSSn_SqM3BdvPsQ1jFHzlNt6I5zY5-B6N_L2Mq41A',
+  traits: {
+    colour: ['Bald Brown'],
+    background: ['Powerful Rainbow Pulses'],
+    clothing: ['Saitamoo Outfit'],
+    feature: ['Hero'],
+    mood: ['Ok'],
+    object: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570590145441431553',
+  isSpecial: true,
+}, {
   name: 'Highland #332 - Mootoro',
   description: 'Highland Cattle.',
   imageUrl: 'https://lh3.googleusercontent.com/dqRQrCbCQTQBjq-DfITHVDC_otVKr7H3KfTT2yQ6LQGlhHj9BDZocnWn7H0sIAKgTcfFp9A8Zm8pN_JY_MEQmwBqKmxPD3oY1kpwZNw',
@@ -3926,6 +3940,45 @@ const highlands: Asset[] = [{
   },
   token: '81086769033880357206596084476994515861067324006954129146728570608837139103745',
   isSpecial: true
+}, {
+  name: 'Highland #286',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/LsN8dlqiKT8sG6stOWVLMLgSoXGu2jfRor5JAcH6h8XSpGc-K4t4MW5xyG9O8WVEgHYUuUC6uLE5TRuhZd1oA8CHL4qnsB4aoytV1g',
+  traits: {
+    background: ['Light Pink'],
+    colour: ['Rainbow Sparkle'],
+    clothing: ['Head Tie', 'Vest'],
+    mood: ['Retro'],
+    object: ['Yamooha Keytar'],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570568155208876033'
+}, {
+  name: 'Highland #287',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/N6MVPSPlFWU9Dsifguapp7y5lxlxMU0xIew6q2P2_IINDuJWDU3jxkJ817EIlWCn5pvNZkhxVjIrc15sFEU1d3A_92lhSpTSaaB9',
+  traits: {
+    clothing: ['Crown'],
+    feature: ['Blush'],
+    colour: ['Light Purple'],
+    background: ['Light Purple'],
+    mood: ['Slurrrp'],
+    object: ['Almond Milkshake']
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570569254720503809'
+}, {
+  name: 'Highland #289',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/I8BahVPIdJLhdO4YAt6CATEx3924xCDD75gXHJV86knHRXcXVUfJ49g9EYjjlsMJZYQlC9in07InRcQcFtwfnM1qp2TrTJLCsMQg_JA',
+  traits: {
+    background: ['Light Pink'],
+    colour: ['Light Pink'],
+    clothing: ['Horn Bows', 'Maid Outfit'],
+    mood: ['Helpful'],
+    object: ['Sparkle Duster'],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570571453743759361'
 }]
 
 export default highlands
