@@ -9,6 +9,7 @@ import { Coffee } from 'react-feather'
 import { Switch } from '@headlessui/react'
 import { FilterContext } from '../providers/FilterProvider'
 import classNames from 'classnames'
+import { Shuffle } from 'react-feather'
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,7 +24,7 @@ const Sidebar = () => {
   } = useCollection()
 
   const {
-    filterSpecial, setFilterSpecial
+    filterSpecial, setFilterSpecial, shuffle
   } = useContext(FilterContext)
 
   const filterControls = (
@@ -91,7 +92,10 @@ const Sidebar = () => {
 
       <div className="px-3 pt-4 hidden lg:block">
         <div className="p-2 mx-auto bg-white rounded sticky top-12">
-          <h1 className="w-full px-4 py-2 text-lg font-medium">Filter</h1>
+          <div className="w-full px-4 py-2 flex items-center">
+            <h1 className="text-lg font-medium flex-grow">Filter</h1>
+            <Shuffle className="h-5 w-5 text-gray-700 cursor-pointer" strokeWidth="2" onClick={() => shuffle()} />
+          </div>
           { filterControls }
         </div>
       </div>

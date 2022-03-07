@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from 'react'
+import { createContext, ReactNode, useEffect, useState } from 'react'
 import { highlands } from '../constants'
 import { Asset, TRAIT } from '../types/asset'
 
@@ -16,6 +16,7 @@ export type FilterContextProps = {
   items: Asset[],
   filterSpecial: boolean
   setFilterSpecial: (filterSpecial: boolean) => void
+  shuffle: () => void
 }
 
 const defaultFilterProvider: FilterContextProps = {
@@ -31,7 +32,8 @@ const defaultFilterProvider: FilterContextProps = {
   removeFilter: (_type: TRAIT, _value: string) => null,
   items: [],
   filterSpecial: false,
-  setFilterSpecial: (_filterSpecial: boolean) => null
+  setFilterSpecial: (_filterSpecial: boolean) => null,
+  shuffle: () => null
 }
 
 export const FilterContext = createContext(defaultFilterProvider)
@@ -46,6 +48,7 @@ const shouldInclude = (traits: string[], filter: string[]): boolean => {
 }
 
 export const FilterProvider = ({ children }: FilterProviderProps) => {
+  const [ items, setItems ] = useState<Asset[]>([ ...highlands ])
   const [ background, setBackground ] = useState<string[]>([])
   const [ clothing, setClothing ] = useState<string[]>([])
   const [ colour, setColour ] = useState<string[]>([])
@@ -54,18 +57,21 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ object, setObject ] = useState<string[]>([])
   const [ filterSpecial, setFilterSpecial ] = useState(false)
   
-  const items = [ ...highlands ].filter(({ traits, isSpecial }) => {
-    if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0 && !filterSpecial) { return true }
-    const shouldFilterSpecial = filterSpecial ? isSpecial : true
-
-    return shouldFilterSpecial
-      && shouldInclude(traits['background'], background)
-      && shouldInclude(traits['clothing'], clothing)
-      && shouldInclude(traits['colour'], colour)
-      && shouldInclude(traits['feature'], feature)
-      && shouldInclude(traits['mood'], mood)
-      && shouldInclude(traits['object'], object)
-  })
+  useEffect(() => {
+    setItems(items.filter(({ traits, isSpecial }) => {
+      if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0 && !filterSpecial) { return true }
+      const shouldFilterSpecial = filterSpecial ? isSpecial : true
+  
+      return shouldFilterSpecial
+        && shouldInclude(traits['background'], background)
+        && shouldInclude(traits['clothing'], clothing)
+        && shouldInclude(traits['colour'], colour)
+        && shouldInclude(traits['feature'], feature)
+        && shouldInclude(traits['mood'], mood)
+        && shouldInclude(traits['object'], object)
+    }))
+  }, [ items, background, clothing, colour, feature, mood, object, filterSpecial ])
+  
   
   const addFilter = (type: TRAIT, value: string) => {
     switch (type) {
@@ -131,6 +137,8 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
     }
   }
 
+  const shuffle = () => setItems(items.sort(() => Math.random() - 0.5))
+
   return (
     <FilterContext.Provider value={{
       traits: {
@@ -145,7 +153,8 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       removeFilter,
       items,
       filterSpecial,
-      setFilterSpecial
+      setFilterSpecial,
+      shuffle
     }}>
       { children }
     </FilterContext.Provider>
