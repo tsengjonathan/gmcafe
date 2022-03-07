@@ -48,7 +48,7 @@ const shouldInclude = (traits: string[], filter: string[]): boolean => {
 }
 
 export const FilterProvider = ({ children }: FilterProviderProps) => {
-  const [ items, setItems ] = useState<Asset[]>([ ...highlands ])
+  const [ items, setItems ] = useState<Asset[]>(highlands)
   const [ background, setBackground ] = useState<string[]>([])
   const [ clothing, setClothing ] = useState<string[]>([])
   const [ colour, setColour ] = useState<string[]>([])
@@ -58,7 +58,7 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ filterSpecial, setFilterSpecial ] = useState(false)
   
   useEffect(() => {
-    setItems(items.filter(({ traits, isSpecial }) => {
+    setItems(highlands.filter(({ traits, isSpecial }) => {
       if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0 && !filterSpecial) { return true }
       const shouldFilterSpecial = filterSpecial ? isSpecial : true
   
@@ -70,7 +70,7 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
         && shouldInclude(traits['mood'], mood)
         && shouldInclude(traits['object'], object)
     }))
-  }, [ items, background, clothing, colour, feature, mood, object, filterSpecial ])
+  }, [ background, clothing, colour, feature, mood, object, filterSpecial ])
   
   
   const addFilter = (type: TRAIT, value: string) => {
@@ -106,27 +106,33 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
     switch (type) {
       case TRAIT.BACKGROUND:
         if (!background.includes(value)) { return }
-        setBackground(background.splice(background.indexOf(value), 1))
+        background.splice(background.indexOf(value), 1)
+        setBackground([...background])
         return
       case TRAIT.CLOTHING:
         if (!clothing.includes(value)) { return }
-        setClothing(clothing.splice(clothing.indexOf(value), 1))
+        clothing.splice(clothing.indexOf(value), 1)
+        setClothing([...clothing])
         return
       case TRAIT.COLOUR:
         if (!colour.includes(value)) { return }
-        setColour(colour.splice(colour.indexOf(value), 1))
+        colour.splice(colour.indexOf(value), 1)
+        setColour([...colour])
         return
       case TRAIT.FEATURE:
         if (!feature.includes(value)) { return }
-        setFeature(feature.splice(feature.indexOf(value), 1))
+        feature.splice(feature.indexOf(value), 1)
+        setFeature([...feature])
         return
       case TRAIT.MOOD:
         if (!mood.includes(value)) { return }
-        setMood(mood.splice(mood.indexOf(value), 1))
+        mood.splice(mood.indexOf(value), 1)
+        setMood([...mood])
         return
       case TRAIT.OBJECT:
         if (!object.includes(value)) { return }
-        setObject(object.splice(object.indexOf(value), 1))
+        object.splice(object.indexOf(value), 1)
+        setObject([...object])
         return
     }
   }

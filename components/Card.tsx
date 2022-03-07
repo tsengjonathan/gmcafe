@@ -27,7 +27,7 @@ const Card = ({ name, imageUrl: inputUrl, traits, token, isSpecial }: Asset) => 
           { 'drop-shadow': isSpecial },
           { 'scale-110 lg:scale-100 transition-transform lg:hover:scale-110 duration-200': !isSpecial }
         )}>
-          <Image src={imageUrl} alt={name} layout="fill" objectFit="cover" onError={() => setImageUrl('/fallback.png')}/>
+          {/* <Image src={imageUrl} alt={name} layout="fill" objectFit="cover" onError={() => setImageUrl('/fallback.png')}/> */}
         </div>
         <Link href={externalLink} passHref>
           <a target="_blank">
