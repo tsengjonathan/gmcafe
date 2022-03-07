@@ -137,7 +137,7 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
     }
   }
 
-  const shuffle = () => setItems(items.sort(() => Math.random() - 0.5))
+  const shuffle = () => setItems([...items.sort(() => Math.random() - 0.5)])
 
   return (
     <FilterContext.Provider value={{
