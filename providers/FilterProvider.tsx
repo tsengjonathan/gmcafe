@@ -106,33 +106,27 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
     switch (type) {
       case TRAIT.BACKGROUND:
         if (!background.includes(value)) { return }
-        background.splice(background.indexOf(value), 1)
-        setBackground([...background])
+        setBackground(background.splice(background.indexOf(value), 1))
         return
       case TRAIT.CLOTHING:
         if (!clothing.includes(value)) { return }
-        clothing.splice(clothing.indexOf(value), 1)
-        setClothing([...clothing])
+        setClothing(clothing.splice(clothing.indexOf(value), 1))
         return
       case TRAIT.COLOUR:
         if (!colour.includes(value)) { return }
-        colour.splice(colour.indexOf(value), 1)
-        setColour([...colour])
+        setColour(colour.splice(colour.indexOf(value), 1))
         return
       case TRAIT.FEATURE:
         if (!feature.includes(value)) { return }
-        feature.splice(feature.indexOf(value), 1)
-        setFeature([...feature])
+        setFeature(feature.splice(feature.indexOf(value), 1))
         return
       case TRAIT.MOOD:
         if (!mood.includes(value)) { return }
-        mood.splice(mood.indexOf(value), 1)
-        setMood([...mood])
+        setMood(mood.splice(mood.indexOf(value), 1))
         return
       case TRAIT.OBJECT:
         if (!object.includes(value)) { return }
-        object.splice(object.indexOf(value), 1)
-        setObject([...object])
+        setObject(object.splice(object.indexOf(value), 1))
         return
     }
   }
