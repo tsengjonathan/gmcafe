@@ -1,15 +1,19 @@
 import React, { useContext, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import useCollection from '../hooks/useCollection'
 import Disclosure from './Disclosure'
 import { TRAIT } from '../types/asset'
-import { MenuIcon, XIcon } from '@heroicons/react/solid'
-import { Drawer } from '@mui/material'
+import { MenuIcon } from '@heroicons/react/solid'
+
 import { Coffee } from 'react-feather'
 import { Switch } from '@headlessui/react'
 import { FilterContext } from '../providers/FilterProvider'
 import classNames from 'classnames'
 import { Shuffle } from 'react-feather'
+import Drawer from './Drawer'
+import { DiscordIcon, OpenSeaIcon, TwitterIcon } from './Icons'
+
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -68,27 +72,25 @@ const Sidebar = () => {
         <MenuIcon className="w-10 h-10 cursor-pointer" color="white" onClick={() => setIsOpen(!isOpen)} />
       </div>
 
-      <Drawer open={isOpen} onClose={() => setIsOpen(false)} anchor="right">
-        <div className="w-64 flex flex-col h-full justify-between">
-          <div className="flex items-center border-b border-gray-300 pl-4 pr-3 py-2">
-            <h1 className="w-full text-lg font-medium">Filter</h1>
-            <XIcon className="w-8 h-8 cursor-pointer" onClick={() => setIsOpen(false)} />
-          </div>
-          <div className="grow">
-            { filterControls }
-          </div>
-          <div className="justify-center text-sm mb-2 flex items-center">
-            Made with <Coffee className="h-4 w-4 mx-1" strokeWidth="3" /> by Loop<span className="text-xs text-gray-500 ml-0.5">#1155</span>
-          </div>
-        </div>
-      </Drawer>
-
       <div className="mx-auto hidden lg:flex lg:flex-col">
+        <div className="flex mb-4 justify-center">
+          <a href="https://opensea.io/collection/goodmorningcafe" target="blank">
+            <OpenSeaIcon className="h-5 w-5 mx-1" />
+          </a>
+          <a href="https://twitter.com/gmcafeNFT" target="blank">
+            <TwitterIcon className="h-5 w-5 mx-1" />
+          </a>
+          <a href="https://discord.com/gmcafe" target="blank">
+            <DiscordIcon className="h-5 w-5 mx-1" />
+          </a>
+        </div>
         <Image src="/logo.webp" alt="logo" width={173} height={112} />
         <div className="text-white justify-center mt-2 text-sm flex items-center">
           Made with <Coffee className="h-4 w-4 mx-1" strokeWidth="3" /> by Loop <span className="text-xs ml-0.5">#1155</span>
         </div>
       </div>
+
+      <Drawer isOpen={isOpen} close={() => setIsOpen(false)} filterControls={filterControls} />
 
       <div className="px-3 pt-4 hidden lg:block">
         <div className="p-2 mx-auto bg-white rounded sticky top-12">
