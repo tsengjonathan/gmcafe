@@ -6,7 +6,7 @@ import Disclosure from './Disclosure'
 import { TRAIT } from '../types/asset'
 import { MenuIcon } from '@heroicons/react/solid'
 
-import { Coffee } from 'react-feather'
+import { Coffee, RotateCcw } from 'react-feather'
 import { Switch } from '@headlessui/react'
 import { FilterContext } from '../providers/FilterProvider'
 import classNames from 'classnames'
@@ -28,7 +28,7 @@ const Sidebar = () => {
   } = useCollection()
 
   const {
-    filterSpecial, setFilterSpecial, shuffle
+    filterSpecial, setFilterSpecial, shuffle, reverse
   } = useContext(FilterContext)
 
   const filterControls = (
@@ -96,6 +96,7 @@ const Sidebar = () => {
         <div className="p-2 mx-auto bg-white rounded sticky top-12">
           <div className="w-full px-4 py-2 flex items-center">
             <h1 className="text-lg font-medium flex-grow">Filter</h1>
+            <RotateCcw className="h-5 w-5 text-gray-700 cursor-pointer mr-2" strokeWidth="2" onClick={() => reverse()} />
             <Shuffle className="h-5 w-5 text-gray-700 cursor-pointer" strokeWidth="2" onClick={() => shuffle()} />
           </div>
           { filterControls }

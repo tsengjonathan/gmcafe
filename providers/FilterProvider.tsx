@@ -17,6 +17,7 @@ export type FilterContextProps = {
   filterSpecial: boolean
   setFilterSpecial: (filterSpecial: boolean) => void
   shuffle: () => void
+  reverse: () => void
 }
 
 const defaultFilterProvider: FilterContextProps = {
@@ -33,7 +34,8 @@ const defaultFilterProvider: FilterContextProps = {
   items: [],
   filterSpecial: false,
   setFilterSpecial: (_filterSpecial: boolean) => null,
-  shuffle: () => null
+  shuffle: () => null,
+  reverse: () => null,
 }
 
 export const FilterContext = createContext(defaultFilterProvider)
@@ -139,6 +141,8 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
 
   const shuffle = () => setItems([...items.sort(() => Math.random() - 0.5)])
 
+  const reverse = () => setItems([...items.reverse()])
+
   return (
     <FilterContext.Provider value={{
       traits: {
@@ -154,7 +158,8 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       items,
       filterSpecial,
       setFilterSpecial,
-      shuffle
+      shuffle,
+      reverse
     }}>
       { children }
     </FilterContext.Provider>
