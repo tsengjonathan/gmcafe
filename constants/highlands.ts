@@ -3979,6 +3979,33 @@ const highlands: Asset[] = [{
     feature: []
   },
   token: '81086769033880357206596084476994515861067324006954129146728570571453743759361'
+}, {
+  name: 'Highland #291',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/dLPJS3LEGFIWP8_gBr_hKY1LUBN0GhJURTdUOXVFLrzKMAzvydGEnBvoAnIjipwl-6i9l5lRhUdjcr87omBf5WcWvIrd8Q3u41Sd',
+  traits: {
+    feature: ['Freckles'],
+    background: ['Light Yellow'],
+    colour: ['Light Brown with Spots'],
+    mood: ['Stylish'],
+    object: ['Hairdryer', 'Comb'],
+    clothing: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570573652767014913'
+}, {
+  name: 'Highland #316 - Moogeta',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/7yJ_SNxDvaO2HSmJFvdoatMt89RCeSOWgBGmGmKv8DcTiFmHB9zvr0waQDd2GHCRIrt7J06sijIfCe7kfk0ALRkM5e-VfaiEXnDBnA',
+  traits: {
+    colour: ['Light Brown'],
+    mood: ['Powerful Bovine'],
+    background: ['Power Flashes'],
+    clothing: ['Moogeta Suit'],
+    feature: ['Milk Flash!', 'Blue Mooiyan Aura', 'Super Mooiyan'],
+    object: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570591244953059329',
+  isSpecial: true
 }]
 
 export default highlands
