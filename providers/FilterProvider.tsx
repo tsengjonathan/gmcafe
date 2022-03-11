@@ -2,6 +2,10 @@ import { createContext, ReactNode, useEffect, useState } from 'react'
 import { highlands } from '../constants'
 import { Asset, TRAIT } from '../types/asset'
 
+export type Entry = Asset & {
+  isHidden?: boolean
+}
+
 export type FilterContextProps = {
   traits: {
     background: string[]
@@ -13,7 +17,7 @@ export type FilterContextProps = {
   }
   addFilter: (type: TRAIT, value: string) => void
   removeFilter: (type: TRAIT, value: string) => void
-  items: Asset[],
+  items: Entry[],
   filterSpecial: boolean
   setFilterSpecial: (filterSpecial: boolean) => void
   shuffle: () => void
@@ -50,7 +54,7 @@ const shouldInclude = (traits: string[], filter: string[]): boolean => {
 }
 
 export const FilterProvider = ({ children }: FilterProviderProps) => {
-  const [ items, setItems ] = useState<Asset[]>(highlands)
+  const [ items, setItems ] = useState<Entry[]>(highlands)
   const [ background, setBackground ] = useState<string[]>([])
   const [ clothing, setClothing ] = useState<string[]>([])
   const [ colour, setColour ] = useState<string[]>([])
@@ -60,17 +64,24 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ filterSpecial, setFilterSpecial ] = useState(false)
   
   useEffect(() => {
-    setItems(highlands.filter(({ traits, isSpecial }) => {
-      if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0 && !filterSpecial) { return true }
+    setItems(highlands.map(highland => {
+      const { isSpecial, traits } = highland
+
+      if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0 && !filterSpecial) { return highland }
       const shouldFilterSpecial = filterSpecial ? isSpecial : true
   
-      return shouldFilterSpecial
+      const isVisible = shouldFilterSpecial
         && shouldInclude(traits['background'], background)
         && shouldInclude(traits['clothing'], clothing)
         && shouldInclude(traits['colour'], colour)
         && shouldInclude(traits['feature'], feature)
         && shouldInclude(traits['mood'], mood)
         && shouldInclude(traits['object'], object)
+      
+      return {
+        ...highland,
+        isHidden: !isVisible
+      }
     }))
   }, [ background, clothing, colour, feature, mood, object, filterSpecial ])
   
