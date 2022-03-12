@@ -18,6 +18,7 @@ module.exports = {
         'purple': '#8946ab',
         'orange-light': '#fef0e5',
         'yellow-light': '#fffeca',
+        'discord': '#2c2f33',
       },
       spacing: {
         38: '9.5rem'

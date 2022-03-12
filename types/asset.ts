@@ -5,6 +5,7 @@ export type Asset = {
   traits: Traits
   token: string
   isSpecial?: boolean
+  discord?: string
 }
 
 export enum TRAIT {

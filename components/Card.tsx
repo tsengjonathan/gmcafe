@@ -8,12 +8,13 @@ import { contract, marketplaceUrl } from '../constants'
 import Link from 'next/link'
 import { Transition } from '@headlessui/react'
 import { Entry } from '../providers/FilterProvider'
+import NameTag from './NameTag'
 
 const renderChips = (traits: string[], type: TRAIT, token: string): ReactNode[] => (
   traits.map((trait, idx) => <Chip key={`${token}-${trait}-${idx}`} name={trait} type={type} />)
 )
 
-const Card = ({ name, imageUrl, traits, token, isSpecial, isHidden }: Entry) => {
+const Card = ({ name, imageUrl, traits, token, isSpecial, isHidden, discord }: Entry) => {
   const displayName = isSpecial ? name : name.split(' ')[1]
 
   const { background, clothing, colour, mood, feature, object } = traits
@@ -49,7 +50,8 @@ const Card = ({ name, imageUrl, traits, token, isSpecial, isHidden }: Entry) => 
             </a>
           </Link>
         </div>
-        <h3 className="mt-2 text-lg cursor-default px-3">{displayName}</h3>
+        <h3 className="mt-2 mb-1 text-lg cursor-default px-3">{displayName}</h3>
+        { discord ? <NameTag name={discord} /> : null }
         <div className="break-inside-avoid mt-2 px-2">
           {renderChips(background, TRAIT.BACKGROUND, token)}
           {renderChips(clothing, TRAIT.CLOTHING, token)}

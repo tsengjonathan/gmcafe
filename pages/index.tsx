@@ -8,6 +8,8 @@ import { FilterContext } from '../providers/FilterProvider'
 const Home = () => {
   const { items } = useContext(FilterContext)
 
+  const visibleItems = items.filter(item => !item.isHidden)
+
   return (
     <div className="flex flex-col lg:flex-row min-h-screen">
       <Head>
@@ -26,7 +28,7 @@ const Home = () => {
 
       <Sidebar />
       <main className="flex flex-1 flex-col items-center text-center lg:w-3/4">
-        <FilterList count={items.length} />
+        <FilterList count={visibleItems.length} />
         <Cards items={items} />
       </main>
     </div>
