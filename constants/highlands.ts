@@ -1567,7 +1567,8 @@ const highlands: Asset[] = [{
     mood: ['Ready'],
     object: ['Bat With Spikes and Tape']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570372442139131905'
+  token: '81086769033880357206596084476994515861067324006954129146728570372442139131905',
+  discord: 'Strive#4463'
 }, {
   name: 'Highland #114',
   description: 'Highland Cattle.',
@@ -4152,6 +4153,20 @@ const highlands: Asset[] = [{
   token: '81086769033880357206596084476994515861067324006954129146728570591244953059329',
   isSpecial: true,
   discord: 'AnosNFT#5386'
+}, {
+  name: 'Highland #290',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/h1nFCg7vIe0MVYwnYTmZG_HElGIC7f9vy1gy2e_TC_JJY1TNFdSprP1o1u6FEHgNby805JMgKso8r7O-jGAhNoHyk0NKq72MHNug9no',
+  traits: {
+    background: ['Pink'],
+    colour: ['Light Brown'],
+    object: ['Coffee Mug', 'Halo', 'Wings'],
+    mood: ['Angelic'],
+    clothing: ['Robe'],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570572553255387137',
+  discord: 'clon#0001'
 }]
 
 export default highlands
