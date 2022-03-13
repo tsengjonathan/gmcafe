@@ -22,6 +22,8 @@ export type FilterContextProps = {
   setFilterSpecial: (filterSpecial: boolean) => void
   shuffle: () => void
   reverse: () => void
+  discordOnly: boolean
+  setDiscordOnly: (discordOnly: boolean) => void
 }
 
 const defaultFilterProvider: FilterContextProps = {
@@ -40,6 +42,8 @@ const defaultFilterProvider: FilterContextProps = {
   setFilterSpecial: (_filterSpecial: boolean) => null,
   shuffle: () => null,
   reverse: () => null,
+  discordOnly: false,
+  setDiscordOnly: (_discordOnly: boolean) => null,
 }
 
 export const FilterContext = createContext(defaultFilterProvider)
@@ -62,15 +66,17 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ mood, setMood ] = useState<string[]>([])
   const [ object, setObject ] = useState<string[]>([])
   const [ filterSpecial, setFilterSpecial ] = useState(false)
+  const [ discordOnly, setDiscordOnly ] = useState(false)
   
   useEffect(() => {
     setItems(highlands.map(highland => {
-      const { isSpecial, traits } = highland
+      const { isSpecial, traits, discord } = highland
 
-      if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0 && !filterSpecial) { return highland }
+      if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0 && !filterSpecial && !discordOnly) { return highland }
       const shouldFilterSpecial = filterSpecial ? isSpecial : true
+      const shouldDiscordOnly = discordOnly ? !!discord : true
   
-      const isVisible = shouldFilterSpecial
+      const isVisible = shouldFilterSpecial && shouldDiscordOnly
         && shouldInclude(traits['background'], background)
         && shouldInclude(traits['clothing'], clothing)
         && shouldInclude(traits['colour'], colour)
@@ -83,7 +89,7 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
         isHidden: !isVisible
       }
     }))
-  }, [ background, clothing, colour, feature, mood, object, filterSpecial ])
+  }, [ background, clothing, colour, feature, mood, object, filterSpecial, discordOnly ])
   
   
   const addFilter = (type: TRAIT, value: string) => {
@@ -170,7 +176,9 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       filterSpecial,
       setFilterSpecial,
       shuffle,
-      reverse
+      reverse,
+      discordOnly,
+      setDiscordOnly,
     }}>
       { children }
     </FilterContext.Provider>

@@ -79,7 +79,8 @@ const highlands: Asset[] = [{
     mood: ['Tough'],
     object: ['Bat']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570250396348448769'
+  token: '81086769033880357206596084476994515861067324006954129146728570250396348448769',
+  discord: 'D-Grimm#4242'
 }, {
   name: 'Highland #7',
   description: 'Highland Cattle.',
@@ -144,7 +145,8 @@ const highlands: Asset[] = [{
     mood: ['College'],
     object: []
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570255893906587649'
+  token: '81086769033880357206596084476994515861067324006954129146728570255893906587649',
+  discord: 'nineman#3465'
 }, {
   name: 'Highland #12',
   description: 'Highland Cattle.',
@@ -226,7 +228,8 @@ const highlands: Asset[] = [{
     mood: ['Yum'],
     object: ['Ice Cream']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570262490976354305'
+  token: '81086769033880357206596084476994515861067324006954129146728570262490976354305',
+  discord: 'LmrXmr#2505'
 }, {
   name: 'Highland #18',
   description: 'Highland Cattle.',
@@ -239,7 +242,8 @@ const highlands: Asset[] = [{
     mood: ['Hmph'],
     object: ['Flower', 'Bell']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570263590487982081'
+  token: '81086769033880357206596084476994515861067324006954129146728570263590487982081',
+  discord: 'wedpianda#3159'
 }, {
   name: 'Highland #19',
   description: 'Highland Cattle.',
@@ -388,7 +392,8 @@ const highlands: Asset[] = [{
     mood: ['Thirsty'],
     object: ['Boba']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570275685115887617'
+  token: '81086769033880357206596084476994515861067324006954129146728570275685115887617',
+  discord: 'TronQuixote#6969'
 }, {
   name: '#302 - Moomaru',
   description: 'Highland Cattle.',
@@ -509,7 +514,8 @@ const highlands: Asset[] = [{
     mood: ['Blush'],
     object: []
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570285580720537601'
+  token: '81086769033880357206596084476994515861067324006954129146728570285580720537601',
+  discord: 'D-Grimm#4242'
 }, {
   name: 'Highland #37',
   description: 'Highland Cattle.',
@@ -614,7 +620,8 @@ const highlands: Asset[] = [{
     mood: [],
     object: []
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570294376813559809'
+  token: '81086769033880357206596084476994515861067324006954129146728570294376813559809',
+  discord: 'Bob Loukas#4262'
 }, {
   name: 'Highland #45',
   description: 'Highland Cattle.',
@@ -823,7 +830,8 @@ const highlands: Asset[] = [{
     mood: ['Wild'],
     object: ['Pizza']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570311968999604225'
+  token: '81086769033880357206596084476994515861067324006954129146728570311968999604225',
+  discord: 'lylemckeany#7191'
 }, {
   name: 'Highland #61',
   description: 'Highland Cattle.',
@@ -849,7 +857,8 @@ const highlands: Asset[] = [{
     mood: ['Vacant'],
     object: ['Bottle']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570314168022859777'
+  token: '81086769033880357206596084476994515861067324006954129146728570314168022859777',
+  discord: 'malone#1111'
 }, {
   name: 'Highland #63',
   description: 'Highland Cattle.',
@@ -862,7 +871,8 @@ const highlands: Asset[] = [{
     mood: ['Nerdy'],
     object: ['Coffee Mug', 'Glasses']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570315267534487553'
+  token: '81086769033880357206596084476994515861067324006954129146728570315267534487553',
+  discord: 'CozShesDead#4934'
 }, {
   name: 'Highland #64',
   description: 'Highland Cattle.',
@@ -968,7 +978,8 @@ const highlands: Asset[] = [{
     mood: ['Goodtimes'],
     object: ['Boba']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570324063627509761'
+  token: '81086769033880357206596084476994515861067324006954129146728570324063627509761',
+  discord: 'Kevin012#6969'
 }, {
   name: 'Highland #71',
   description: 'Highland Cattle.',
@@ -981,7 +992,8 @@ const highlands: Asset[] = [{
     mood: ['Extra Vibing'],
     object: ['Tea Mug']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570325163139137537'
+  token: '81086769033880357206596084476994515861067324006954129146728570325163139137537',
+  discord: 'nciao#2579'
 }, {
   name: 'Highland #72',
   description: 'Highland Cattle.',
@@ -1284,7 +1296,8 @@ const highlands: Asset[] = [{
     mood: ['Extra Vibing'],
     object: ['Coffee Mug', 'Marshmallow']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570350451906576385'
+  token: '81086769033880357206596084476994515861067324006954129146728570350451906576385',
+  discord: 'CptnSqrPants#3121'
 }, {
   name: 'Highland #95',
   description: 'Highland Cattle.',
@@ -1363,7 +1376,8 @@ const highlands: Asset[] = [{
     mood: ['Bright'],
     object: []
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570357048976343041'
+  token: '81086769033880357206596084476994515861067324006954129146728570357048976343041',
+  discord: 'Tippy#1234'
 }, {
   name: 'Highland #100',
   description: 'Highland Cattle.',
@@ -2624,7 +2638,8 @@ const highlands: Asset[] = [{
     mood: ['Suss'],
     object: ['Cookie']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570461502580981761'
+  token: '81086769033880357206596084476994515861067324006954129146728570461502580981761',
+  discord: 'slade45#3475'
 }, {
   name: 'Highland #193',
   description: 'Highland Cattle.',
@@ -2785,7 +2800,8 @@ const highlands: Asset[] = [{
     mood: ['Vibing'],
     object: ['Coffee Mug']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570474696720515073'
+  token: '81086769033880357206596084476994515861067324006954129146728570474696720515073',
+  discord: 'UnrealApe#9858'
 }, {
   name: 'Highland #205',
   description: 'Highland Cattle.',
@@ -2850,7 +2866,8 @@ const highlands: Asset[] = [{
     mood: ['Rebel'],
     object: ['Skateboard']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570480194278653953'
+  token: '81086769033880357206596084476994515861067324006954129146728570480194278653953',
+  discord: 'izeeyahmon#7858'
 }, {
   name: 'Highland #210',
   description: 'Highland Cattle.',
@@ -2863,7 +2880,8 @@ const highlands: Asset[] = [{
     mood: ['Caffinated'],
     object: ['Cowla']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570481293790281729'
+  token: '81086769033880357206596084476994515861067324006954129146728570481293790281729',
+  discord: 'turtlethecat#4273'
 }, {
   name: 'Highland #211',
   description: 'Highland Cattle.',
@@ -2903,7 +2921,8 @@ const highlands: Asset[] = [{
     mood: ['Carbs'],
     object: ['Moonchies']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570484592325165057'
+  token: '81086769033880357206596084476994515861067324006954129146728570484592325165057',
+  discord: 'boo🌸#8898'
 }, {
   name: 'Highland #214',
   description: 'Highland Cattle.',
@@ -2943,7 +2962,8 @@ const highlands: Asset[] = [{
     mood: ['Attack!'],
     object: ['Controller']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570487890860048385'
+  token: '81086769033880357206596084476994515861067324006954129146728570487890860048385',
+  discord: 'leenbean#9309'
 }, {
   name: 'Highland #217',
   description: 'Highland Cattle.',
@@ -2995,7 +3015,8 @@ const highlands: Asset[] = [{
     mood: ['Player'],
     object: ['Mech Shooter']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570492288906559489'
+  token: '81086769033880357206596084476994515861067324006954129146728570492288906559489',
+  discord: 'jez#0001'
 }, {
   name: 'Highland #221',
   description: 'Highland Cattle.',
@@ -3171,7 +3192,8 @@ const highlands: Asset[] = [{
     ],
     object: ['Soy Sausage']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570506582557720577'
+  token: '81086769033880357206596084476994515861067324006954129146728570506582557720577',
+  discord: 'Lemon#7059'
 }, {
   name: 'Highland #234',
   description: 'Highland Cattle.',
@@ -3236,7 +3258,8 @@ const highlands: Asset[] = [{
     mood: ['Wild'],
     object: ['Apple']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570512080115859457'
+  token: '81086769033880357206596084476994515861067324006954129146728570512080115859457',
+  discord: 'EEEBA#1110'
 }, {
   name: 'Highland #305 - Siegmeyer',
   description: 'Highland Cattle.',
@@ -3455,7 +3478,8 @@ const highlands: Asset[] = [{
     mood: ['Carbs'],
     object: ['Nuggets']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570529672301903873'
+  token: '81086769033880357206596084476994515861067324006954129146728570529672301903873',
+  discord: 'Wang#6621'
 }, {
   name: 'Highland #254',
   description: 'Highland Cattle.',
@@ -3468,7 +3492,8 @@ const highlands: Asset[] = [{
     mood: ['Boss'],
     object: ['Coffee Mug']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570530771813531649'
+  token: '81086769033880357206596084476994515861067324006954129146728570530771813531649',
+  discord: 'Nando#9999'
 }, {
   name: 'Highland #255',
   description: 'Highland Cattle.',
@@ -3495,7 +3520,8 @@ const highlands: Asset[] = [{
     mood: ['Optimistic'],
     object: ['Camera']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570532970836787201'
+  token: '81086769033880357206596084476994515861067324006954129146728570532970836787201',
+  discord: 'Smurfbay | FEW#6477'
 }, {
   name: 'Highland #257',
   description: 'Highland Cattle.',

@@ -28,7 +28,7 @@ const Sidebar = () => {
   } = useCollection()
 
   const {
-    filterSpecial, setFilterSpecial, shuffle, reverse
+    filterSpecial, setFilterSpecial, shuffle, reverse, discordOnly, setDiscordOnly
   } = useContext(FilterContext)
 
   const filterControls = (
@@ -52,6 +52,30 @@ const Sidebar = () => {
             className={classNames(
               { 'translate-x-4': filterSpecial },
               { 'translate-x-0': !filterSpecial },
+              'pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200'
+            )}
+          />
+        </Switch>
+      </div>
+      <div className="flex py-4 pl-4 pr-2 text-sm font-medium border-t border-gray-300 justify-between items-center">
+        <span>
+          Discord Users
+        </span>
+        <Switch
+          checked={discordOnly}
+          onChange={() => setDiscordOnly(!discordOnly)}
+          className={classNames(
+            { 'bg-pink': discordOnly },
+            { 'bg-gray-500': !discordOnly },
+            'relative inline-flex flex-shrink-0 h-6 w-10 border-2 border-transparent rounded-full cursor-pointer transition-colors duration-200 focus:outline-none'
+          )}
+        >
+          <span className="sr-only">Discord Users</span>
+          <span
+            aria-hidden="true"
+            className={classNames(
+              { 'translate-x-4': discordOnly },
+              { 'translate-x-0': !discordOnly },
               'pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200'
             )}
           />
