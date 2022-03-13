@@ -1452,7 +1452,8 @@ const highlands: Asset[] = [{
     mood: ['Muffin'],
     object: ['Muffin']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570360347511226369'
+  token: '81086769033880357206596084476994515861067324006954129146728570360347511226369',
+  discord: 'Llamaontherun#4192'
 }, {
   name: 'Highland #103',
   description: 'Highland Cattle.',
@@ -2313,7 +2314,8 @@ const highlands: Asset[] = [{
     mood: ['Anticipating'],
     object: ['Coffee Mug']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570429616743776257'
+  token: '81086769033880357206596084476994515861067324006954129146728570429616743776257',
+  discord: 'Artoria#0473'
 }, {
   name: 'Highland #165',
   description: 'Highland Cattle.',
@@ -3700,7 +3702,8 @@ const highlands: Asset[] = [{
     mood: ['Classic'],
     object: ['Teddy']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570539567906553857'
+  token: '81086769033880357206596084476994515861067324006954129146728570539567906553857',
+  discord: '😺.eth#0001'
 }, {
   name: 'Highland #263',
   description: 'Highland Cattle.',
