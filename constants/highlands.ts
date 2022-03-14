@@ -805,7 +805,7 @@ const highlands: Asset[] = [{
     colour: ['Light Brown'],
     feature: [],
     mood: ['Carbs'],
-    object: ['PIzza']
+    object: ['Pizza']
   },
   token: '81086769033880357206596084476994515861067324006954129146728570308670464720897',
   discord: 'Salty Spitoon#0587'
