@@ -59,7 +59,7 @@ const Sidebar = () => {
       </div>
       <div className="flex py-4 pl-4 pr-2 text-sm font-medium border-t border-gray-300 justify-between items-center">
         <span>
-          Discord Users
+          Discord Users Only
         </span>
         <Switch
           checked={discordOnly}
@@ -70,7 +70,7 @@ const Sidebar = () => {
             'relative inline-flex flex-shrink-0 h-6 w-10 border-2 border-transparent rounded-full cursor-pointer transition-colors duration-200 focus:outline-none'
           )}
         >
-          <span className="sr-only">Discord Users</span>
+          <span className="sr-only">Discord Users Only</span>
           <span
             aria-hidden="true"
             className={classNames(

@@ -3769,7 +3769,8 @@ const highlands: Asset[] = [{
     mood: ['Benny Hype!'],
     object: ['Basketball']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570545065464692737'
+  token: '81086769033880357206596084476994515861067324006954129146728570545065464692737',
+  discord: '$anta#0025'
 }, {
   name: 'Highland #307 - MoonMoo',
   description: 'Highland Cattle.',
@@ -4254,6 +4255,20 @@ const highlands: Asset[] = [{
   },
   token: '81086769033880357206596084476994515861067324006954129146728570572553255387137',
   discord: 'clon#0001'
+}, {
+  name: 'Highland #292',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/x9y1afrrCoNWgc5a96h5KLusA3M3wTJpeY6hKAqYTUxO6DFOlf3nYXaQ3g2zllRaFl5oTCW-8s-nLBuJo7XGoTDGTaCKYV85-Ol2BS8',
+  traits: {
+    colour: ['Light Brown'],
+    object: ['Coffee Mug', 'Rainbow Liquid'],
+    background: ['Light Blue'],
+    mood: ['Nerdy'],
+    clothing: ['<gm/> Beanie', 'Loose Fit Shirt'],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570574752278642689',
+  discord: 'Loop#1155'
 }]
 
 export default highlands
