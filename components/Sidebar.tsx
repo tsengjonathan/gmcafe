@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import useCollection from '../hooks/useCollection'
 import Disclosure from './Disclosure'
 import { TRAIT } from '../types/asset'
