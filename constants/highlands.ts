@@ -1803,9 +1803,9 @@ const highlands: Asset[] = [{
   description: 'Highland Cattle.',
   imageUrl: 'https://lh3.googleusercontent.com/VkxpA28-fYN6PKUX5uqvdHVmwlQxB9X6fYWxKtqXESjJK3Un0PYFNEew3bq996NAADUZKaRMDrdsNfhYbiNrkCunO4K0wfjSqoc0w9I',
   traits: {
-    background: ['Light Pink'],
+    background: ['Light Green'],
     clothing: ['Pj Hat'],
-    colour: ['Light Purple'],
+    colour: ['Purple'],
     feature: [],
     mood: ['Diary Goods'],
     object: ['Chocolate']
@@ -1954,7 +1954,7 @@ const highlands: Asset[] = [{
   description: 'Highland Cattle.',
   imageUrl: 'https://lh3.googleusercontent.com/zIQRFNQ3fgpS0xDR0se1JJ2T3ptt40a5IpJE86ViENsXYDnF7sTrll0vdQs3E1nkBJcnUFB5nJD_od28m2RJ318LZxLXG7TZWh29LhU',
   traits: {
-    background: ['Light Pink'],
+    background: ['Light Purple'],
     clothing: ['Glasses', 'Shorts'],
     colour: ['Yellow'],
     feature: ['Tall hair'],
@@ -2267,7 +2267,7 @@ const highlands: Asset[] = [{
   description: 'Highland Cattle.',
   imageUrl: 'https://lh3.googleusercontent.com/9sawnqpUexW9G_MCQHRElSMYwAbCYAgvBdfPM1F-6yFfiLnzefZ12f0vkneuFVEx84CizVlOhih-rNquP6OjOQVsT7vh_6NMTpoQMbs',
   traits: {
-    background: ['Light Green'],
+    background: ['Light Blue'],
     clothing: [],
     colour: ['Light Brown'],
     feature: ['Freckles', 'Nerd Hair'],
@@ -2293,9 +2293,9 @@ const highlands: Asset[] = [{
   description: 'Highland Cattle.',
   imageUrl: 'https://lh3.googleusercontent.com/BcvsaHAc9V6dwUIcXBCrSwm6As1NfhL8gvwD61OEEw-iFFZtaY3IcW29OPFkc7zp_2zn9laRKh7GG4ItVC6JrkAYqvT8Fg_7Yhx0-u0',
   traits: {
-    background: [],
+    background: ['Light Pink'],
     clothing: ['Flower Tiara'],
-    colour: ['Light Purple', 'Light yellow'],
+    colour: ['Purple'],
     feature: ['Blush'],
     mood: ['Coffee Eyes'],
     object: ['Vienna Coffee']
@@ -3163,7 +3163,7 @@ const highlands: Asset[] = [{
   description: 'Highland Cattle.',
   imageUrl: 'https://lh3.googleusercontent.com/2613g_TknS4H1a71MbVE5QKImRuKBROHmz-A2T9hYRvNGic2gv0TkuRSGpNFpUV8BCW9CXpFjVGks9LxYg_Csse6ZxndsCogLge1',
   traits: {
-    background: ['Light Green'],
+    background: ['Light Blue'],
     clothing: ['Earrings', 'Shirt', 'Bear Beanie'],
     colour: ['Brown'],
     feature: [],
@@ -3333,7 +3333,7 @@ const highlands: Asset[] = [{
   description: 'Highland Cattle.',
   imageUrl: 'https://lh3.googleusercontent.com/3COHxkJBB5pyopztM-jxienvmJPJ1YscEsGO-SJthXDqNI0k8VfPqxYnjE5xBdv0BpHkPBa1s-T1JVit9T1Wofmv_uzWwshTmTC9',
   traits: {
-    background: ['Light Green'],
+    background: ['Light Blue'],
     clothing: ['Beanie', 'Flannel'],
     colour: ['Light Brown'],
     feature: [],
