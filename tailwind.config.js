@@ -22,6 +22,15 @@ module.exports = {
       },
       spacing: {
         38: '9.5rem'
+      },
+      keyframes: {
+        rerender: {
+          '0%': { opacity: '0%' },
+          '100%': { opacity: '100%' },
+        }
+      },
+      animation: {
+        rerender: 'rerender 500ms ease-in-out'
       }
     },
     fontFamily: {

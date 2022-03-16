@@ -2,10 +2,6 @@ import { createContext, ReactNode, useEffect, useState } from 'react'
 import { highlands } from '../constants'
 import { Asset, TRAIT } from '../types/asset'
 
-export type Entry = Asset & {
-  isHidden?: boolean
-}
-
 export type FilterContextProps = {
   traits: {
     background: string[]
@@ -17,7 +13,7 @@ export type FilterContextProps = {
   }
   addFilter: (type: TRAIT, value: string) => void
   removeFilter: (type: TRAIT, value: string) => void
-  items: Entry[],
+  items: Asset[],
   filterSpecial: boolean
   setFilterSpecial: (filterSpecial: boolean) => void
   shuffle: () => void
@@ -58,7 +54,7 @@ const shouldInclude = (traits: string[], filter: string[]): boolean => {
 }
 
 export const FilterProvider = ({ children }: FilterProviderProps) => {
-  const [ items, setItems ] = useState<Entry[]>(highlands)
+  const [ items, setItems ] = useState<Asset[]>(highlands)
   const [ background, setBackground ] = useState<string[]>([])
   const [ clothing, setClothing ] = useState<string[]>([])
   const [ colour, setColour ] = useState<string[]>([])
@@ -69,25 +65,20 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ discordOnly, setDiscordOnly ] = useState(false)
   
   useEffect(() => {
-    setItems(highlands.map(highland => {
+    setItems(highlands.filter(highland => {
       const { isSpecial, traits, discord } = highland
 
       if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0 && !filterSpecial && !discordOnly) { return highland }
       const shouldFilterSpecial = filterSpecial ? isSpecial : true
       const shouldDiscordOnly = discordOnly ? !!discord : true
   
-      const isVisible = shouldFilterSpecial && shouldDiscordOnly
+      return shouldFilterSpecial && shouldDiscordOnly
         && shouldInclude(traits['background'], background)
         && shouldInclude(traits['clothing'], clothing)
         && shouldInclude(traits['colour'], colour)
         && shouldInclude(traits['feature'], feature)
         && shouldInclude(traits['mood'], mood)
         && shouldInclude(traits['object'], object)
-      
-      return {
-        ...highland,
-        isHidden: !isVisible
-      }
     }))
   }, [ background, clothing, colour, feature, mood, object, filterSpecial, discordOnly ])
   
