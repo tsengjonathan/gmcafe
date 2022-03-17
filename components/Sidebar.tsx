@@ -12,7 +12,9 @@ import classNames from 'classnames'
 import { Shuffle } from 'react-feather'
 import Drawer from './Drawer'
 import { DiscordIcon, OpenSeaIcon, TwitterIcon } from './Icons'
-
+import FilterInput from './FilterInput'
+import FilterPanel from './FilterPanel'
+import FilterDisclosure from './FilterDisclosure'
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,7 +29,7 @@ const Sidebar = () => {
   } = useCollection()
 
   const {
-    filterSpecial, setFilterSpecial, shuffle, reverse, discordOnly, setDiscordOnly
+    filterSpecial, setFilterSpecial, shuffle, reverse, discordInput, setDiscordInput
   } = useContext(FilterContext)
 
   const filterControls = (
@@ -56,36 +58,15 @@ const Sidebar = () => {
           />
         </Switch>
       </div>
-      <div className="flex py-4 pl-4 pr-2 text-sm font-medium border-t border-gray-300 justify-between items-center">
-        <span>
-          Discord Users Only
-        </span>
-        <Switch
-          checked={discordOnly}
-          onChange={() => setDiscordOnly(!discordOnly)}
-          className={classNames(
-            { 'bg-pink': discordOnly },
-            { 'bg-gray-500': !discordOnly },
-            'relative inline-flex flex-shrink-0 h-6 w-10 border-2 border-transparent rounded-full cursor-pointer transition-colors duration-200 focus:outline-none'
-          )}
-        >
-          <span className="sr-only">Discord Users Only</span>
-          <span
-            aria-hidden="true"
-            className={classNames(
-              { 'translate-x-4': discordOnly },
-              { 'translate-x-0': !discordOnly },
-              'pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200'
-            )}
-          />
-        </Switch>
-      </div>
-      <Disclosure title={TRAIT.BACKGROUND} fields={background} />
-      <Disclosure title={TRAIT.CLOTHING} fields={clothing} />
-      <Disclosure title={TRAIT.COLOUR} fields={colour} />
-      <Disclosure title={TRAIT.FEATURE} fields={feature} />
-      <Disclosure title={TRAIT.MOOD} fields={mood} />
-      <Disclosure title={TRAIT.OBJECT} fields={object} />
+      <Disclosure title="Discord">
+        <FilterInput input={discordInput} setInput={setDiscordInput} placeholder="BenColefax#3753" />
+      </Disclosure>
+      <FilterDisclosure title={TRAIT.BACKGROUND} fields={background} />
+      <FilterDisclosure title={TRAIT.CLOTHING} fields={clothing} />
+      <FilterDisclosure title={TRAIT.COLOUR} fields={colour} />
+      <FilterDisclosure title={TRAIT.FEATURE} fields={feature} />
+      <FilterDisclosure title={TRAIT.MOOD} fields={mood} />
+      <FilterDisclosure title={TRAIT.OBJECT} fields={object} />
     </>
   )
 

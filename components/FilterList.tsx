@@ -4,19 +4,15 @@ import { FilterContext } from '../providers/FilterProvider'
 import { TRAIT } from '../types/asset'
 import FilterChip from './FilterChip'
 
-type FilterListProps = {
-  count: number
-}
-
-const FilterList = ({ count }: FilterListProps) => {
-  const { traits: { background, clothing, colour, feature, mood, object } } = useContext(FilterContext)
+const FilterList = () => {
+  const { traits: { background, clothing, colour, feature, mood, object }, size } = useContext(FilterContext)
   const total = highlands.length
 
   return (
     <div className="h-20 w-full bg-pink-light bg-opacity-50">
       <div className="w-full h-full pl-4 lg:px-8 flex items-center">
         <div className="font-mono text-3xl w-20 lg:w-28 text-left font-semibold">
-          <span className="text-purple font-normal">{count}</span>
+          <span className="text-purple font-normal">{size}</span>
           /
           <span>{total}</span>
         </div>

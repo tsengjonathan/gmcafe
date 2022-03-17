@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import useDebounce from '../hooks/useDebounce'
-import { DisclosureProps } from './Disclosure'
+import { TRAIT } from '../types/asset'
 import FilterInput from './FilterInput'
 import RadioFilter from './RadioFilter'
 import { kebabCase } from './util'
 
-export type FilterPanelProps = DisclosureProps
+export type FilterPanelProps = {
+  title: TRAIT
+  fields: { [key: string]: number }
+}
 
 const FilterPanel = ({ fields, title }: FilterPanelProps) => {
   const [input, setInput] = useState('')
@@ -27,8 +30,8 @@ const FilterPanel = ({ fields, title }: FilterPanelProps) => {
     })
 
   return (
-    <div className="lg:max-h-80 lg:overflow-y-scroll">
-      <FilterInput input={input} setInput={setInput} />
+    <div className="lg:max-h-80 lg:overflow-y-scroll mb-3">
+      <FilterInput input={input} setInput={setInput} placeholder='Search...' />
       {filters}
     </div>
   )

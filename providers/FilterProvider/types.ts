@@ -11,13 +11,15 @@ export type FilterContextProps = {
   }
   addFilter: (type: TRAIT, value: string) => void
   removeFilter: (type: TRAIT, value: string) => void
-  items: Asset[],
+  items: Asset[]
+  size: number
   filterSpecial: boolean
   setFilterSpecial: (filterSpecial: boolean) => void
   shuffle: () => void
   reverse: () => void
-  discordOnly: boolean
-  setDiscordOnly: (discordOnly: boolean) => void
+  discordInput: string
+  setDiscordInput: (discordInput: string) => void
+  nextPage: () => void
 }
 
 export const defaultFilterProvider: FilterContextProps = {
@@ -32,10 +34,12 @@ export const defaultFilterProvider: FilterContextProps = {
   addFilter: (_type: TRAIT, _value: string) => null,
   removeFilter: (_type: TRAIT, _value: string) => null,
   items: [],
+  size: 0,
   filterSpecial: false,
   setFilterSpecial: (_filterSpecial: boolean) => null,
   shuffle: () => null,
   reverse: () => null,
-  discordOnly: false,
-  setDiscordOnly: (_discordOnly: boolean) => null,
+  discordInput: '',
+  setDiscordInput: (_discordInput: string) => null,
+  nextPage: () => null,
 }

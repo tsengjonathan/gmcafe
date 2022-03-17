@@ -3,6 +3,8 @@ import { highlands } from '../../constants'
 import { Asset, TRAIT } from '../../types/asset'
 import { defaultFilterProvider } from './types'
 
+const ITEMS_PER_PAGE = 60
+
 export const FilterContext = createContext(defaultFilterProvider)
 
 type FilterProviderProps = {
@@ -16,6 +18,7 @@ const shouldInclude = (traits: string[], filter: Set<string>): boolean => {
 
 export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ items, setItems ] = useState<Asset[]>(highlands)
+  const [ count, setCount ] = useState(ITEMS_PER_PAGE)
   const [ background, setBackground ] = useState<Set<string>>(new Set())
   const [ clothing, setClothing ] = useState<Set<string>>(new Set())
   const [ colour, setColour ] = useState<Set<string>>(new Set())
@@ -23,19 +26,19 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ mood, setMood ] = useState<Set<string>>(new Set())
   const [ object, setObject ] = useState<Set<string>>(new Set())
   const [ filterSpecial, setFilterSpecial ] = useState(false)
-  const [ discordOnly, setDiscordOnly ] = useState(false)
+  const [ discordInput, setDiscordInput ] = useState('')
   
   useEffect(() => {
     setItems(highlands.filter(highland => {
       const { isSpecial, traits, discord } = highland
 
       const filterCount = background.size + clothing.size + colour.size + feature.size + mood.size + object.size
-      if (filterCount === 0 && !filterSpecial && !discordOnly) { return highland }
+      if (filterCount === 0 && !filterSpecial && !discordInput) { return highland }
 
       const shouldFilterSpecial = filterSpecial ? isSpecial : true
-      const shouldDiscordOnly = discordOnly ? !!discord : true
   
-      return shouldFilterSpecial && shouldDiscordOnly
+      return shouldFilterSpecial
+        && discord?.toLowerCase().includes(discordInput.toLowerCase())
         && shouldInclude(traits['background'], background)
         && shouldInclude(traits['clothing'], clothing)
         && shouldInclude(traits['colour'], colour)
@@ -43,7 +46,7 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
         && shouldInclude(traits['mood'], mood)
         && shouldInclude(traits['object'], object)
     }))
-  }, [ background, clothing, colour, feature, mood, object, filterSpecial, discordOnly ])
+  }, [ background, clothing, colour, feature, mood, object, filterSpecial, discordInput ])
   
   
   const addFilter = (type: TRAIT, value: string) => {
@@ -96,6 +99,8 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
 
   const reverse = () => setItems([...items.reverse()])
 
+  const nextPage = () => setCount(count + ITEMS_PER_PAGE)
+
   return (
     <FilterContext.Provider value={{
       traits: {
@@ -108,13 +113,15 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       },
       addFilter,
       removeFilter,
-      items,
+      items: items.slice(0, count),
+      size: items.length,
       filterSpecial,
       setFilterSpecial,
       shuffle,
       reverse,
-      discordOnly,
-      setDiscordOnly,
+      discordInput,
+      setDiscordInput,
+      nextPage,
     }}>
       { children }
     </FilterContext.Provider>

@@ -1,16 +1,14 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/outline'
-import FilterPanel from './FilterPanel'
-import { TRAIT } from '../types/asset'
 import { capitalize } from './util'
 
 export type DisclosureProps = {
-  title: TRAIT
-  fields: { [key: string]: number }
+  title: string
+  children: ReactNode | ReactNode[]
 }
 
-const Disclosure_ = ({ title, fields }: DisclosureProps) => {
+const Disclosure_ = ({ title, children }: DisclosureProps) => {
   return (
     <Disclosure>
       {({ open }) => (
@@ -31,8 +29,8 @@ const Disclosure_ = ({ title, fields }: DisclosureProps) => {
             leaveFrom="transform scale-100 opacity-100"
             leaveTo="transform scale-95 opacity-0"
           >
-            <Disclosure.Panel className="px-3 pb-6 text-sm">
-              <FilterPanel title={title} fields={fields} />
+            <Disclosure.Panel className="px-3 pb-3 text-sm">
+              {children}
             </Disclosure.Panel>
           </Transition>
         </>
