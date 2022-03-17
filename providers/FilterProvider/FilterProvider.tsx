@@ -9,19 +9,19 @@ type FilterProviderProps = {
   children: ReactNode
 }
 
-const shouldInclude = (traits: string[], filter: string[]): boolean => {
-  if (filter.length === 0) { return true }
-  return traits.some(trait => filter.includes(trait.toLowerCase()))
+const shouldInclude = (traits: string[], filter: Set<string>): boolean => {
+  if (filter.size === 0) { return true }
+  return traits.some(trait => filter.has(trait.toLowerCase()))
 }
 
 export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ items, setItems ] = useState<Asset[]>(highlands)
-  const [ background, setBackground ] = useState<string[]>([])
-  const [ clothing, setClothing ] = useState<string[]>([])
-  const [ colour, setColour ] = useState<string[]>([])
-  const [ feature, setFeature ] = useState<string[]>([])
-  const [ mood, setMood ] = useState<string[]>([])
-  const [ object, setObject ] = useState<string[]>([])
+  const [ background, setBackground ] = useState<Set<string>>(new Set())
+  const [ clothing, setClothing ] = useState<Set<string>>(new Set())
+  const [ colour, setColour ] = useState<Set<string>>(new Set())
+  const [ feature, setFeature ] = useState<Set<string>>(new Set())
+  const [ mood, setMood ] = useState<Set<string>>(new Set())
+  const [ object, setObject ] = useState<Set<string>>(new Set())
   const [ filterSpecial, setFilterSpecial ] = useState(false)
   const [ discordOnly, setDiscordOnly ] = useState(false)
   
@@ -29,7 +29,9 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
     setItems(highlands.filter(highland => {
       const { isSpecial, traits, discord } = highland
 
-      if ([...background, ...clothing, ...colour, ...feature, ...mood, ...object].length === 0 && !filterSpecial && !discordOnly) { return highland }
+      const filterCount = background.size + clothing.size + colour.size + feature.size + mood.size + object.size
+      if (filterCount === 0 && !filterSpecial && !discordOnly) { return highland }
+
       const shouldFilterSpecial = filterSpecial ? isSpecial : true
       const shouldDiscordOnly = discordOnly ? !!discord : true
   
@@ -47,64 +49,46 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
   const addFilter = (type: TRAIT, value: string) => {
     switch (type) {
       case TRAIT.BACKGROUND:
-        if (background.includes(value)) { return }
-        setBackground([...background, value])
-        return
+        background.add(value)
+        return setBackground(new Set(background))
       case TRAIT.CLOTHING:
-        if (clothing.includes(value)) { return }
-        setClothing([...clothing, value])
-        return
+        clothing.add(value)
+        return setClothing(new Set(clothing))
       case TRAIT.COLOUR:
-        if (colour.includes(value)) { return }
-        setColour([...colour, value])
-        return
+        colour.add(value)
+        return setColour(new Set(colour))
       case TRAIT.FEATURE:
-        if (feature.includes(value)) { return }
-        setFeature([...feature, value])
-        return
+        feature.add(value)
+        return setFeature(new Set(feature))
       case TRAIT.MOOD:
-        if (mood.includes(value)) { return }
-        setMood([...mood, value])
-        return
+        mood.add(value)
+        return setMood(new Set(mood))
       case TRAIT.OBJECT:
-        if (object.includes(value)) { return }
-        setObject([...object, value])
-        return
+        object.add(value)
+        return setObject(new Set(object))
     }
   }
 
   const removeFilter = (type: TRAIT, value: string) => {
     switch (type) {
       case TRAIT.BACKGROUND:
-        if (!background.includes(value)) { return }
-        background.splice(background.indexOf(value), 1)
-        setBackground([...background])
-        return
+        background.delete(value)
+        return setBackground(new Set(background))
       case TRAIT.CLOTHING:
-        if (!clothing.includes(value)) { return }
-        clothing.splice(clothing.indexOf(value), 1)
-        setClothing([...clothing])
-        return
+        clothing.delete(value)
+        return setClothing(new Set(clothing))
       case TRAIT.COLOUR:
-        if (!colour.includes(value)) { return }
-        colour.splice(colour.indexOf(value), 1)
-        setColour([...colour])
-        return
+        colour.delete(value)
+        return setColour(new Set(colour))
       case TRAIT.FEATURE:
-        if (!feature.includes(value)) { return }
-        feature.splice(feature.indexOf(value), 1)
-        setFeature([...feature])
-        return
+        feature.delete(value)
+        return setFeature(new Set(feature))
       case TRAIT.MOOD:
-        if (!mood.includes(value)) { return }
-        mood.splice(mood.indexOf(value), 1)
-        setMood([...mood])
-        return
+        mood.delete(value)
+        return setMood(new Set(mood))
       case TRAIT.OBJECT:
-        if (!object.includes(value)) { return }
-        object.splice(object.indexOf(value), 1)
-        setObject([...object])
-        return
+        object.delete(value)
+        return setObject(new Set(object))
     }
   }
 

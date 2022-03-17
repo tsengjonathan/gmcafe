@@ -15,7 +15,7 @@ const RadioFilter = ({ name, type, idx, count }: RadioFilterProps) => {
 
   const { addFilter, removeFilter, traits } = useContext(FilterContext)
 
-  const isSelected = traits[type].includes(name)
+  const isSelected = traits[type].has(name)
 
   const onClick = () => {
     if (isSelected) {
