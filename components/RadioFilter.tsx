@@ -34,6 +34,7 @@ const RadioFilter = ({ name, type, idx, count }: RadioFilterProps) => {
         value={name}
         checked={isSelected}
         onClick={onClick}
+        onChange={() => null}
       />
       <label
         className="ml-2 my-0.5 text-default overflow-hidden inline-block"

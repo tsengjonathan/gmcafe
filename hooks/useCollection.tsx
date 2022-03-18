@@ -1,5 +1,4 @@
-import { baseUrl, collection, highlands } from '../constants'
-import useSWR from 'swr'
+import { highlands } from '../constants'
 import { Collection, UnprocessedCollection } from '../types/collection'
 
 // const fetcher = (url: string) => fetch(url).then((res) => res.json())

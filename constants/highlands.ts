@@ -1591,7 +1591,7 @@ const highlands: Asset[] = [{
     object: []
   },
   token: '81086769033880357206596084476994515861067324006954129146728570371342627504129',
-  discord: 'Fraggy#8503'
+  discord: 'Tatiana11#5281'
 }, {
   name: 'Highland #113',
   description: 'Highland Cattle.',

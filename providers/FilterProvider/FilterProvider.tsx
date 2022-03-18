@@ -36,9 +36,9 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       if (filterCount === 0 && !filterSpecial && !discordInput) { return highland }
 
       const shouldFilterSpecial = filterSpecial ? isSpecial : true
+      const shouldFilterDiscord = discord ? discord.toLowerCase().includes(discordInput.toLowerCase()) : true
   
-      return shouldFilterSpecial
-        && discord?.toLowerCase().includes(discordInput.toLowerCase())
+      return shouldFilterSpecial && shouldFilterDiscord
         && shouldInclude(traits['background'], background)
         && shouldInclude(traits['clothing'], clothing)
         && shouldInclude(traits['colour'], colour)
