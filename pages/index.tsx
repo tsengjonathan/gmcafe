@@ -1,7 +1,4 @@
-import { ArrowNarrowUpIcon } from '@heroicons/react/solid'
-import Fab from '@mui/material/Fab'
 import Head from 'next/head'
-import { useContext } from 'react'
 import Cards from '../components/Cards'
 import FilterList from '../components/FilterList'
 import FloatingButton from '../components/FloatingButton'

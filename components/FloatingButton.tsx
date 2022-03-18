@@ -9,8 +9,8 @@ const FloatingButton = () => {
   const isVisible = y >= 1000
 
   const className = classNames(
-    'rounded-full fixed left-4 bottom-4 transition-opacity',
-    'bg-pink md:bg-white shadow',
+    'rounded-full fixed right-8 bottom-8 transition-opacity',
+    'bg-pink shadow',
     { 'opacity-0': !isVisible },
     { 'opacity-100 cursor-pointer': isVisible }
   )
@@ -21,7 +21,7 @@ const FloatingButton = () => {
 
   return (
     <a className={className} onClick={scrollToTop}>
-      <ArrowUpIcon className="h-6 w-6 m-4 text-white md:text-black" />
+      <ArrowUpIcon className="h-6 w-6 m-4 text-white" />
     </a>
   )
 }

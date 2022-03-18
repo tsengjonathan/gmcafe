@@ -13,7 +13,6 @@ import { Shuffle } from 'react-feather'
 import Drawer from './Drawer'
 import { DiscordIcon, OpenSeaIcon, TwitterIcon } from './Icons'
 import FilterInput from './FilterInput'
-import FilterPanel from './FilterPanel'
 import FilterDisclosure from './FilterDisclosure'
 
 const Sidebar = () => {
@@ -71,7 +70,7 @@ const Sidebar = () => {
   )
 
   return (
-    <div className="bg-pink lg:w-1/4 lg:py-8 flex-col h-14 lg:h-auto lg:flex">
+    <div className="bg-pink lg:w-1/4 lg:py-8 flex-col h-14 lg:h-screen lg:flex lg:sticky top-0 overflow-scroll scrollbar-hidden">
       <div className="lg:hidden flex items-center h-full justify-end px-4">
         <MenuIcon className="w-10 h-10 cursor-pointer" color="white" onClick={() => setIsOpen(!isOpen)} />
       </div>

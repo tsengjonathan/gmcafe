@@ -25,7 +25,7 @@ const FilterList = () => {
           {Array.from(object).map((trait, idx) => <FilterChip key={`filter-chip-object-${idx}`} name={trait} type={TRAIT.OBJECT} />)}
         </div>
       </div>
-      </div>
+    </div>
   )
 }
 
