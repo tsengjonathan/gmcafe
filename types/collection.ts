@@ -14,3 +14,5 @@ export type Collection = {
   [TRAIT.MOOD]: { [key: string]: number },
   [TRAIT.OBJECT]: { [key: string]: number }, 
 }
+
+export type CollectionType = 'cow' | 'phase2'

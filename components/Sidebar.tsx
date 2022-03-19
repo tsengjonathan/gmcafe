@@ -13,6 +13,8 @@ import { DiscordIcon, OpenSeaIcon, TwitterIcon } from './Icons'
 import FilterInput from './FilterInput'
 import FilterDisclosure from './FilterDisclosure'
 import FilterToggle from './FilterToggle'
+import { ThemeContext } from '../providers/ThemeProvider'
+import classNames from 'classnames'
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,6 +32,8 @@ const Sidebar = () => {
     filterSpecial, setFilterSpecial, shuffle, reverse, discordInput, setDiscordInput
   } = useContext(FilterContext)
 
+  const { primaryBackground } = useContext(ThemeContext)
+
   const filterControls = (
     <>
       <FilterToggle title="Custom Moos" isEnabled={filterSpecial} setIsEnabled={setFilterSpecial} />
@@ -46,7 +50,10 @@ const Sidebar = () => {
   )
 
   return (
-    <div className="bg-pink lg:w-1/4 lg:py-8 flex-col h-14 lg:h-screen lg:flex lg:sticky top-0 overflow-scroll scrollbar-hidden">
+    <div className={classNames(
+      primaryBackground,
+      'lg:w-1/4 lg:py-8 flex-col h-14 lg:h-screen lg:flex lg:sticky top-0 overflow-scroll scrollbar-hidden'
+    )}>
       <div className="lg:hidden flex items-center h-full justify-end px-4">
         <MenuIcon className="w-10 h-10 cursor-pointer" color="white" onClick={() => setIsOpen(!isOpen)} />
       </div>

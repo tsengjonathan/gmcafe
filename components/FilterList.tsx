@@ -1,15 +1,22 @@
+import classNames from 'classnames'
 import React, { useContext } from 'react'
 import { highlands } from '../constants'
 import { FilterContext } from '../providers/FilterProvider'
+import { ThemeContext } from '../providers/ThemeProvider'
 import { TRAIT } from '../types/asset'
 import FilterChip from './FilterChip'
 
 const FilterList = () => {
   const { filter: { background, clothing, colour, feature, mood, object }, size } = useContext(FilterContext)
+  const { secondaryBackground } = useContext(ThemeContext)
+
   const total = highlands.length
 
   return (
-    <div className="h-20 w-full bg-pink-light bg-opacity-50">
+    <div className={classNames(
+      secondaryBackground,
+      'h-20 w-full bg-opacity-50'
+    )}>
       <div className="w-full h-full pl-4 lg:px-8 flex items-center">
         <div className="font-mono text-3xl w-20 lg:w-28 text-left font-semibold">
           <span className="text-purple font-normal">{size}</span>
