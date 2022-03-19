@@ -2152,7 +2152,6 @@ const highlands: Asset[] = [{
     object: ['Chainsaw']
   },
   token: '81086769033880357206596084476994515861067324006954129146728570416422604242945',
-  discord: 'Locturnal#9897'
 }, {
   name: 'Highland #153',
   description: 'Highland Cattle.',
@@ -2287,7 +2286,8 @@ const highlands: Asset[] = [{
     mood: ['Hodl'],
     object: []
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570427417720520705'
+  token: '81086769033880357206596084476994515861067324006954129146728570427417720520705',
+  discord: 'Locturnal#9897'
 }, {
   name: 'Highland #163',
   description: 'Highland Cattle.',
