@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useEffect, useState } from 'react'
 import { highlands } from '../../constants'
-import { Asset, TRAIT } from '../../types/asset'
-import { defaultFilterProvider } from './types'
+import { Asset, Trait, TRAIT } from '../../types/asset'
+import { defaultFilter, defaultFilterProvider } from './types'
 
 const ITEMS_PER_PAGE = 60
 
@@ -16,21 +16,18 @@ const shouldInclude = (traits: string[], filter: Set<string>): boolean => {
   return traits.some(trait => filter.has(trait.toLowerCase()))
 }
 
+
 export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ items, setItems ] = useState<Asset[]>(highlands)
   const [ count, setCount ] = useState(ITEMS_PER_PAGE)
-  const [ background, setBackground ] = useState<Set<string>>(new Set())
-  const [ clothing, setClothing ] = useState<Set<string>>(new Set())
-  const [ colour, setColour ] = useState<Set<string>>(new Set())
-  const [ feature, setFeature ] = useState<Set<string>>(new Set())
-  const [ mood, setMood ] = useState<Set<string>>(new Set())
-  const [ object, setObject ] = useState<Set<string>>(new Set())
+  const [ filter, setFilter ] = useState<Record<Trait, Set<string>>>(defaultFilter)
   const [ filterSpecial, setFilterSpecial ] = useState(false)
   const [ discordInput, setDiscordInput ] = useState('')
   
   useEffect(() => {
     setItems(highlands.filter(highland => {
       const { isSpecial, traits, discord } = highland
+      const { background, clothing, colour, feature, mood, object } = filter
 
       const filterCount = background.size + clothing.size + colour.size + feature.size + mood.size + object.size
       if (filterCount === 0 && !filterSpecial && !discordInput) { return highland }
@@ -46,52 +43,52 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
         && shouldInclude(traits['mood'], mood)
         && shouldInclude(traits['object'], object)
     }))
-  }, [ background, clothing, colour, feature, mood, object, filterSpecial, discordInput ])
+  }, [ filter, filterSpecial, discordInput ])
   
   
   const addFilter = (type: TRAIT, value: string) => {
     switch (type) {
       case TRAIT.BACKGROUND:
-        background.add(value)
-        return setBackground(new Set(background))
+        filter.background.add(value)
+        return setFilter({ ...filter })
       case TRAIT.CLOTHING:
-        clothing.add(value)
-        return setClothing(new Set(clothing))
+        filter.clothing.add(value)
+        return setFilter({ ...filter })
       case TRAIT.COLOUR:
-        colour.add(value)
-        return setColour(new Set(colour))
+        filter.colour.add(value)
+        return setFilter({ ...filter })
       case TRAIT.FEATURE:
-        feature.add(value)
-        return setFeature(new Set(feature))
+        filter.feature.add(value)
+        return setFilter({ ...filter })
       case TRAIT.MOOD:
-        mood.add(value)
-        return setMood(new Set(mood))
+        filter.mood.add(value)
+        return setFilter({ ...filter })
       case TRAIT.OBJECT:
-        object.add(value)
-        return setObject(new Set(object))
+        filter.object.add(value)
+        return setFilter({ ...filter })
     }
   }
 
   const removeFilter = (type: TRAIT, value: string) => {
     switch (type) {
       case TRAIT.BACKGROUND:
-        background.delete(value)
-        return setBackground(new Set(background))
+        filter.background.delete(value)
+        return setFilter({ ...filter })
       case TRAIT.CLOTHING:
-        clothing.delete(value)
-        return setClothing(new Set(clothing))
+        filter.clothing.delete(value)
+        return setFilter({ ...filter })
       case TRAIT.COLOUR:
-        colour.delete(value)
-        return setColour(new Set(colour))
+        filter.colour.delete(value)
+        return setFilter({ ...filter })
       case TRAIT.FEATURE:
-        feature.delete(value)
-        return setFeature(new Set(feature))
+        filter.feature.delete(value)
+        return setFilter({ ...filter })
       case TRAIT.MOOD:
-        mood.delete(value)
-        return setMood(new Set(mood))
+        filter.mood.delete(value)
+        return setFilter({ ...filter })
       case TRAIT.OBJECT:
-        object.delete(value)
-        return setObject(new Set(object))
+        filter.object.delete(value)
+        return setFilter({ ...filter })
     }
   }
 
@@ -103,14 +100,7 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
 
   return (
     <FilterContext.Provider value={{
-      traits: {
-        background,
-        clothing,
-        colour,
-        feature,
-        mood,
-        object,
-      },
+      filter,
       addFilter,
       removeFilter,
       items: items.slice(0, count),

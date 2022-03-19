@@ -1,14 +1,7 @@
-import { TRAIT, Asset } from '../../types/asset'
+import { TRAIT, Asset, Trait } from '../../types/asset'
 
 export type FilterContextProps = {
-  traits: {
-    background: Set<string>
-    clothing: Set<string>
-    colour: Set<string>
-    feature: Set<string>
-    mood: Set<string>
-    object: Set<string>
-  }
+  filter: Record<Trait, Set<string>>
   addFilter: (type: TRAIT, value: string) => void
   removeFilter: (type: TRAIT, value: string) => void
   items: Asset[]
@@ -22,15 +15,17 @@ export type FilterContextProps = {
   nextPage: () => void
 }
 
+export const defaultFilter: Record<Trait, Set<string>> = {
+  background: new Set(),
+  clothing: new Set(),
+  colour: new Set(),
+  feature: new Set(),
+  mood: new Set(),
+  object: new Set(),
+}
+
 export const defaultFilterProvider: FilterContextProps = {
-  traits: {
-    background: new Set(),
-    clothing: new Set(),
-    colour: new Set(),
-    feature: new Set(),
-    mood: new Set(),
-    object: new Set(),
-  },
+  filter: defaultFilter,
   addFilter: (_type: TRAIT, _value: string) => null,
   removeFilter: (_type: TRAIT, _value: string) => null,
   items: [],

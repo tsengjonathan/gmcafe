@@ -13,9 +13,9 @@ export type RadioFilterProps = {
 const RadioFilter = ({ name, type, idx, count }: RadioFilterProps) => {
   const id = `filter-${type}-${idx}`
 
-  const { addFilter, removeFilter, traits } = useContext(FilterContext)
+  const { addFilter, removeFilter, filter } = useContext(FilterContext)
 
-  const isSelected = traits[type].has(name)
+  const isSelected = filter[type].has(name)
 
   const onClick = () => {
     if (isSelected) {

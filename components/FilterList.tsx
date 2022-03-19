@@ -5,7 +5,7 @@ import { TRAIT } from '../types/asset'
 import FilterChip from './FilterChip'
 
 const FilterList = () => {
-  const { traits: { background, clothing, colour, feature, mood, object }, size } = useContext(FilterContext)
+  const { filter: { background, clothing, colour, feature, mood, object }, size } = useContext(FilterContext)
   const total = highlands.length
 
   return (

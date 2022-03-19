@@ -17,6 +17,8 @@ export enum TRAIT {
   OBJECT = 'object'
 }
 
+export type Trait = 'background' | 'clothing' | 'colour' | 'feature' | 'mood' | 'object'
+
 export type Traits = {
   [TRAIT.BACKGROUND]: string[],
   [TRAIT.CLOTHING]: string[],
