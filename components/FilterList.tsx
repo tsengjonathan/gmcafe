@@ -1,4 +1,3 @@
-import classNames from 'classnames'
 import React, { useContext } from 'react'
 import { highlands } from '../constants'
 import { FilterContext } from '../providers/FilterProvider'
@@ -8,18 +7,23 @@ import FilterChip from './FilterChip'
 
 const FilterList = () => {
   const { filter: { background, clothing, colour, feature, mood, object }, size } = useContext(FilterContext)
-  const { secondaryBackground } = useContext(ThemeContext)
+  const { secondaryBackground, primaryText } = useContext(ThemeContext)
 
   const total = highlands.length
 
   return (
     <div
-      className="h-20 w-full bg-opacity-50 transition-color"
+      className="h-20 w-full bg-opacity-50 transition-colors"
       style={{ backgroundColor: secondaryBackground }}
     >
       <div className="w-full h-full pl-4 lg:px-8 flex items-center">
         <div className="font-mono text-3xl w-20 lg:w-28 text-left font-semibold">
-          <span className="text-purple font-normal">{size}</span>
+          <span
+            className="font-normal"
+            style={{ color: primaryText }}
+          >
+            {size}
+          </span>
           /
           <span>{total}</span>
         </div>
