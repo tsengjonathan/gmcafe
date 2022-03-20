@@ -7,7 +7,7 @@ export type ThemeContextProps = {
 }
 
 export const defaultThemeProvider: ThemeContextProps = {
-  primaryBackground: 'bg-pink',
-  secondaryBackground: 'bg-pink-light',
+  primaryBackground: '#ff7dbd',
+  secondaryBackground: '#ffc7e5',
   changeTheme: () => null,
 }

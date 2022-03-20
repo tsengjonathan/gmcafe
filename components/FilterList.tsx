@@ -13,10 +13,10 @@ const FilterList = () => {
   const total = highlands.length
 
   return (
-    <div className={classNames(
-      secondaryBackground,
-      'h-20 w-full bg-opacity-50'
-    )}>
+    <div
+      className="h-20 w-full bg-opacity-50 transition-color"
+      style={{ backgroundColor: secondaryBackground }}
+    >
       <div className="w-full h-full pl-4 lg:px-8 flex items-center">
         <div className="font-mono text-3xl w-20 lg:w-28 text-left font-semibold">
           <span className="text-purple font-normal">{size}</span>
