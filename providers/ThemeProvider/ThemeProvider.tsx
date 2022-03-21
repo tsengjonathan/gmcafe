@@ -11,14 +11,18 @@ type ThemeProviderProps = {
 
 const themes: Record<CollectionType, Omit<ThemeContextProps, 'changeTheme'>> = {
   'cow': {
-    primaryBackground: 'bg-pink',
-    secondaryBackground: 'bg-pink-light'
+    primaryBackground: '#ff7dbd',
+    secondaryBackground: '#ffc7e5',
+    primaryText: '#8946ab',
   },
   'phase2': {
-    primaryBackground: 'bg-purple',
-    secondaryBackground: 'bg-purple-light'
+    primaryBackground: '#8946ab',
+    secondaryBackground: '#dfb9f1',
+    primaryText: '#ffffff',
   }
 }
+
+export const themeOrder: CollectionType[] = ['cow', 'phase2']
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [ theme, setTheme ] = useState<Omit<ThemeContextProps, 'changeTheme'>>(themes['cow'])
