@@ -4269,6 +4269,21 @@ const highlands: Asset[] = [{
   },
   token: '81086769033880357206596084476994515861067324006954129146728570574752278642689',
   discord: 'Loop#1155'
+}, {
+  name: 'Highland #317 - Chief GMOO Officer',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/8BZpR-NTYeKcKPYsrgo1blDD7XlB_X653pq626dDi4McpoULqFgci-EbxJWfkxlr2vW_76FtEmQoBZ0eYMrwahSWlv_AAeFc1olXJg',
+  traits: {
+    colour: ['Light Brown'],
+    object: ['Book', 'Headphones', 'GM JUICE Coffee'],
+    clothing: ['Hoody', 'Clear Frame Glasses'],
+    mood: ['Cosy'],
+    background: ['Morning Rays of Sun'],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570592344464687105',
+  isSpecial: true,
+  discord: 'LDF#0507'
 }]
 
 export default highlands
