@@ -2633,7 +2633,8 @@ const highlands: Asset[] = [{
     mood: ['Boba First'],
     object: ['Boba']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570454905511215105'
+  token: '81086769033880357206596084476994515861067324006954129146728570454905511215105',
+  discord: '( α ) gigglebangs#0008'
 }, {
   name: 'Highland #187',
   description: 'Highland Cattle.',
