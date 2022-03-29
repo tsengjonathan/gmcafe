@@ -4285,6 +4285,21 @@ const highlands: Asset[] = [{
   token: '81086769033880357206596084476994515861067324006954129146728570592344464687105',
   isSpecial: true,
   discord: 'LDF#0507'
+}, {
+  name: 'Highland #318 - Griffmoo',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/RW0_Dg5EvRCk1rN4_bngDS3wos1ts1BXgg1ZdYZHmZkw5SKRyk9d9SiqhPf7RXOmk9GFV23brApgBzXfij0I_V9b8dI86H7H_SWH4aQ',
+  traits: {
+    colour: ['Gradient Brown'],
+    object: [],
+    clothing: ['Steel Armour'],
+    mood: ['Plotting'],
+    background: ['Filtered Light'],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570593443976314881',
+  isSpecial: true,
+  discord: 'jez#0001'
 }]
 
 export default highlands
