@@ -4300,6 +4300,20 @@ const highlands: Asset[] = [{
   token: '81086769033880357206596084476994515861067324006954129146728570593443976314881',
   isSpecial: true,
   discord: 'jez#0001'
+}, {
+  name: 'Highland #293',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/RPe1uDpgdwnHtQUAODbN6tjPL1GxpKTctbMw25LBneDJBDbqOASTGPoTZp3_8lZVJQnPjEsvFC1mnvxJ523gcrxKcSSOncQaBFG_5A',
+  traits: {
+    colour: ['Brown'],
+    object: ['Flower', 'Umbrella'],
+    background: ['Light Pink'],
+    mood: ['Hee Hee'],
+    clothing: ['Kimono'],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570575851790270465',
+  discord: 'T.E.D.#3166'
 }]
 
 export default highlands
