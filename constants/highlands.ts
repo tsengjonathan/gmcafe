@@ -50,7 +50,7 @@ const highlands: Asset[] = [{
     colour: ['Purple'],
     feature: [],
     mood: ['Vibing'],
-    object: ['Coffee mug']
+    object: ['Coffee Mug']
   },
   token: '81086769033880357206596084476994515861067324006954129146728570248197325193217',
   discord: 'kg#0973'
@@ -158,7 +158,7 @@ const highlands: Asset[] = [{
     colour: ['Pink Spots'],
     feature: [],
     mood: ['vibing'],
-    object: ['Coffee mug']
+    object: ['Coffee Mug']
   },
   token: '81086769033880357206596084476994515861067324006954129146728570256993418215425',
   discord: 'cadocado#7549'
@@ -4334,6 +4334,19 @@ const highlands: Asset[] = [{
     feature: []
   },
   token: '81086769033880357206596084476994515861067324006954129146728570576951301898241',
+}, {
+  name: 'Highland #295',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/cJkb0XZYIe8iKzMfVH6jiRRNksV0QQGXvoB8ta5IKY-UTx1jVC3mUON80dUXyKCggzXQJQZ5IwswJf7EqtsT3EP311q7DLmRA8dowtw',
+  traits: {
+    colour: ['Light Brown with Spots'],
+    object: ['Coffee Mug', 'Egg on Head', 'Randy the Chicken'],
+    background: ['Light Blue'],
+    mood: ['Confused'],
+    clothing: [],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570578050813526017',
 }]
 
 export default highlands
