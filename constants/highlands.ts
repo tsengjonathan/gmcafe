@@ -577,7 +577,8 @@ const highlands: Asset[] = [{
     mood: ['Spooky'],
     object: ['Coffee Mug + Red Fluid']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570289978767048705'
+  token: '81086769033880357206596084476994515861067324006954129146728570289978767048705',
+  discord: 'a1rport#6969'
 }, {
   name: 'Highland #41',
   description: 'Highland Cattle.',
@@ -884,11 +885,11 @@ const highlands: Asset[] = [{
   imageUrl: 'https://lh3.googleusercontent.com/Bw1K1bM2_FGy0gtuKlyA2SQ9q5ouJQi0sSgUMtUimUWtr4vZTZzBozz60jHHHrwlOr49bMBaK1qS2ySAkJrfBCwynAOiHtOcRGXUPzg',
   traits: {
     background: ['Light Green'],
-    clothing: ['Vest and Shirt'],
+    clothing: ['Vest and Shirt', 'Glasses'],
     colour: ['Light Brown'],
     feature: [],
     mood: ['Nerdy'],
-    object: ['Coffee Mug', 'Glasses']
+    object: ['Coffee Mug']
   },
   token: '81086769033880357206596084476994515861067324006954129146728570315267534487553',
   discord: 'CozShesDead#4934'
@@ -1534,7 +1535,8 @@ const highlands: Asset[] = [{
     mood: ['Jitters'],
     object: ['Coffee Mug']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570366944580993025'
+  token: '81086769033880357206596084476994515861067324006954129146728570366944580993025',
+  discord: 'Bella1173#1173'
 }, {
   name: 'Highland #109',
   description: 'Highland Cattle.',
@@ -2364,11 +2366,11 @@ const highlands: Asset[] = [{
   imageUrl: 'https://lh3.googleusercontent.com/tqGGWEM0_SFAcbc1JdvEQD2fzVqTUWUBPj_p3obxLJVnUt0dW3o-iUK4YYfhXpOn8Y661WxlrwC5nrKiQ-onqGOjntQ6C21qYT1RLQ',
   traits: {
     background: ['Light Pink'],
-    clothing: ['Shirt'],
+    clothing: ['Shirt', 'Glasses'],
     colour: ['Brown'],
     feature: [],
     mood: ['Mmmm'],
-    object: ['Glasses', 'Burger']
+    object: ['Burger']
   },
   token: '81086769033880357206596084476994515861067324006954129146728570434014790287361'
 }, {
@@ -2701,7 +2703,8 @@ const highlands: Asset[] = [{
     mood: ['Extra Vibing'],
     object: ['Takeaway Coffee']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570460403069353985'
+  token: '81086769033880357206596084476994515861067324006954129146728570460403069353985',
+  discord: 'BellaPizza#0257'
 }, {
   name: 'Highland #192',
   description: 'Highland Cattle.',
@@ -2755,7 +2758,8 @@ const highlands: Asset[] = [{
     mood: ['Extra Vibing'],
     object: ['Chopsticks', 'Sushi']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570464801115865089'
+  token: '81086769033880357206596084476994515861067324006954129146728570464801115865089',
+  discord: 'The Rise#4477'
 }, {
   name: 'Highland #196',
   description: 'Highland Cattle.',
@@ -3300,7 +3304,8 @@ const highlands: Asset[] = [{
     mood: ['Festive'],
     object: ['Hot Chocolate']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570507682069348353'
+  token: '81086769033880357206596084476994515861067324006954129146728570507682069348353',
+  discord: 'Asvoriart#5027'
 }, {
   name: 'Highland #235',
   description: 'Highland Cattle.',
@@ -3649,7 +3654,8 @@ const highlands: Asset[] = [{
     mood: ['Carbs'],
     object: ['Burger']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570535169860042753'
+  token: '81086769033880357206596084476994515861067324006954129146728570535169860042753',
+  discord: 'DL#2441'
 }, {
   name: 'Highland #259',
   description: 'Highland Cattle.',
@@ -3757,7 +3763,8 @@ const highlands: Asset[] = [{
     mood: ['Safe'],
     object: ['Duck Floatie']
   },
-  token: '81086769033880357206596084476994515861067324006954129146728570543965953064961'
+  token: '81086769033880357206596084476994515861067324006954129146728570543965953064961',
+  discord: 'amandaawy#3499'
 }, {
   name: 'Highland #267',
   description: 'Highland Cattle.',
@@ -4314,6 +4321,19 @@ const highlands: Asset[] = [{
   },
   token: '81086769033880357206596084476994515861067324006954129146728570575851790270465',
   discord: 'T.E.D.#3166'
+}, {
+  name: 'Highland #294',
+  description: 'Highland Cattle.',
+  imageUrl: 'https://lh3.googleusercontent.com/QyfiIbGzkYGDMQsLFF4D5FoL3Brsw3oI4atDB0umXpxIK8nN6tVlGZE3CKum0Bh1Pzfs7gVkJ6toKaT1M9u139mOqsmw-NT5F1WK-w',
+  traits: {
+    colour: ['Light Brown'],
+    object: ['Muleta'],
+    background: ['Light Purple'],
+    mood: ['Alpha'],
+    clothing: ['Scarf', 'Matador Hat'],
+    feature: []
+  },
+  token: '81086769033880357206596084476994515861067324006954129146728570576951301898241',
 }]
 
 export default highlands
