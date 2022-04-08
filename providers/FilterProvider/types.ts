@@ -6,6 +6,7 @@ export type FilterContextProps = {
   removeFilter: (type: TRAIT, value: string) => void
   items: Asset[]
   size: number
+  total: number
   filterSpecial: boolean
   setFilterSpecial: (filterSpecial: boolean) => void
   shuffle: () => void
@@ -30,6 +31,7 @@ export const defaultFilterProvider: FilterContextProps = {
   removeFilter: (_type: TRAIT, _value: string) => null,
   items: [],
   size: 0,
+  total: 0,
   filterSpecial: false,
   setFilterSpecial: (_filterSpecial: boolean) => null,
   shuffle: () => null,

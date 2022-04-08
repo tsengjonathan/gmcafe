@@ -1,9 +1,11 @@
 import { createContext, ReactNode, useEffect, useState } from 'react'
-import { highlands } from '../../constants'
+import _highlands from '../../constants/highlands.json'
 import { Asset, Trait, TRAIT } from '../../types/asset'
 import { defaultFilter, defaultFilterProvider } from './types'
 
 const ITEMS_PER_PAGE = 60
+
+const highlands: Asset[] = _highlands
 
 export const FilterContext = createContext(defaultFilterProvider)
 
@@ -18,6 +20,7 @@ const shouldInclude = (traits: string[], filter: Set<string>): boolean => {
 
 
 export const FilterProvider = ({ children }: FilterProviderProps) => {
+  const [ allItems, ] = useState<Asset[]>(highlands)
   const [ items, setItems ] = useState<Asset[]>(highlands)
   const [ count, setCount ] = useState(ITEMS_PER_PAGE)
   const [ filter, setFilter ] = useState<Record<Trait, Set<string>>>(defaultFilter)
@@ -105,6 +108,7 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       removeFilter,
       items: items.slice(0, count),
       size: items.length,
+      total: allItems.length,
       filterSpecial,
       setFilterSpecial,
       shuffle,

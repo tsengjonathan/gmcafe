@@ -1,15 +1,12 @@
 import React, { useContext } from 'react'
-import { highlands } from '../constants'
 import { FilterContext } from '../providers/FilterProvider'
 import { ThemeContext } from '../providers/ThemeProvider'
 import { TRAIT } from '../types/asset'
 import FilterChip from './FilterChip'
 
 const FilterList = () => {
-  const { filter: { background, clothing, colour, feature, mood, object }, size } = useContext(FilterContext)
+  const { filter: { background, clothing, colour, feature, mood, object }, size, total } = useContext(FilterContext)
   const { secondaryBackground, primaryText } = useContext(ThemeContext)
-
-  const total = highlands.length
 
   return (
     <div

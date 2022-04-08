@@ -1,4 +1,3 @@
-import { highlands } from '../constants'
 import { Collection, UnprocessedCollection } from '../types/collection'
 
 // const fetcher = (url: string) => fetch(url).then((res) => res.json())
@@ -22,16 +21,16 @@ const useCollection = (): Collection => {
     object: {}, 
   }
 
-  highlands.forEach(({ traits }) => {
-    const { background, clothing, colour, feature, mood, object } = traits
+  // highlands.forEach(({ traits }) => {
+  //   const { background, clothing, colour, feature, mood, object } = traits
 
-    background.forEach(trait => addCount(collection.background, trait))
-    clothing.forEach(trait => addCount(collection.clothing, trait))
-    colour.forEach(trait => addCount(collection.colour, trait))
-    feature.forEach(trait => addCount(collection.feature, trait))
-    mood.forEach(trait => addCount(collection.mood, trait))
-    object.forEach(trait => addCount(collection.object, trait))
-  })
+  //   background.forEach(trait => addCount(collection.background, trait))
+  //   clothing.forEach(trait => addCount(collection.clothing, trait))
+  //   colour.forEach(trait => addCount(collection.colour, trait))
+  //   feature.forEach(trait => addCount(collection.feature, trait))
+  //   mood.forEach(trait => addCount(collection.mood, trait))
+  //   object.forEach(trait => addCount(collection.object, trait))
+  // })
 
   return collection
 }
