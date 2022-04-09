@@ -112,7 +112,7 @@
   "imageUrl": "https://lh3.googleusercontent.com/8UwbAuce058iY2VqZrmRoRKCr9A1VET2WZakWj2ZQSFhH1ElKlErYXuAbEi63EU4ymvr9CCPC5PPzB0yt4lTIhVx_0OnRx3kpzxhMg",
   "traits": {
     "background": ["Light Pink"],
-    "clothing": ["Party Hat", "Rainbow T-shirt", "Star Glasses"],
+    "clothing": ["Party Hat", "Rainbow Shirt", "Star Glasses"],
     "colour": ["White"],
     "feature": [],
     "mood": ["Party"],
@@ -180,7 +180,7 @@
   "imageUrl": "https://lh3.googleusercontent.com/fhR6zHR9R4h22Z6ojOlyjnFO50wd9SVx5jTbqZN9KwYrP2QvL5hhJmcXyrFFRXkpskHMHAwSe9vC0F6MivyZ5bG_eTS_f8b1gW0ssBM",
   "traits": {
     "background": ["Yellow"],
-    "clothing": ["Rainbow T-shirt"],
+    "clothing": ["Rainbow Shirt"],
     "colour": ["Green Spots"],
     "feature": [],
     "mood": ["Sweats"],
@@ -373,7 +373,7 @@
   "traits": {
     "background": ["Green"],
     "clothing": [],
-    "colour": ["Purple with Light Spots"],
+    "colour": ["Purple with Spots"],
     "feature": ["Blush"],
     "mood": ["Ready"],
     "object": ["Bat with Spikes and Tape"]
@@ -497,7 +497,7 @@
   "traits": {
     "background": ["Yellow"],
     "clothing": ["Gold Bling"],
-    "colour": ["Light Pink with Pink Spots"],
+    "colour": ["Light Pink with Spots"],
     "feature": [],
     "mood": ["Boss"],
     "object": []
@@ -510,7 +510,7 @@
   "imageUrl": "https://lh3.googleusercontent.com/F04VgGV2VENrf0kbj3ExafzqgzCBGXosGUyMS55_z-jKzWCzq-_Hd4lPrJYGNoUVCuLeBXp7IrZX7B40w1bogXpTMcBQLU3D2Wdx-A",
   "traits": {
     "background": ["Light Green"],
-    "clothing": ["Yellow Shirt with Pink Spots", "Pink Bow"],
+    "clothing": ["Yellow Shirt with Spots", "Bow"],
     "colour": ["White"],
     "feature": ["Blush"],
     "mood": ["Blush"],
@@ -570,7 +570,7 @@
     "colour": ["Undead Green"],
     "feature": ["Sawn Horn", "Neck Bolt", "Stitches"],
     "mood": ["Spooky"],
-    "object": ["Coffee Mug + Red Fluid"]
+    "object": ["Coffee Mug", "Red Fluid"]
   },
   "token": "81086769033880357206596084476994515861067324006954129146728570289978767048705",
   "discord": "a1rport#6969"
@@ -622,7 +622,7 @@
   "traits": {
     "background": ["Light Green"],
     "clothing": [],
-    "colour": ["White with Brown Spots"],
+    "colour": ["White with Spots"],
     "feature": [],
     "mood": [],
     "object": ["Takeaway Coffee"]
@@ -663,7 +663,7 @@
   "traits": {
     "background": ["Pink"],
     "clothing": ["Watch", "Captain Hat"],
-    "colour": ["Light Pink with Purple Spots"],
+    "colour": ["Light Pink with Spots"],
     "feature": [],
     "mood": ["Good Vibes"],
     "object": ["Coffee Mug"]
@@ -675,11 +675,11 @@
   "imageUrl": "https://lh3.googleusercontent.com/36dJuR2mLA8pTRWsctrrS_gYeyntrSH3Jq9xK5NaPdxi8jYbipAV3W81YO0mWO--Qbx3uPP6q4HXraxh_cNQOUwpbk6ge76wz5vO",
   "traits": {
     "background": [],
-    "clothing": ["Towel"],
+    "clothing": ["Towel", "Party Hat"],
     "colour": ["Light Brown"],
     "feature": ["Freckles"],
     "mood": ["Cheeky"],
-    "object": ["Party Hat"]
+    "object": []
   },
   "token": "81086769033880357206596084476994515861067324006954129146728570298774860070913"
 }, {
@@ -717,7 +717,7 @@
   "traits": {
     "background": ["Light Green"],
     "clothing": ["Towel", "Head Towel"],
-    "colour": ["Purple with Light Purple Spots"],
+    "colour": ["Purple with Spots"],
     "feature": [],
     "mood": ["Fresh"],
     "object": []
@@ -730,7 +730,7 @@
   "traits": {
     "background": ["Yellow"],
     "clothing": ["Hat"],
-    "colour": ["Purple with Dark Purple Stripes"],
+    "colour": ["Purple with Stripes"],
     "feature": [],
     "mood": ["Wired"],
     "object": ["Cabbage", "Watch"]
@@ -771,7 +771,7 @@
   "traits": {
     "background": ["Pink"],
     "clothing": ["Glasses", "Captain Hat"],
-    "colour": ["Yellow with Light Purple Spots"],
+    "colour": ["Yellow with Spots"],
     "feature": [],
     "mood": ["Pensive"],
     "object": ["Coffee Mug"]
@@ -1402,7 +1402,7 @@
   "imageUrl": "https://lh3.googleusercontent.com/KovLLfoSEyrYrxqxHu8E8Zs2uQ9hUbQ3ADb6IUO_lEYlKootHYLj2TKBFnxwcmXhyEdaivufowThYZMtjQ6r4CWi_M9Wm4xmCGB1Pzw",
   "traits": {
     "background": ["Light Yellow"],
-    "clothing": ["Blouse", "Double Bows"],
+    "clothing": ["Blouse", "Horn Bows"],
     "colour": ["Light Brown"],
     "feature": ["Freckles", "Blush"],
     "mood": ["Bright"],
@@ -1433,7 +1433,7 @@
     "clothing": ["Glasses", "Head Band", "Arm Band"],
     "colour": ["Light Pink"],
     "feature": ["Freckles", "Slicked Back Hair"],
-    "mood": ["Carbloading"],
+    "mood": ["Carb Loading"],
     "object": ["Donut"]
   },
   "token": "81086769033880357206596084476994515861067324006954129146728570359247999598593"
@@ -1457,7 +1457,7 @@
   "imageUrl": "https://lh3.googleusercontent.com/uDX-I9BZtxI5b7o0LNlryVpOc1c3EM0_D7Ft4LdDDWbqwuEGl7Qqt_E_gas7Ep32puCBxXknqzT2o04WWN_LHU3-j3ynnTRk2kBAIiY",
   "traits": {
     "background": ["Pink"],
-    "clothing": ["Blouse", "Double Bows"],
+    "clothing": ["Blouse", "Horn Bows"],
     "colour": ["Purple"],
     "feature": ["Blush"],
     "mood": ["Coffee First"],
@@ -1554,7 +1554,7 @@
   "traits": {
     "background": ["Yellow"],
     "clothing": ["Hat", "Scarf"],
-    "colour": ["White with Brown Spots"],
+    "colour": ["White with Spots"],
     "feature": ["Freckles"],
     "mood": ["Boba"],
     "object": ["Boba"]
@@ -1733,7 +1733,7 @@
   "traits": {
     "background": ["Yellow"],
     "clothing": ["Wild Rag", "Cowboy Hat"],
-    "colour": ["White with Purple Spots"],
+    "colour": ["White with Spots"],
     "feature": [],
     "mood": ["Wut?"],
     "object": ["Ice Cream"]
@@ -1815,7 +1815,7 @@
   "traits": {
     "background": ["Light Purple"],
     "clothing": [],
-    "colour": ["Light Brown with Light Spots"],
+    "colour": ["Light Brown with Spots"],
     "feature": [],
     "mood": [],
     "object": ["Bandage"]
@@ -2050,7 +2050,7 @@
     "clothing": ["Hat"],
     "colour": ["Light Brown"],
     "feature": ["Freckles", "Blush"],
-    "mood": ["Suss"],
+    "mood": ["Sus"],
     "object": ["Watch", "Milk Carton"]
   },
   "token": "81086769033880357206596084476994515861067324006954129146728570408726022848513",
@@ -2088,7 +2088,7 @@
   "imageUrl": "https://lh3.googleusercontent.com/kCgC9EO9S3YaX70f8dNZuiQcyFqgN-1iU5yBc4X4I8vjmLl64GK09W_CLDM0IrTQVasziV0gmrEPw8HXLuIQewc8xSCEVbJfwUngtQ",
   "traits": {
     "background": ["Yellow"],
-    "clothing": ["Hoody"],
+    "clothing": ["Hoodie"],
     "colour": ["Light Brown"],
     "feature": ["Morning hair"],
     "mood": ["Cosy Caffine"],
@@ -2144,7 +2144,7 @@
     "clothing": ["Hard Hat"],
     "colour": ["Light Purple"],
     "feature": [],
-    "mood": ["Workn"],
+    "mood": ["Workin'"],
     "object": ["Chainsaw"]
   },
   "token": "81086769033880357206596084476994515861067324006954129146728570416422604242945"
@@ -2249,7 +2249,7 @@
   "imageUrl": "https://lh3.googleusercontent.com/q672hqAuwEeujY03XUGmQQltoLGWEWwXvmao3lyvxODmTtyLu9LdtUV6-cUaE_ETV4e0JogY_biG48yz1zPNZ18AayIb-FeMjTtIFg",
   "traits": {
     "background": ["Pink"],
-    "clothing": ["Shirt", "Bows"],
+    "clothing": ["Shirt", "Bow"],
     "colour": ["Light Brown"],
     "feature": ["Blush", "Hair Buns"],
     "mood": ["Innocent"],
@@ -2443,7 +2443,7 @@
   "imageUrl": "https://lh3.googleusercontent.com/XDWheuZbIOdJbv_UZeXTZg60ce0p2OtFkCTbky7o4rRx0QhUzVbIHGHFbpbKx502hL6H3kGfDQIUAljzS3Io-iGRXSabkqdg2imgcA",
   "traits": {
     "background": ["Light Purple"],
-    "clothing": ["Hoody"],
+    "clothing": ["Hoodie"],
     "colour": ["Light Brown"],
     "feature": ["Freckles", "Leveled Up Hair"],
     "mood": ["R2"],
@@ -2582,7 +2582,7 @@
   "traits": {
     "background": ["Light Blue"],
     "clothing": [],
-    "colour": ["White with Pink Spots"],
+    "colour": ["White with Spots"],
     "feature": [],
     "mood": ["Carbs"],
     "object": ["Confetti", "Cookie"]
@@ -2708,7 +2708,7 @@
     "clothing": ["Star Glasses"],
     "colour": ["Purple"],
     "feature": [],
-    "mood": ["Suss"],
+    "mood": ["Sus"],
     "object": ["Cookie"]
   },
   "token": "81086769033880357206596084476994515861067324006954129146728570461502580981761",
@@ -3038,7 +3038,7 @@
   "traits": {
     "background": ["Purple"],
     "clothing": ["Neck Ribbon with Diamond", "Bow"],
-    "colour": ["Light Pink with Light Stripes"],
+    "colour": ["Light Pink with Stripes"],
     "feature": [],
     "mood": ["Attack!"],
     "object": ["Controller"]
@@ -3107,7 +3107,7 @@
   "traits": {
     "background": ["Light Pink"],
     "clothing": ["Flower Crown"],
-    "colour": ["White with Brown Spots"],
+    "colour": ["White with Spots"],
     "feature": ["Freckles", "Blush"],
     "mood": ["Tropical"],
     "object": ["Pineapple"]
@@ -3190,7 +3190,7 @@
   "traits": {
     "background": ["Green"],
     "clothing": [],
-    "colour": ["Pink with Light Spots"],
+    "colour": ["Pink with Spots"],
     "feature": [],
     "mood": ["Comfy"],
     "object": ["Coffee Mug"]
@@ -3245,7 +3245,7 @@
   "traits": {
     "background": [],
     "clothing": [],
-    "colour": ["Light Brown with Light Spots"],
+    "colour": ["Light Brown with Spots"],
     "feature": ["Rainbow Hair"],
     "mood": ["Carbs"],
     "object": ["Toast", "Butter knife"]
@@ -3620,7 +3620,7 @@
   "imageUrl": "https://lh3.googleusercontent.com/vX1AZDu3L14-081397TUgUx2I4QIooAG2n4F882Ixc4H5STFQ3YkI3TTk_Fr13k9Qn-wMHcCnKu_UMl8fNQXvyjVwu7rxD_3rGr7",
   "traits": {
     "background": ["Light Blue"],
-    "clothing": ["Hoody"],
+    "clothing": ["Hoodie"],
     "colour": ["Brown"],
     "feature": [],
     "mood": ["Attack!"],
@@ -3649,7 +3649,7 @@
   "traits": {
     "background": ["Light Yellow"],
     "clothing": ["Hat", "Kimono"],
-    "colour": ["White with Brown Spots"],
+    "colour": ["White with Spots"],
     "feature": ["Freckles"],
     "mood": ["Chilled"],
     "object": ["Tea Cup"]
@@ -4270,7 +4270,7 @@
   "traits": {
     "colour": ["Light Brown"],
     "object": ["Book", "Headphones", "GM JUICE Coffee"],
-    "clothing": ["Hoody", "Clear Frame Glasses"],
+    "clothing": ["Hoodie", "Clear Frame Glasses"],
     "mood": ["Cosy"],
     "background": ["Morning Rays of Sun"],
     "feature": []
@@ -4333,5 +4333,19 @@
     "clothing": [],
     "feature": []
   },
-  "token": "81086769033880357206596084476994515861067324006954129146728570578050813526017"
+  "token": "81086769033880357206596084476994515861067324006954129146728570578050813526017",
+  "discord": "sneeze#1234"
+}, {
+  "name": "Highland #297",
+  "description": "Highland Cattle.",
+  "imageUrl": "https://lh3.googleusercontent.com/l32MPCxqRrShdUiVhlrXE6nvtk0Z6XnE1niTCdPNjWb2nSBNnXXPsHWJNJ5akGSMLwj7_TEzPIAwgmzVCb03aM3Dxot82yTZ9LVA4A",
+  "traits": {
+    "colour": ["Purple"],
+    "object": ["Cotton Candy"],
+    "background": ["Pink"],
+    "mood": ["Excite!"],
+    "clothing": ["Shirt", "Bucket Hat"],
+    "feature": ["Blush"]
+  },
+  "token": "81086769033880357206596084476994515861067324006954129146728570579150325153793"
 }]
