@@ -5,6 +5,7 @@ export type FilterContextProps = {
   addFilter: (type: TRAIT, value: string) => void
   removeFilter: (type: TRAIT, value: string) => void
   items: Asset[]
+  allItems: Asset[]
   size: number
   total: number
   filterSpecial: boolean
@@ -30,6 +31,7 @@ export const defaultFilterProvider: FilterContextProps = {
   addFilter: (_type: TRAIT, _value: string) => null,
   removeFilter: (_type: TRAIT, _value: string) => null,
   items: [],
+  allItems: [],
   size: 0,
   total: 0,
   filterSpecial: false,

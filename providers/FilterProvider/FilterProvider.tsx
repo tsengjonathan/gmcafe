@@ -105,6 +105,7 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       addFilter,
       removeFilter,
       items: items.slice(0, count),
+      allItems: allItems,
       size: items.length,
       total: allItems.length,
       filterSpecial,
