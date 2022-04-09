@@ -1,11 +1,9 @@
 import { createContext, ReactNode, useEffect, useState } from 'react'
-import _highlands from '../../constants/highlands.json'
+import { highlands } from '../../constants'
 import { Asset, Trait, TRAIT } from '../../types/asset'
 import { defaultFilter, defaultFilterProvider } from './types'
 
 const ITEMS_PER_PAGE = 60
-
-const highlands: Asset[] = _highlands
 
 export const FilterContext = createContext(defaultFilterProvider)
 
