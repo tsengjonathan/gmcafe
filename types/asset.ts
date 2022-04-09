@@ -2,30 +2,27 @@ export type Asset = {
   name: string
   description: string
   imageUrl: string
-  traits: Traits
+  attributes: Attribute[]
   token: string
   isSpecial?: boolean
   discord?: string
+  owner: string
 }
 
 export enum TRAIT {
-  BACKGROUND = 'background',
-  CLOTHING = 'clothing',
-  COLOUR = 'colour',
-  FEATURE = 'feature',
-  MOOD = 'mood',
-  OBJECT = 'object'
+  BACKGROUND = 'Background',
+  CLOTHING = 'Clothing',
+  COLOUR = 'Colour',
+  FEATURE = 'Feature',
+  MOOD = 'Mood',
+  OBJECT = 'Object'
 }
 
 export type Trait = 'background' | 'clothing' | 'colour' | 'feature' | 'mood' | 'object'
 
-export type Traits = {
-  [TRAIT.BACKGROUND]: string[],
-  [TRAIT.CLOTHING]: string[],
-  [TRAIT.COLOUR]: string[],
-  [TRAIT.FEATURE]: string[],
-  [TRAIT.MOOD]: string[],
-  [TRAIT.OBJECT]: string[], 
+export type Attribute = {
+  'trait_type': TRAIT
+  'value': string
 }
 
 export type UnprocessedAsset = {

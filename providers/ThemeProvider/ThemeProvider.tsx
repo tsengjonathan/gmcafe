@@ -1,6 +1,6 @@
-import { createContext, ReactNode, useState } from "react";
-import { CollectionType } from "../../types/collection";
-import { defaultThemeProvider, ThemeContextProps } from "./types";
+import { createContext, ReactNode, useState } from 'react';
+import { CollectionType } from '../../types/collection';
+import { defaultThemeProvider, ThemeContextProps } from './types';
 
 
 export const ThemeContext = createContext(defaultThemeProvider)

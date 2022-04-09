@@ -1,23 +1,21 @@
 import classNames from 'classnames'
 import Image from 'next/image'
-import { ReactNode } from 'react'
-import { Asset, TRAIT } from '../types/asset'
+import { Asset } from '../types/asset'
 import Chip from './Chip'
 import { ExternalLinkIcon } from '@heroicons/react/outline'
 import { contract, marketplaceUrl } from '../constants'
 import Link from 'next/link'
 import NameTag from './NameTag'
 
-const renderChips = (traits: string[], type: TRAIT, token: string): ReactNode[] => (
-  traits.map((trait, idx) => <Chip key={`${token}-${trait}-${idx}`} name={trait} type={type} />)
-)
-
-const Card = ({ name, imageUrl, traits, token, isSpecial, discord }: Asset) => {
+const Card = ({ name, imageUrl, attributes, token, isSpecial, discord }: Asset) => {
   const displayName = isSpecial ? name : name.split(' ')[1]
 
-  const { background, clothing, colour, mood, feature, object } = traits
-
   const externalLink = `${marketplaceUrl}/${contract}/${token}`
+
+  const chips = attributes.map((attribute, idx) => {
+    const { trait_type, value } = attribute
+    return <Chip key={`${token}-${trait_type}-${idx}`} name={value} type={trait_type} />
+  })
 
   return (
     <div className={classNames(
@@ -41,12 +39,7 @@ const Card = ({ name, imageUrl, traits, token, isSpecial, discord }: Asset) => {
       <h3 className="mt-2 mb-1 text-lg cursor-default px-3">{displayName}</h3>
       { discord ? <NameTag name={discord} /> : null }
       <div className="break-inside-avoid mt-2 px-2">
-        {renderChips(background, TRAIT.BACKGROUND, token)}
-        {renderChips(clothing, TRAIT.CLOTHING, token)}
-        {renderChips(colour, TRAIT.COLOUR, token)}
-        {renderChips(mood, TRAIT.MOOD, token)}
-        {renderChips(feature, TRAIT.FEATURE, token)}
-        {renderChips(object, TRAIT.OBJECT, token)}
+        {chips}
       </div>
     </div>
   )

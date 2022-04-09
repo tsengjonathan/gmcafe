@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { FilterContext } from '../providers/FilterProvider'
 import { TRAIT } from '../types/asset'
-import { capitalize } from './util'
+import { capitalize, convertTrait } from './util'
 
 export type RadioFilterProps = {
   name: string
@@ -15,7 +15,7 @@ const RadioFilter = ({ name, type, idx, count }: RadioFilterProps) => {
 
   const { addFilter, removeFilter, filter } = useContext(FilterContext)
 
-  const isSelected = filter[type].has(name)
+  const isSelected = filter[convertTrait(type)].has(name)
 
   const onClick = () => {
     if (isSelected) {
@@ -40,7 +40,7 @@ const RadioFilter = ({ name, type, idx, count }: RadioFilterProps) => {
         className="ml-2 my-0.5 text-default overflow-hidden inline-block"
         htmlFor={id}
       >
-        {`${capitalize(name)} (${count})`}
+        {`${name} (${count})`}
       </label>
     </div>
   )

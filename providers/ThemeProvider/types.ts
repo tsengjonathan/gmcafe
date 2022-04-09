@@ -1,4 +1,4 @@
-import { CollectionType } from "../../types/collection"
+import { CollectionType } from '../../types/collection'
 
 export type ThemeContextProps = {
   primaryBackground: string

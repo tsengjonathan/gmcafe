@@ -21,14 +21,7 @@ import { Tooltip } from '@mui/material'
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
   
-  const {
-    background,
-    clothing,
-    colour,
-    feature,
-    mood,
-    object
-  } = useCollection()
+  const collection = useCollection()
 
   const {
     filterSpecial, setFilterSpecial, shuffle, reverse, discordInput, setDiscordInput
@@ -45,12 +38,12 @@ const Sidebar = () => {
       <Disclosure title="Discord">
         <FilterInput input={discordInput} setInput={setDiscordInput} placeholder="BenColefax#3753" />
       </Disclosure>
-      <FilterDisclosure title={TRAIT.BACKGROUND} fields={background} />
-      <FilterDisclosure title={TRAIT.CLOTHING} fields={clothing} />
-      <FilterDisclosure title={TRAIT.COLOUR} fields={colour} />
-      <FilterDisclosure title={TRAIT.FEATURE} fields={feature} />
-      <FilterDisclosure title={TRAIT.MOOD} fields={mood} />
-      <FilterDisclosure title={TRAIT.OBJECT} fields={object} />
+      <FilterDisclosure title={TRAIT.BACKGROUND} fields={collection[TRAIT.BACKGROUND]} />
+      <FilterDisclosure title={TRAIT.CLOTHING} fields={collection[TRAIT.CLOTHING]} />
+      <FilterDisclosure title={TRAIT.COLOUR} fields={collection[TRAIT.COLOUR]} />
+      <FilterDisclosure title={TRAIT.FEATURE} fields={collection[TRAIT.FEATURE]} />
+      <FilterDisclosure title={TRAIT.MOOD} fields={collection[TRAIT.MOOD]} />
+      <FilterDisclosure title={TRAIT.OBJECT} fields={collection[TRAIT.OBJECT]} />
     </>
   )
 

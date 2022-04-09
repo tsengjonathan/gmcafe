@@ -11,12 +11,6 @@ type FilterProviderProps = {
   children: ReactNode
 }
 
-const shouldInclude = (traits: string[], filter: Set<string>): boolean => {
-  if (filter.size === 0) { return true }
-  return traits.some(trait => filter.has(trait.toLowerCase()))
-}
-
-
 export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ allItems, ] = useState<Asset[]>(highlands)
   const [ items, setItems ] = useState<Asset[]>(highlands)
@@ -27,7 +21,7 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
   
   useEffect(() => {
     setItems(highlands.filter(highland => {
-      const { isSpecial, traits, discord } = highland
+      const { isSpecial, attributes, discord } = highland
       const { background, clothing, colour, feature, mood, object } = filter
 
       const filterCount = background.size + clothing.size + colour.size + feature.size + mood.size + object.size
@@ -37,12 +31,23 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       const shouldFilterDiscord = discordInput ? discord?.toLowerCase().includes(discordInput.toLowerCase()) : true
   
       return shouldFilterSpecial && shouldFilterDiscord
-        && shouldInclude(traits['background'], background)
-        && shouldInclude(traits['clothing'], clothing)
-        && shouldInclude(traits['colour'], colour)
-        && shouldInclude(traits['feature'], feature)
-        && shouldInclude(traits['mood'], mood)
-        && shouldInclude(traits['object'], object)
+        && attributes.some(attribute => {
+          const { trait_type, value } = attribute
+          switch (trait_type) {
+            case TRAIT.BACKGROUND:
+              return background.has(value)
+            case TRAIT.CLOTHING:
+              return clothing.has(value)
+            case TRAIT.COLOUR:
+              return colour.has(value)
+            case TRAIT.FEATURE:
+              return feature.has(value)
+            case TRAIT.MOOD:
+              return mood.has(value)
+            case TRAIT.OBJECT:
+              return object.has(value)
+          }
+        })
     }))
   }, [ filter, filterSpecial, discordInput ])
   

@@ -1,4 +1,4 @@
-import { TRAIT } from "./asset"
+import { TRAIT } from './asset'
 
 export type UnprocessedCollection = {
   collection: {
