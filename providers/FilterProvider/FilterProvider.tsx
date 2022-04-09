@@ -35,17 +35,17 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
           const { trait_type, value } = attribute
           switch (trait_type) {
             case TRAIT.BACKGROUND:
-              return background.has(value)
+              return background.size === 0 || background.has(value)
             case TRAIT.CLOTHING:
-              return clothing.has(value)
+              return clothing.size === 0 || clothing.has(value)
             case TRAIT.COLOUR:
-              return colour.has(value)
+              return colour.size === 0 || colour.has(value)
             case TRAIT.FEATURE:
-              return feature.has(value)
+              return feature.size === 0 || feature.has(value)
             case TRAIT.MOOD:
-              return mood.has(value)
+              return mood.size === 0 || mood.has(value)
             case TRAIT.OBJECT:
-              return object.has(value)
+              return object.size === 0 || object.has(value)
           }
         })
     }))
