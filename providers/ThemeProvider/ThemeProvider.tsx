@@ -12,7 +12,7 @@ type ThemeProviderProps = {
 const themes: Record<CollectionType, Omit<ThemeContextProps, 'changeTheme'>> = {
   'cow': {
     primaryBackground: '#ff7dbd',
-    secondaryBackground: '#ffc7e5',
+    secondaryBackground: '#ffc7e588',
     primaryText: '#8946ab',
   },
   'phase2': {

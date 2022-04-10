@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useEffect, useState } from 'react'
 import { highlands } from '../../constants'
-import { Asset, Trait, TRAIT } from '../../types/asset'
+import { Asset, Attribute, Trait, TRAIT } from '../../types/asset'
 import { defaultFilter, defaultFilterProvider } from './types'
 
 const ITEMS_PER_PAGE = 60
@@ -9,6 +9,11 @@ export const FilterContext = createContext(defaultFilterProvider)
 
 type FilterProviderProps = {
   children: ReactNode
+}
+
+const shouldInclude = (trait: TRAIT, attributes: Attribute[], filter: Set<string>) => {
+  const traitAttrs = attributes.filter(attribute => attribute.trait_type === trait)
+  return filter.size === 0 || traitAttrs.some(attr => filter.has(attr.value))
 }
 
 export const FilterProvider = ({ children }: FilterProviderProps) => {
@@ -31,23 +36,12 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       const shouldFilterDiscord = discordInput ? discord?.toLowerCase().includes(discordInput.toLowerCase()) : true
   
       return shouldFilterSpecial && shouldFilterDiscord
-        && attributes.some(attribute => {
-          const { trait_type, value } = attribute
-          switch (trait_type) {
-            case TRAIT.BACKGROUND:
-              return background.size === 0 || background.has(value)
-            case TRAIT.CLOTHING:
-              return clothing.size === 0 || clothing.has(value)
-            case TRAIT.COLOUR:
-              return colour.size === 0 || colour.has(value)
-            case TRAIT.FEATURE:
-              return feature.size === 0 || feature.has(value)
-            case TRAIT.MOOD:
-              return mood.size === 0 || mood.has(value)
-            case TRAIT.OBJECT:
-              return object.size === 0 || object.has(value)
-          }
-        })
+        && shouldInclude(TRAIT.BACKGROUND, attributes, background)
+        && shouldInclude(TRAIT.CLOTHING, attributes, clothing)
+        && shouldInclude(TRAIT.COLOUR, attributes, colour)
+        && shouldInclude(TRAIT.FEATURE, attributes, feature)
+        && shouldInclude(TRAIT.MOOD, attributes, mood)
+        && shouldInclude(TRAIT.OBJECT, attributes, object)
     }))
   }, [ filter, filterSpecial, discordInput ])
   
