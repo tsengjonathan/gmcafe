@@ -640,7 +640,7 @@
       },
       {
         "trait_type": "Feature",
-        "value": "'Gm' Brand"
+        "value": "'GM' Brand"
       },
       {
         "trait_type": "Feature",
@@ -718,7 +718,7 @@
       },
       {
         "trait_type": "Mood",
-        "value": "Chilled"
+        "value": "Chill"
       },
       {
         "trait_type": "Object",
@@ -1684,7 +1684,7 @@
       },
       {
         "trait_type": "Clothing",
-        "value": "Watermelon Hat With Drips"
+        "value": "Watermelon Hat"
       },
       {
         "trait_type": "Colour",
@@ -1697,6 +1697,10 @@
       {
         "trait_type": "Object",
         "value": "Takeaway Coffee"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Red Fluid"
       }
     ]
   },
@@ -3630,7 +3634,7 @@
       },
       {
         "trait_type": "Clothing",
-        "value": "Baret"
+        "value": "Beret"
       },
       {
         "trait_type": "Colour",
@@ -3883,7 +3887,7 @@
       },
       {
         "trait_type": "Clothing",
-        "value": "Baret"
+        "value": "Beret"
       },
       {
         "trait_type": "Colour",
@@ -4242,6 +4246,7 @@
     "description": "Highland Cattle.",
     "imageUrl": "https://lh3.googleusercontent.com/SGkQYqqveoJYazmWquBRm2fq_5Vl5bKTl2R3ZUr9-3SK99hN_A61b8Z3DqfnbpZ3-LMVrd6O1SXkfh9Abyuhn6R3tX90xekkgBDs8ac",
     "token": "81086769033880357206596084476994515861067324006954129146728570384536767037441",
+    "discord": "kassnft#5737",
     "owner": "0xefa845164e612fe623ac21380afc8ec78f22e3c3",
     "attributes": [
       {
@@ -4419,6 +4424,10 @@
       {
         "trait_type": "Object",
         "value": "Bandage"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Baguette"
       }
     ]
   },
@@ -4828,7 +4837,7 @@
       },
       {
         "trait_type": "Mood",
-        "value": "Studiez"
+        "value": "Studious"
       },
       {
         "trait_type": "Object",
@@ -5113,7 +5122,7 @@
       },
       {
         "trait_type": "Mood",
-        "value": "Cosy Caffine"
+        "value": "Cosy Caffeine"
       },
       {
         "trait_type": "Object",
@@ -5175,7 +5184,7 @@
       },
       {
         "trait_type": "Clothing",
-        "value": "Gm Earrings"
+        "value": "GM Earrings"
       },
       {
         "trait_type": "Colour",
@@ -5661,7 +5670,7 @@
       },
       {
         "trait_type": "Clothing",
-        "value": "Hat With Flap"
+        "value": "Hat"
       },
       {
         "trait_type": "Colour",
@@ -5686,8 +5695,8 @@
     "description": "Highland Cattle.",
     "imageUrl": "https://lh3.googleusercontent.com/DuhObi5Lv9or2d92IHcD02StUbheK4qkkw6NHEGizoBWCJ32bn0X0NQcsfD_aDg6sI0FrLHFTO2tKzGlcDP4YYVRbMXtzYRRnW6hKw",
     "token": "81086769033880357206596084476994515861067324006954129146728570430716255404033",
-    "discord": "📻🎵🎵#6969",
-    "owner": "0xf54d81b2955832474a87a8dada4a042a05b83180",
+    "discord": "Kiaannz#0975",
+    "owner": "0x89d393a0797c0d8271589e18eabfe43a0bb66a7e",
     "attributes": [
       {
         "trait_type": "Background",
@@ -6814,7 +6823,7 @@
       },
       {
         "trait_type": "Mood",
-        "value": "90'S"
+        "value": "90's"
       }
     ]
   },
@@ -7262,7 +7271,7 @@
       },
       {
         "trait_type": "Mood",
-        "value": "Caffinated"
+        "value": "Caffeinated"
       },
       {
         "trait_type": "Object",
@@ -8928,7 +8937,7 @@
       },
       {
         "trait_type": "Mood",
-        "value": "Chilled"
+        "value": "Chill"
       },
       {
         "trait_type": "Object",
@@ -9776,7 +9785,7 @@
       },
       {
         "trait_type": "Object",
-        "value": "Gm Wand"
+        "value": "GM Wand"
       },
       {
         "trait_type": "Mood",
@@ -10384,7 +10393,7 @@
       },
       {
         "trait_type": "Clothing",
-        "value": "<Gm/> Beanie"
+        "value": "<GM/> Beanie"
       },
       {
         "trait_type": "Clothing",
@@ -10415,7 +10424,7 @@
       },
       {
         "trait_type": "Object",
-        "value": "Gm Juice Coffee"
+        "value": "GM Juice Coffee"
       },
       {
         "trait_type": "Clothing",

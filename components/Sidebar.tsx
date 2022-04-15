@@ -64,7 +64,7 @@ const Sidebar = () => {
           <a href="https://twitter.com/gmcafeNFT" target="blank">
             <TwitterIcon className="h-5 w-5 mx-1" />
           </a>
-          <a href="https://discord.com/gmcafe" target="blank">
+          <a href="https://discord.gg/gmcafe" target="blank">
             <DiscordIcon className="h-5 w-5 mx-1" />
           </a>
         </div>
