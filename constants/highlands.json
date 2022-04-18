@@ -10610,4 +10610,42 @@
       }
     ]
   }
+  ,
+  {
+    "name": "Highland #298",
+    "description": "Highland Cattle.",
+    "imageUrl": "https://lh3.googleusercontent.com/32pHDyjeIr8YBf5Jood_uxDbrtsf_PaHltCEqcIhxXORHKK8Z-u8dUjhrAxTabzM2q3wNor_fl5gmvPAuAioUXtPYB9fRdbxe66H",
+    "token": "81086769033880357206596084476994515861067324006954129146728570580249836781569",
+    "owner": "0xb23db186161ba869c06faed618d0a0263bdb75c3",
+    "attributes": [
+      {
+        "trait_type": "Colour",
+        "value": "Brown"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Coffee Mug"
+      },
+      {
+        "trait_type": "Background",
+        "value": "Light Purple"
+      },
+      {
+        "trait_type": "Mood",
+        "value": "Howdy"
+      },
+      {
+        "trait_type": "Clothing",
+        "value": "Sheriff Hat"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Marcus the Cactus"
+      },
+      {
+        "trait_type": "Feature",
+        "value": "Moustache"
+      }
+    ]
+  }
 ]
