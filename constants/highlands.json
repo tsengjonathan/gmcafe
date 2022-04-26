@@ -1184,10 +1184,6 @@
       },
       {
         "trait_type": "Object",
-        "value": "Spoon"
-      },
-      {
-        "trait_type": "Object",
         "value": "Pot"
       }
     ]
@@ -1681,7 +1677,7 @@
       },
       {
         "trait_type": "Object",
-        "value": "Coffee Mug"
+        "value": "Takeaway Coffee"
       }
     ]
   },
@@ -4055,6 +4051,7 @@
     "description": "Highland Cattle.",
     "imageUrl": "https://lh3.googleusercontent.com/6phkiDLSfYflvm9ksImBZAwsntS9qYyOZLF4J5SOvVLsGGbyREYCAjD6Kf9W5-AgH5T_TORg47_-htLq_pI0koR1IeOPnpo243hx",
     "token": "81086769033880357206596084476994515861067324006954129146728570382337743781889",
+    "discord": "JRYEN#8074",
     "attributes": [
       {
         "trait_type": "Background",
@@ -6160,10 +6157,6 @@
       {
         "trait_type": "Mood",
         "value": "Carbs"
-      },
-      {
-        "trait_type": "Object",
-        "value": "Confetti"
       },
       {
         "trait_type": "Object",
@@ -10302,8 +10295,7 @@
         "value": "Blush"
       }
     ]
-  }
-  ,
+  },
   {
     "name": "Highland #298",
     "description": "Highland Cattle.",
@@ -10372,6 +10364,38 @@
       {
         "trait_type": "Clothing",
         "value": "Mina's Heart Glasses"
+      }
+    ]
+  },
+  {
+    "name": "Highland #299",
+    "description": "Highland Cattle.",
+    "imageUrl": "https://lh3.googleusercontent.com/96mzRY3N7HoceAQUKAbrXF4Xd-cY2WngIdIKwoEiElsQasYm0kmWYDvHmC9ZJ7hU1j6yTdeQyPMCKrXjx0uDLq5S8VplcECidwn74g",
+    "token": "81086769033880357206596084476994515861067324006954129146728570581349348409345",
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Light Green"
+      },
+      {
+        "trait_type": "Clothing",
+        "value": "Head Tie"
+      },
+      {
+        "trait_type": "Colour",
+        "value": "Light Brown with Spots"
+      },
+      {
+        "trait_type": "Mood",
+        "value": "Pew Pew!"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Bazooka"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Randy"
       }
     ]
   }
