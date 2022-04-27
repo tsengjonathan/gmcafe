@@ -49,7 +49,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className="lg:w-1/4 lg:py-8 flex-col h-14 lg:h-screen lg:flex lg:sticky top-0 overflow-scroll scrollbar-hidden transition-colors"
+      className="lg:w-1/4 lg:py-8 flex-col h-14 lg:h-screen lg:flex lg:sticky top-0 overflow-y-auto scrollbar-hidden transition-colors"
       style={{ backgroundColor: primaryBackground }}
     >
       <div className="lg:hidden flex items-center h-full justify-end px-4">

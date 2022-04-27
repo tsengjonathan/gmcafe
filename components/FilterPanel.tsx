@@ -30,7 +30,7 @@ const FilterPanel = ({ fields, title }: FilterPanelProps) => {
     })
 
   return (
-    <div className="lg:max-h-80 lg:overflow-y-scroll mb-3">
+    <div className="lg:max-h-80 lg:overflow-y-auto mb-3">
       <FilterInput input={input} setInput={setInput} placeholder='Search...' />
       {filters}
     </div>
