@@ -10,6 +10,7 @@ const Home = () => {
       <Head>
         <title>Good Morning Café</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
 
         <meta name="description" content="Browse and explore GMCafé Moos" />
         <meta property="og:title" content="Good Morning Café" />
