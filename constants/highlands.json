@@ -10398,5 +10398,38 @@
         "value": "Randy"
       }
     ]
+  },
+  {
+    "name": "Highland #308 - Moothical Beast",
+    "description": "Highland Cattle.",
+    "imageUrl": "https://lh3.googleusercontent.com/Us_yeLumwja0nwcg5sMZrWfmTPw02aG1zjg970ma8A0pme0OES8Q-vNN_o92UnCBVPZhC1nePK8DV-2W4B-WohCnyA0SrgTQKCRNMYM",
+    "token": "81086769033880357206596084476994515861067324006954129146728570583548371664897",
+    "isSpecial": true,
+    "attributes": [
+      {
+        "trait_type": "Object",
+        "value": "Randy"
+      },
+      {
+        "trait_type": "Mood",
+        "value": "Fiery"
+      },
+      {
+        "trait_type": "Colour",
+        "value": "Warm Gradient"
+      },
+      {
+        "trait_type": "Background",
+        "value": "Fire!"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Golden Eggs"
+      },
+      {
+        "trait_type": "Clothing",
+        "value": "Draconic Suit"
+      }
+    ]
   }
 ]
