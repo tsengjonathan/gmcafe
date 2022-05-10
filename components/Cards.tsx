@@ -8,7 +8,7 @@ const Cards = () => {
 
   return (
     <>
-      <div className="flex flex-wrap m-4 lg:m-6 justify-evenly">
+      <div className="grid grid-cols-[repeat(auto-fill,15rem)] justify-between w-full p-4 lg:p-6">
         { items.map(highland => <Card key={highland.token} {...highland} />) }
       </div>
       <div className="flex mb-10">
