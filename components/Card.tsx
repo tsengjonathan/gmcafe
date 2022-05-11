@@ -2,12 +2,16 @@ import classNames from 'classnames'
 import Image from 'next/image'
 import { Asset } from '../types/asset'
 import Chip from './Chip'
-import { ExternalLinkIcon } from '@heroicons/react/outline'
+import { ExternalLinkIcon, SwitchHorizontalIcon } from '@heroicons/react/outline'
 import { contract, marketplaceUrl } from '../constants'
 import Link from 'next/link'
 import NameTag from './NameTag'
+import maccas from '../constants/maccas'
+import { useState } from 'react'
 
 const Card = ({ name, imageUrl, attributes, token, isSpecial, discord }: Asset) => {
+  const [showAltImage, setShowAltImage] = useState(false)
+  
   const displayName = isSpecial ? name : name.split(' ')[1]
 
   const externalLink = `${marketplaceUrl}/${contract}/${token}`
@@ -17,9 +21,11 @@ const Card = ({ name, imageUrl, attributes, token, isSpecial, discord }: Asset) 
     return <Chip key={`${token}-${trait_type}-${idx}`} name={value} type={trait_type} />
   })
 
+  const altImage = token in maccas ? maccas[token] : null
+
   return (
     <div className={classNames(
-      'flex flex-col items-center overflow-hidden rounded lg:pb-6 animate-rerender',
+      'flex flex-col items-center overflow-hidden rounded lg:pb-6 animate-rerender mb-6',
       { 'bg-gray-100 drop-shadow transition-transform lg:hover:scale-105 duration-200 pb-4': isSpecial }
     )}>
       <div className="relative">
@@ -28,13 +34,20 @@ const Card = ({ name, imageUrl, attributes, token, isSpecial, discord }: Asset) 
           { 'drop-shadow': isSpecial },
           { 'scale-110 lg:scale-100 transition-transform lg:hover:scale-110 duration-200': !isSpecial }
         )}>
-          <Image src={imageUrl} alt={name} layout="fill" objectFit="cover" />
+          {!showAltImage && <Image src={imageUrl} alt={name} layout="fill" objectFit="cover" />}
+          {showAltImage && altImage && <Image src={altImage} alt={name} layout="fill" objectFit="cover" />}
         </div>
         <Link href={externalLink} passHref>
           <a target="_blank">
             <ExternalLinkIcon className="h-5 w-5 m-1 cursor-pointer absolute top-0 right-0 text-gray-400 hover:text-gray-600 transition-colors" />
           </a>
         </Link>
+        {altImage && (
+          <SwitchHorizontalIcon
+            className="h-5 w-5 m-1 cursor-pointer absolute bottom-0 left-0 text-gray-400 hover:text-gray-600 transition-colors"
+            onClick={() => setShowAltImage(!showAltImage)}
+          />
+        )}
       </div>
       <h3 className="mt-2 mb-1 text-lg cursor-default px-3">{displayName}</h3>
       { discord ? <NameTag name={discord} /> : null }

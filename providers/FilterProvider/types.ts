@@ -10,6 +10,8 @@ export type FilterContextProps = {
   total: number
   filterSpecial: boolean
   setFilterSpecial: (filterSpecial: boolean) => void
+  filterMaccas: boolean,
+  setFilterMaccas: (filterMaccas: boolean) => void
   shuffle: () => void
   reverse: () => void
   discordInput: string
@@ -36,6 +38,8 @@ export const defaultFilterProvider: FilterContextProps = {
   total: 0,
   filterSpecial: false,
   setFilterSpecial: (_filterSpecial: boolean) => null,
+  filterMaccas: false,
+  setFilterMaccas: (_filterMaccas: boolean) => null,
   shuffle: () => null,
   reverse: () => null,
   discordInput: '',

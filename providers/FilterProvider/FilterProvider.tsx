@@ -2,6 +2,7 @@ import { createContext, ReactNode, useEffect, useState } from 'react'
 import { highlands } from '../../constants'
 import { Asset, Attribute, Trait, TRAIT } from '../../types/asset'
 import { defaultFilter, defaultFilterProvider } from './types'
+import maccas from '../../constants/maccas'
 
 const ITEMS_PER_PAGE = 60
 
@@ -23,19 +24,21 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ filter, setFilter ] = useState<Record<Trait, Set<string>>>(defaultFilter)
   const [ filterSpecial, setFilterSpecial ] = useState(false)
   const [ discordInput, setDiscordInput ] = useState('')
+  const [ filterMaccas, setFilterMaccas ] = useState(false)
   
   useEffect(() => {
     setItems(highlands.filter(highland => {
-      const { isSpecial, attributes, discord } = highland
+      const { isSpecial, attributes, discord, token } = highland
       const { background, clothing, colour, feature, mood, object } = filter
 
       const filterCount = background.size + clothing.size + colour.size + feature.size + mood.size + object.size
-      if (filterCount === 0 && !filterSpecial && !discordInput) { return highland }
+      if (filterCount === 0 && !filterSpecial && !discordInput && !filterMaccas) { return highland }
 
       const shouldFilterSpecial = filterSpecial ? isSpecial : true
       const shouldFilterDiscord = discordInput ? discord?.toLowerCase().includes(discordInput.toLowerCase()) : true
+      const shouldFilterMaccas = filterMaccas ? token in maccas : true
   
-      return shouldFilterSpecial && shouldFilterDiscord
+      return shouldFilterSpecial && shouldFilterDiscord && shouldFilterMaccas
         && shouldInclude(TRAIT.BACKGROUND, attributes, background)
         && shouldInclude(TRAIT.CLOTHING, attributes, clothing)
         && shouldInclude(TRAIT.COLOUR, attributes, colour)
@@ -43,7 +46,7 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
         && shouldInclude(TRAIT.MOOD, attributes, mood)
         && shouldInclude(TRAIT.OBJECT, attributes, object)
     }))
-  }, [ filter, filterSpecial, discordInput ])
+  }, [ filter, filterSpecial, discordInput, filterMaccas ])
   
   
   const addFilter = (type: TRAIT, value: string) => {
@@ -109,6 +112,8 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       total: allItems.length,
       filterSpecial,
       setFilterSpecial,
+      filterMaccas,
+      setFilterMaccas,
       shuffle,
       reverse,
       discordInput,
