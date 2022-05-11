@@ -76,7 +76,7 @@ const Sidebar = () => {
             <DiscordIcon className="h-5 w-5 mx-1" />
           </a>
         </div>
-        <Logo className="mx-20" />
+        <Logo className="w-48" />
         <div className="text-white justify-center mt-2 text-sm flex items-center">
           Made with <Coffee className="h-4 w-4 mx-1" strokeWidth="3" /> by Loop <span className="text-xs ml-0.5">#1155</span>
         </div>
