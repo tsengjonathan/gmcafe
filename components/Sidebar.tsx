@@ -30,8 +30,8 @@ const Sidebar = () => {
     setFilterMaccas,
     shuffle,
     reverse,
-    discordInput,
-    setDiscordInput
+    nameInput,
+    setNameInput
   } = useContext(FilterContext)
 
   const { primaryBackground } = useContext(ThemeContext)
@@ -43,8 +43,8 @@ const Sidebar = () => {
     <>
       <FilterToggle title="Custom Moos" isEnabled={filterSpecial} setIsEnabled={setFilterSpecial} />
       <FilterToggle title="Waccas?" isEnabled={filterMaccas} setIsEnabled={setFilterMaccas} />
-      <Disclosure title="Discord">
-        <FilterInput input={discordInput} setInput={setDiscordInput} placeholder="BenColefax#3753" />
+      <Disclosure title="Name">
+        <FilterInput input={nameInput} setInput={setNameInput} placeholder="BenColefax#3753" />
       </Disclosure>
       <FilterDisclosure title={TRAIT.BACKGROUND} fields={collection[TRAIT.BACKGROUND]} />
       <FilterDisclosure title={TRAIT.CLOTHING} fields={collection[TRAIT.CLOTHING]} />

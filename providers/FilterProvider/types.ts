@@ -14,8 +14,8 @@ export type FilterContextProps = {
   setFilterMaccas: (filterMaccas: boolean) => void
   shuffle: () => void
   reverse: () => void
-  discordInput: string
-  setDiscordInput: (discordInput: string) => void
+  nameInput: string
+  setNameInput: (nameInput: string) => void
   nextPage: () => void
 }
 
@@ -42,7 +42,7 @@ export const defaultFilterProvider: FilterContextProps = {
   setFilterMaccas: (_filterMaccas: boolean) => null,
   shuffle: () => null,
   reverse: () => null,
-  discordInput: '',
-  setDiscordInput: (_discordInput: string) => null,
+  nameInput: '',
+  setNameInput: (_nameInput: string) => null,
   nextPage: () => null,
 }
