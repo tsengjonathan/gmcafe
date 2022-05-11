@@ -34,7 +34,6 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       const filterCount = background.size + clothing.size + colour.size + feature.size + mood.size + object.size
       if (filterCount === 0 && !filterSpecial && !nameInput && !filterMaccas) { return highland }
 
-      console.log(discord?.substring(0, discord.indexOf('#')))
       const filterDiscord = discord?.substring(0, discord.indexOf('#')).toLowerCase().includes(nameInput.toLowerCase())
       const filterName = name.toLowerCase().includes(nameInput.toLowerCase())
 

@@ -25,7 +25,7 @@ const Card = ({ name, imageUrl, attributes, token, isSpecial, discord }: Asset) 
 
   return (
     <div className={classNames(
-      'flex flex-col items-center overflow-hidden rounded lg:pb-6 animate-rerender mb-6',
+      'flex flex-col items-center overflow-hidden rounded lg:pb-6 animate-rerender',
       { 'bg-gray-100 drop-shadow transition-transform lg:hover:scale-105 duration-200 pb-4': isSpecial }
     )}>
       <div className="relative">
