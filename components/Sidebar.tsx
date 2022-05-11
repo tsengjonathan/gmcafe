@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import Image from 'next/image'
 import useCollection from '../hooks/useCollection'
 import Disclosure from './Disclosure'
 import { TRAIT } from '../types/asset'
@@ -17,6 +16,7 @@ import { ThemeContext } from '../providers/ThemeProvider'
 import classNames from 'classnames'
 import { Transition } from '@headlessui/react'
 import { Tooltip } from '@mui/material'
+import Logo from './Logo'
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -76,7 +76,7 @@ const Sidebar = () => {
             <DiscordIcon className="h-5 w-5 mx-1" />
           </a>
         </div>
-        <Image src="/logo.webp" alt="logo" width={173} height={112} />
+        <Logo className="mx-20" />
         <div className="text-white justify-center mt-2 text-sm flex items-center">
           Made with <Coffee className="h-4 w-4 mx-1" strokeWidth="3" /> by Loop <span className="text-xs ml-0.5">#1155</span>
         </div>
