@@ -8,7 +8,7 @@ const Cards = () => {
 
   return (
     <>
-      <div className="grid grid-cols-[repeat(auto-fill,160px)] lg:grid-cols-[repeat(auto-fill,15rem)] justify-between gap-4 lg:gap-6 w-full p-4 lg:p-6">
+      <div className="grid grid-cols-[repeat(auto-fill,160px)] lg:grid-cols-[repeat(auto-fill,14rem)] justify-between gap-4 lg:gap-6 w-full p-4 lg:p-6">
         { items.map(highland => <Card key={highland.token} {...highland} />) }
       </div>
       <div className="flex mb-10">
