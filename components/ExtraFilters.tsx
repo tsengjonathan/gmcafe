@@ -17,7 +17,7 @@ const ExtraFilters = () => {
   } = useContext(FilterContext)
   
   return (
-    <div className="flex gap-4 max-w-screen-xl bg-pink-light w-full p-4 my-1 rounded">
+    <div className="flex gap-4 flex-wrap max-w-screen-xl bg-pink-light w-full p-4 my-1 rounded">
       <div className="flex gap-4 items-center py-2 px-4 bg-white bg-opacity-90 rounded">
         <RotateCcw className="h-5 w-5 text-gray-700 cursor-pointer" strokeWidth="2" onClick={() => reverse()} />
         <Shuffle className="h-5 w-5 text-gray-700 cursor-pointer" strokeWidth="2" onClick={() => shuffle()} />

@@ -6,7 +6,7 @@ const TraitFilters = () => {
   const collection = useCollection()
 
   return (
-    <div className="grid grid-cols-6 gap-4 max-w-screen-xl bg-pink-light w-full p-4 my-1 rounded">
+    <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 max-w-screen-xl bg-pink-light w-full p-4 my-1 rounded">
       <TraitFilter title={TRAIT.BACKGROUND} fields={collection[TRAIT.BACKGROUND]} />
       <TraitFilter title={TRAIT.CLOTHING} fields={collection[TRAIT.CLOTHING]} />
       <TraitFilter title={TRAIT.COLOUR} fields={collection[TRAIT.COLOUR]} />

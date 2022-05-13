@@ -50,7 +50,7 @@ const TraitFilter = ({ title, fields }: TraitFilterProps) => {
     <Combobox value={selected} onChange={changeSelected} multiple>
       <div className="relative">
         <div className="flex bg-white rounded overflow-hidden relative p-1">
-          <Combobox.Button className="flex items-center">
+          <Combobox.Button className="flex items-center w-full">
             <Combobox.Input
               className="focus:outline-none text-sm w-full px-2 py-1"
               displayValue={() => input}
