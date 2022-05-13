@@ -83,7 +83,7 @@ const Option = ({ name, value }: OptionProps) => {
   return (
     <Combobox.Option
       className={({ active }) => classNames(
-        'relative py-2 pl-10 cursor-default',
+        'relative py-2 pl-8 cursor-default',
         { 'bg-pink': active }
       )}
       value={value}
@@ -92,9 +92,10 @@ const Option = ({ name, value }: OptionProps) => {
         <>
           <span className="absolute inset-y-0 left-0 flex items-center pl-2">
             <CheckIcon className={classNames(
-              'h-5 w-5',
-              { 'text-pink': selected || (!selected && active) },
-              { 'text-white': !selected || active }
+              'h-4 w-4',
+              { 'text-pink': !active && selected },
+              { 'text-white': active && selected },
+              { 'hidden': !selected },
             )} />
           </span>
           <span className={classNames(
