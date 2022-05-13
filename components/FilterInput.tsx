@@ -14,7 +14,7 @@ const FilterInput = ({ input, setInput, placeholder }: FilterInputProps) => {
 
   return (
     <input
-      className="w-full bg-transparent duration-300 text-sm p-2 mb-3 border focus:outline-none focus:border-gray-700 rounded-sm"
+      className="w-64 duration-300 text-sm p-2 border focus:outline-none focus:border-white rounded"
       placeholder={placeholder}
       type="text"
       value={input}

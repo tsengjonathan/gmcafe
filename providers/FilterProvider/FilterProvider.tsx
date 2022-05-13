@@ -98,6 +98,30 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
     }
   }
 
+  const overwriteFilters = (type: TRAIT, values: string[]) => {
+    if (type === TRAIT.BACKGROUND) {
+      filter.background.clear()
+      values.forEach(value => filter.background.add(value))
+    } else if (type === TRAIT.CLOTHING) {
+      filter.clothing.clear()
+      values.forEach(value => filter.clothing.add(value))
+    } else if (type === TRAIT.COLOUR) {
+      filter.colour.clear()
+      values.forEach(value => filter.colour.add(value))
+    } else if (type === TRAIT.FEATURE) {
+      filter.feature.clear()
+      values.forEach(value => filter.feature.add(value))
+    } else if (type === TRAIT.MOOD) {
+      filter.mood.clear()
+      values.forEach(value => filter.mood.add(value))
+    } else if (type === TRAIT.OBJECT) {
+      filter.object.clear()
+      values.forEach(value => filter.object.add(value))
+    }
+    
+    setFilter({ ...filter })
+  }
+
   const shuffle = () => setItems([...items.sort(() => Math.random() - 0.5)])
 
   const reverse = () => setItems([...items.reverse()])
@@ -109,6 +133,7 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       filter,
       addFilter,
       removeFilter,
+      overwriteFilters,
       items: items.slice(0, count),
       allItems: allItems,
       size: items.length,

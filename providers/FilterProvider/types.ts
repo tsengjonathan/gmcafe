@@ -4,6 +4,7 @@ export type FilterContextProps = {
   filter: Record<Trait, Set<string>>
   addFilter: (type: TRAIT, value: string) => void
   removeFilter: (type: TRAIT, value: string) => void
+  overwriteFilters: (type: TRAIT, values: string[]) => void
   items: Asset[]
   allItems: Asset[]
   size: number
@@ -32,6 +33,7 @@ export const defaultFilterProvider: FilterContextProps = {
   filter: defaultFilter,
   addFilter: (_type: TRAIT, _value: string) => null,
   removeFilter: (_type: TRAIT, _value: string) => null,
+  overwriteFilters: (_type: TRAIT, _values: string[]) => null,
   items: [],
   allItems: [],
   size: 0,

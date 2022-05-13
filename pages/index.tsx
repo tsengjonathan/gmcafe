@@ -1,12 +1,13 @@
 import Head from 'next/head'
+import Banner from '../components/Banner'
 import Cards from '../components/Cards'
-import FilterList from '../components/FilterList'
+import ExtraFilters from '../components/ExtraFilters'
 import FloatingButton from '../components/FloatingButton'
-import Sidebar from '../components/Sidebar'
+import TraitFilters from '../components/TraitFilters'
 
 const Home = () => {
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen">
+    <div className="flex flex-col lg:flex-row min-h-screen mx-auto">
       <Head>
         <title>Good Morning Café</title>
         <link rel="icon" href="/favicon.ico" />
@@ -22,10 +23,12 @@ const Home = () => {
         <meta name="twitter:card" content="summary_large_image"></meta>
       </Head>
 
-      <Sidebar />
+      {/* <Sidebar /> */}
 
       <main className="flex flex-1 flex-col items-center text-center lg:w-3/4">
-        <FilterList />
+        <Banner />
+        <ExtraFilters />
+        <TraitFilters />
         <Cards />
       </main>
 

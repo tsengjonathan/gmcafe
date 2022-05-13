@@ -10,8 +10,8 @@ type FilterToggleProps = {
 
 const FilterToggle = ({ title, isEnabled, setIsEnabled }: FilterToggleProps) => {
   return (
-    <div className="flex py-4 pl-4 pr-2 text-sm font-medium border-t border-gray-300 justify-between items-center">
-      <span>{title}</span>
+    <div className="flex px-3 py-2 text-sm justify-between items-center bg-white bg-opacity-90 rounded">
+      <span className="mr-2">{title}</span>
       <Switch
         checked={isEnabled}
         onChange={() => setIsEnabled(!isEnabled)}
