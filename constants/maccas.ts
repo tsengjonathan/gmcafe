@@ -22,7 +22,7 @@ import dawn from '../public/maccas/dawn_maccas.png'
 import kingodin from '../public/maccas/kingodin_maccas.png'
 import leenbean from '../public/maccas/leenbean_maccas.png'
 import mooxie from '../public/maccas/mooxie_maccas.png'
-import pepefer from '../public/maccas/pepefere_maccas.png'
+import pepefer from '../public/maccas/pepefer_maccas.png'
 import ted from '../public/maccas/ted_maccas.png'
 
 const maccas: Record<string, StaticImageData> = {
