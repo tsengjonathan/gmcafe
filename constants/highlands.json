@@ -9852,7 +9852,7 @@
   {
     "name": "Highland #286",
     "description": "Highland Cattle.",
-    "imageUrl": "https://lh3.googleusercontent.com/LsN8dlqiKT8sG6stOWVLMLgSoXGu2jfRor5JAcH6h8XSpGc-K4t4MW5xyG9O8WVEgHYUuUC6uLE5TRuhZd1oA8CHL4qnsB4aoytV1g",
+    "imageUrl": "https://lh3.googleusercontent.com/sOS85QgmYqU3K0SVqL3gJOw7mDJ7BhqTEueu-y2k3fbgNEwiG9RjOQMAb8U25CfIwXER8BOMazxsmtsA6YdcYLJvK6_FN9k4HzSf",
     "token": "81086769033880357206596084476994515861067324006954129146728570568155208876033",
     "attributes": [
       {
@@ -9861,23 +9861,23 @@
       },
       {
         "trait_type": "Colour",
-        "value": "Rainbow Sparkle"
-      },
-      {
-        "trait_type": "Clothing",
-        "value": "Head Tie"
-      },
-      {
-        "trait_type": "Clothing",
-        "value": "Vest"
+        "value": "Light Brown"
       },
       {
         "trait_type": "Mood",
-        "value": "Retro"
+        "value": "MooPop"
       },
       {
         "trait_type": "Object",
         "value": "Yamooha Keytar"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Microphone"
+      },
+      {
+        "trait_type": "Feature",
+        "value": "Hearts"
       }
     ]
   },
