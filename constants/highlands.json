@@ -10461,5 +10461,43 @@
         "value": "Ether Staff"
       }
     ]
+  },
+  {
+    "name": "Highland #321 - Cowculated Moo",
+    "description": "Highland Cattle.",
+    "imageUrl": "https://lh3.googleusercontent.com/ER1cV0hdMlLGs4GE_w83tkjXu4stckDGdJ_VuEOV5h7Ja6XdvtZMgGjvhewbhbt0TSwPUL2WEyR9aVFtJV6Oum4Pk6jNUkNfUGbM",
+    "token": "81086769033880357206596084476994515861067324006954129146728570596742511198209",
+    "isSpecial": true,
+    "discord": "canis cariñosa#1011",
+    "attributes": [
+      {
+        "trait_type": "Clothing",
+        "value": "Denim Shirt"
+      },
+      {
+        "trait_type": "Mood",
+        "value": "Cowculated"
+      },
+      {
+        "trait_type": "Colour",
+        "value": "Galaxy Purple"
+      },
+      {
+        "trait_type": "Background",
+        "value": "Cowculated Yellows"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Espresso"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Conveyor Belt"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Series of Pegs and Wheels"
+      }
+    ]
   }
 ]
