@@ -10431,5 +10431,35 @@
         "value": "Draconic Suit"
       }
     ]
+  },
+  {
+    "name": "Highland #320 - WhiskerMoo",
+    "description": "Highland Cattle.",
+    "imageUrl": "https://lh3.googleusercontent.com/BvLJlPO4YOV8OSMt1Y8Tu5oOen1aRfljFWDNEzCT2L3uqTTufw4ij7kXkCRGAawZDElVEWycEfqTDPYlKagOjh_b97UHi4d7wynYzA",
+    "token": "81086769033880357206596084476994515861067324006954129146728570595642999570433",
+    "isSpecial": true,
+    "discord": "RICO製#1683",
+    "attributes": [
+      {
+        "trait_type": "Clothing",
+        "value": "Dubious Robe"
+      },
+      {
+        "trait_type": "Mood",
+        "value": "Adventurous"
+      },
+      {
+        "trait_type": "Colour",
+        "value": "Koi"
+      },
+      {
+        "trait_type": "Background",
+        "value": "Light Reflecting off a Pond"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Ether Staff"
+      }
+    ]
   }
 ]
