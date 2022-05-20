@@ -10499,5 +10499,33 @@
         "value": "Series of Pegs and Wheels"
       }
     ]
+  },
+  {
+    "name": "Highland #300",
+    "description": "Highland Cattle.",
+    "imageUrl": "https://lh3.googleusercontent.com/41uYEMAL583Cgiu6VVmHmRRr4KHSygXgJBKuHtIW57r9ifFrq3aBnM2Ge-hIfJWKDK2ppuHxMeUDNOHzA3smWb8MQg94LKA99CU2Pg",
+    "token": "81086769033880357206596084476994515861067324006954129146728570582448860037121",
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Light Pink"
+      },
+      {
+        "trait_type": "Colour",
+        "value": "Light Yellow"
+      },
+      {
+        "trait_type": "Mood",
+        "value": "Floofy"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Coffee Mug"
+      },
+      {
+        "trait_type": "Object",
+        "value": "Coffee Spill"
+      }
+    ]
   }
 ]
