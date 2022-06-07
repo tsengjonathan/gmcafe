@@ -24,6 +24,7 @@ import leenbean from '../public/maccas/leenbean_maccas.png'
 import mooxie from '../public/maccas/mooxie_maccas.png'
 import pepefer from '../public/maccas/pepefer_maccas.png'
 import ted from '../public/maccas/ted_maccas.png'
+import steph from '../public/maccas/steph_maccas.png'
 
 const maccas: Record<string, StaticImageData> = {
   '81086769033880357206596084476994515861067324006954129146728570576951301898241': bholu,
@@ -50,6 +51,7 @@ const maccas: Record<string, StaticImageData> = {
   '81086769033880357206596084476994515861067324006954129146728570456005022842881': mooxie,
   '81086769033880357206596084476994515861067324006954129146728570538468394926081': pepefer,
   '81086769033880357206596084476994515861067324006954129146728570575851790270465': ted,
+  '81086769033880357206596084476994515861067324006954129146728570568155208876033': steph,
 }
 
 export default maccas
