@@ -10263,12 +10263,13 @@
   {
     "name": "Highland #297",
     "description": "Highland Cattle.",
-    "imageUrl": "https://lh3.googleusercontent.com/l32MPCxqRrShdUiVhlrXE6nvtk0Z6XnE1niTCdPNjWb2nSBNnXXPsHWJNJ5akGSMLwj7_TEzPIAwgmzVCb03aM3Dxot82yTZ9LVA4A",
+    "imageUrl": "https://lh3.googleusercontent.com/H8XC66X1J3iJjEj3QF9dnoQOqVnY94HDl5ZQD2kre7NHzs725Dz6VwLyak7qLJD0cdMoUmv_6bStx_4WxKhivvsuLmBCzzsY2yC-Og",
     "token": "81086769033880357206596084476994515861067324006954129146728570579150325153793",
+    "discord": "skitchy#8506",
     "attributes": [
       {
         "trait_type": "Colour",
-        "value": "Purple"
+        "value": "Light Pink"
       },
       {
         "trait_type": "Object",
@@ -10281,10 +10282,6 @@
       {
         "trait_type": "Mood",
         "value": "Excite!"
-      },
-      {
-        "trait_type": "Clothing",
-        "value": "Shirt"
       },
       {
         "trait_type": "Clothing",
