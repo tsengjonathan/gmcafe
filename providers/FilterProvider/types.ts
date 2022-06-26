@@ -10,6 +10,8 @@ export type FilterContextProps = {
   total: number
   filterSpecial: boolean
   setFilterSpecial: (filterSpecial: boolean) => void
+  filterCommission: boolean
+  setFilterCommission: (filterCommission: boolean) => void
   filterMaccas: boolean,
   setFilterMaccas: (filterMaccas: boolean) => void
   shuffle: () => void
@@ -38,6 +40,8 @@ export const defaultFilterProvider: FilterContextProps = {
   total: 0,
   filterSpecial: false,
   setFilterSpecial: (_filterSpecial: boolean) => null,
+  filterCommission: false,
+  setFilterCommission: (_filterCommission: boolean) => null,
   filterMaccas: false,
   setFilterMaccas: (_filterMaccas: boolean) => null,
   shuffle: () => null,

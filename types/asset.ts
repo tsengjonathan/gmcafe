@@ -5,6 +5,7 @@ export type Asset = {
   attributes: Attribute[]
   token: string
   isSpecial?: boolean
+  commission?: boolean
   discord?: string
 }
 

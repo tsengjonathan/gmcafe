@@ -23,16 +23,17 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
   const [ count, setCount ] = useState(ITEMS_PER_PAGE)
   const [ filter, setFilter ] = useState<Record<Trait, Set<string>>>(defaultFilter)
   const [ filterSpecial, setFilterSpecial ] = useState(false)
+  const [ filterCommission, setFilterCommission ] = useState(false)
   const [ nameInput, setNameInput ] = useState('')
   const [ filterMaccas, setFilterMaccas ] = useState(false)
   
   useEffect(() => {
     setItems(highlands.filter(highland => {
-      const { isSpecial, attributes, discord, token, name } = highland
+      const { isSpecial, attributes, discord, token, name, commission } = highland
       const { background, clothing, colour, feature, mood, object } = filter
 
       const filterCount = background.size + clothing.size + colour.size + feature.size + mood.size + object.size
-      if (filterCount === 0 && !filterSpecial && !nameInput && !filterMaccas) { return highland }
+      if (filterCount === 0 && !filterSpecial && !nameInput && !filterMaccas && !filterCommission) { return highland }
 
       const filterDiscord = discord?.substring(0, discord.indexOf('#')).toLowerCase().includes(nameInput.toLowerCase())
       const filterName = name.toLowerCase().includes(nameInput.toLowerCase())
@@ -40,8 +41,9 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       const shouldFilterSpecial = filterSpecial ? isSpecial : true
       const shouldFilterName = nameInput ? filterDiscord || filterName : true
       const shouldFilterMaccas = filterMaccas ? token in maccas : true
+      const shouldFilterCommission = filterCommission ? commission : true
   
-      return shouldFilterSpecial && shouldFilterName && shouldFilterMaccas
+      return shouldFilterSpecial && shouldFilterName && shouldFilterMaccas && shouldFilterCommission
         && shouldInclude(TRAIT.BACKGROUND, attributes, background)
         && shouldInclude(TRAIT.CLOTHING, attributes, clothing)
         && shouldInclude(TRAIT.COLOUR, attributes, colour)
@@ -49,7 +51,7 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
         && shouldInclude(TRAIT.MOOD, attributes, mood)
         && shouldInclude(TRAIT.OBJECT, attributes, object)
     }))
-  }, [ filter, filterSpecial, nameInput, filterMaccas ])
+  }, [ filter, filterSpecial, nameInput, filterMaccas, filterCommission ])
   
   
   const addFilter = (type: TRAIT, value: string) => {
@@ -115,6 +117,8 @@ export const FilterProvider = ({ children }: FilterProviderProps) => {
       total: allItems.length,
       filterSpecial,
       setFilterSpecial,
+      filterCommission,
+      setFilterCommission,
       filterMaccas,
       setFilterMaccas,
       shuffle,
