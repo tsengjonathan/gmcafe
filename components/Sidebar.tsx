@@ -26,8 +26,6 @@ const Sidebar = () => {
   const {
     filterSpecial,
     setFilterSpecial,
-    filterCommission,
-    setFilterCommission,
     filterMaccas,
     setFilterMaccas,
     shuffle,
@@ -45,7 +43,6 @@ const Sidebar = () => {
     <>
       <FilterToggle title="Custom Moos" isEnabled={filterSpecial} setIsEnabled={setFilterSpecial} />
       <FilterToggle title="Waccas?" isEnabled={filterMaccas} setIsEnabled={setFilterMaccas} />
-      <FilterToggle title="Commission" isEnabled={filterCommission} setIsEnabled={setFilterCommission} />
       <Disclosure title="Name">
         <FilterInput input={nameInput} setInput={setNameInput} placeholder="BenColefax#3753" />
       </Disclosure>
